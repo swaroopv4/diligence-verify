@@ -21,9 +21,10 @@ if str(SOURCE_ROOT) not in sys.path:
 
 from dv.config import project_root
 from dv.models import Chunk, ConsistencyFlag, DataModel, EvaluationRow, FactResult, ModeSummary
-from dv.report import percent, read_database, summarize
+from dv.report import format_cost, format_seconds, percent, read_database, summarize
 from dv.table import TRANSLATION, locate_cells, normalize_quote
 from dv.study import CHECK_NAMES, Study, CaughtError, Usage, select_studies, call_usage, caught_errors, format_number, metric_name, headline, result_rows, average_steps, cost_rows
+from dv.study import REVIEW_LABEL, review_summary
 
 ROOT = project_root()
 logger = logging.getLogger(__name__)
@@ -159,13 +160,13 @@ def cost_and_cache(db: sqlite3.Connection, study: Study, ticker: str, mode: str)
         st.markdown(f"**Average verified cost by step · {len(study.companies)} companies**")
         records=average_steps(db,study)
         st.dataframe(pd.DataFrame([{"Step":r["Step"],"Requests":r["Requests"],
-            "Avg reference cost / company":f"${r['Avg reference cost / company']:.6f}"} for r in records]),hide_index=True,width="stretch")
+            "Avg reference cost / company":format_cost(r['Avg reference cost / company'])} for r in records]),hide_index=True,width="stretch")
     with replay:
         st.markdown("**Verified run and cached replay**")
         pairs=[("Cold verified",study.verified_run),("Cached replay",study.cache_run)]
         usages=[(label,call_usage(db,run,"verified")) for label,run in pairs if run]
-        st.dataframe(pd.DataFrame([{"Run":label,"New tokens":f"{u.input_tokens+u.output_tokens:,}","Time":f"{u.seconds:.2f}s",
-            "Reference cost":f"${u.cost:.6f}","Cache hit rate":percent(u.hit_rate)} for label,u in usages]),hide_index=True,width="stretch")
+        st.dataframe(pd.DataFrame([{"Run":label,"New tokens":f"{u.input_tokens+u.output_tokens:,}","Time":format_seconds(u.seconds),
+            "Reference cost":format_cost(u.cost),"Cache hit rate":percent(u.hit_rate)} for label,u in usages]),hide_index=True,width="stretch")
     st.caption("Reference-price estimates use stored token usage. Measured time includes free-tier request pacing and recovery waits.")
 
 
@@ -209,10 +210,12 @@ def main() -> None:
             wrong_card,precision_card,review_card,base_cost,verified_cost=st.columns(5)
             wrong_card.metric("Wrong answers · baseline → verified",f"{sum(item.wrong for item in baseline)} → {sum(item.wrong for item in verified)}")
             precision_card.metric("Precision · baseline → verified",f"{precision(baseline)} → {precision(verified)}")
-            review_card.metric("Flagged for human review",sum(item.unverified for item in verified))
+            review_total, review_caption = review_summary(db, studies)
+            review_card.metric(REVIEW_LABEL, review_total)
+            review_card.caption(review_caption)
             for card,record in zip([base_cost,verified_cost],cost_rows(db,studies[0]),strict=True):
-                card.metric(record['Mode']+" · cost / company",f"${record['Reference cost / company']:.6f}")
-                card.caption(f"Average time: {record['Avg time / company (s)']:.2f}s / company")
+                card.metric(record['Mode']+" · cost / company",format_cost(record['Reference cost / company']))
+                card.caption(f"Average time: {format_seconds(record['Avg time / company (s)'])} / company")
             st.dataframe(pd.DataFrame(result_rows(db,studies)),hide_index=True,width="stretch")
             st.caption(f"Each row totals {len(companies)*len(metrics)} facts: {len(companies)} companies × {len(metrics)} financial metrics. No-ground-truth cases are included in the total and excluded from precision.")
 

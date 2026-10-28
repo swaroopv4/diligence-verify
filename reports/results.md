@@ -2,6 +2,9 @@
 
 Code verification removed all 5 wrong answers: 3 corrected on retry, 2 flagged for human review.
 
+**Unverified · flagged for review: 3**
+includes 2 caught baseline errors
+
 | Mode | Model | Correct | Wrong | Unverified | Not found | No ground truth | Precision on answered |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Baseline | gemini-3.5-flash-lite | 109 | 5 | 0 | 17 | 4 | 95.6% |
@@ -23,22 +26,22 @@ Each mode covers 135 facts: 15 companies × 9 metrics. Missing ground truth is e
 
 | Mode | Reference cost / company | Avg time / company |
 | --- | --- | --- |
-| Baseline | $0.106568 | 45.40s |
-| Verified | $0.136189 | 58.21s |
+| Baseline | $0.11 | 45s |
+| Verified | $0.14 | 58s |
 
 ## Average verified cost by step
 
 | Step | Requests | Avg reference cost / company |
 | --- | --- | --- |
-| Extraction attempt 1 | 137 | $0.105990 |
-| Verification retries | 22 | $0.030198 |
+| Extraction attempt 1 | 137 | $0.11 |
+| Verification retries | 22 | $0.03 |
 
 ## Verified replay
 
 | Run | New tokens | Time | Reference cost | Cache hit rate |
 | --- | --- | --- | --- | --- |
-| Cold verified | 603771 | 873.17s | $2.042829 | 0.0% |
-| Cached replay | 0 | 27.95s | $0.000000 | 100.0% |
+| Cold verified | 603771 | 873s | $2.04 | 0.0% |
+| Cached replay | 0 | 28s | $0.00 | 100.0% |
 
 Reference costs use the token prices stored with each run. Measured time includes free-tier pacing and recovery waits.
 

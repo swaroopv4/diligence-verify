@@ -79,6 +79,14 @@ def percent(value: float | None) -> str:
     return f"{value:.1%}" if value is not None else "N/A"
 
 
+def format_cost(value: float) -> str:
+    return f"${value:.2f}"
+
+
+def format_seconds(value: float | None) -> str:
+    return f"{value:.0f}s" if value is not None else "N/A"
+
+
 def cache_replays(db: sqlite3.Connection, run_ids: list[str], companies: set[str]) -> list[str]:
     models={db.execute("SELECT model FROM runs WHERE run_id=?",(run_id,)).fetchone()[0] for run_id in run_ids}
     selected: dict[str,str]={}
@@ -134,8 +142,8 @@ def generate_report(run_ids: list[str] | None = None, cache_run_ids: list[str] |
                 raise ValueError(f"Incomplete evaluation for {run_id}")
         summaries=[summarize(db,run_id,mode) for run_id in run_ids for mode in ("baseline","verified")]
         main=[[s.mode,s.model,s.correct,s.wrong,s.unverified,percent(s.precision_on_answered),
-               f"{s.avg_seconds_per_company:.3f}s" if s.avg_seconds_per_company is not None else "N/A",
-               f"$ {s.cost_reference_usd:.6f}"] for s in summaries]
+               format_seconds(s.avg_seconds_per_company),
+               format_cost(s.cost_reference_usd)] for s in summaries]
         sections=["# Diligence Verify results",
             "Generated entirely from stored runs, evaluations, verification attempts and call logs.",
             f"Study: {len(companies)} companies, {len(configs[0]['metrics'])} metrics, "
@@ -189,7 +197,7 @@ def generate_report(run_ids: list[str] | None = None, cache_run_ids: list[str] |
             ["Model","Ticker","Metric","Extracted","XBRL","Quote"],wrong) if wrong else "No wrong baseline rows.",
             "## Cost, timing and cache",markdown_table(
             ["Run","Mode","Input tokens","Output tokens","Actual cost","Reference cost","Calls","Cache hits","Hit rate"],
-            [[s.run_id,s.mode,s.input_tokens,s.output_tokens,f"$ {s.cost_actual_usd:.6f}",f"$ {s.cost_reference_usd:.6f}",
+            [[s.run_id,s.mode,s.input_tokens,s.output_tokens,format_cost(s.cost_actual_usd),format_cost(s.cost_reference_usd),
               s.calls,s.cache_hits,percent(s.cache_hit_rate)] for s in summaries]),
             "Reference prices are frozen per run. Timings include retry waits; interpret them alongside cache-hit rates. "
             "Tables cover the listed benchmark run IDs; preflights and abandoned trials remain in the audit database. "
@@ -213,9 +221,9 @@ def generate_report(run_ids: list[str] | None = None, cache_run_ids: list[str] |
                 raise ValueError("Cache replay model is absent from the main comparison")
             replay=summarize(db,cache_id,"verified")
             cache_rows.append([cache_id,warm["model"],replay.input_tokens+replay.output_tokens,
-                f"$ {replay.cost_reference_usd:.6f}",percent(replay.cache_hit_rate),
-                f"$ {original.cost_reference_usd-replay.cost_reference_usd:.6f}",
-                f"{replay.avg_seconds_per_company:.3f}s" if replay.avg_seconds_per_company is not None else "N/A"])
+                format_cost(replay.cost_reference_usd),percent(replay.cache_hit_rate),
+                format_cost(original.cost_reference_usd-replay.cost_reference_usd),
+                format_seconds(replay.avg_seconds_per_company)])
         sections.extend(["### Verified replay with the same settings",markdown_table(
             ["Replay","Model","New tokens","Reference cost","Hit rate","Reference cost saved vs first verified run","Avg time/company"],cache_rows)
             if cache_rows else "A completed cache replay has not been supplied."])

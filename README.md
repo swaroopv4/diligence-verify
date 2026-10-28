@@ -9,6 +9,9 @@ Diligence Verify extracts 9 financial numbers from 15 public companies’ SEC 10
 
 Code verification removed all 5 wrong answers: 3 corrected on retry, 2 flagged for human review.
 
+**Unverified · flagged for review: 3**
+includes 2 caught baseline errors
+
 Each mode covers 135 facts; missing ground truth is excluded from precision.
 
 ## Examples
@@ -30,8 +33,8 @@ Each mode covers 135 facts; missing ground truth is excluded from precision.
 
 ## Cost per company
 
-- Baseline: $0.106568 at reference token prices; 45.40s average.
-- Verified: $0.136189 at reference token prices; 58.21s average.
+- Baseline: $0.11 at reference token prices; 45s average.
+- Verified: $0.14 at reference token prices; 58s average.
 
 ## Limitations
 

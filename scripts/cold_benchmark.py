@@ -20,6 +20,7 @@ from pydantic import BaseModel
 from dv.config import LLMSettings, load_config, project_root
 from dv.llm import CallContext, CompatibleProvider, LLMClient, ProviderResponse
 from dv.models import DataModel, EvaluationRow
+from dv.report import format_cost, format_seconds
 
 Output = TypeVar("Output", bound=BaseModel)
 ROOT = project_root()
@@ -183,8 +184,8 @@ def write_comparison(path: Path, run_id: str, mode: str, reference_run: str,
         stored = json.loads(db.execute("SELECT settings_json FROM runs WHERE run_id=?", (run_id,)).fetchone()[0])
     report = ["# Cold accuracy comparison", "", table, "",
         f"Isolated database: `{path.relative_to(ROOT).as_posix()}`. Initial cache entries: 0. Model: `{MODEL}`; temperature: {stored['llm']['temperature']}.",
-        f"New input tokens: {usage[0]:,}; output: {usage[1]:,}; reference cost: ${usage[2]:.6f}; cache hits: {usage[3]}/{usage[4]}.",
-        f"Companies measured: {timings[0]}; total wall time: {timings[1]:.2f}s; average: {timings[2]:.2f}s/company; reference cost/company: ${usage[2]/timings[0]:.6f}.",
+        f"New input tokens: {usage[0]:,}; output: {usage[1]:,}; reference cost: {format_cost(usage[2])}; cache hits: {usage[3]}/{usage[4]}.",
+        f"Companies measured: {timings[0]}; total wall time: {format_seconds(timings[1])}; average: {format_seconds(timings[2])}/company; reference cost/company: {format_cost(usage[2]/timings[0])}.",
         "Time includes free-tier request pacing and any provider recovery waits.", ""]
     if differences:
         report += ["**STOP: cold-run accuracy differs from the current results.** Dashboard files, original results and original cache have not been changed. No automatic rerun or tuning is permitted by this gate.", "",

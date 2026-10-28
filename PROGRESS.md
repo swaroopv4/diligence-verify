@@ -774,3 +774,10 @@ Offline measurement-wrapper validation: **185 tests passed**. The requested poli
 - Known limits: one model, 15 companies, 10-K only, incomplete XBRL coverage, and Intel section labels; checks establish this sample result, not universal financial correctness. Reference-price costs are measured token estimates, not provider charges. Measured latency includes free-tier pacing/recovery.
 
 - Fresh committed clone gate also passed all 30 company/mode views using the app-only dependency environment, with .env absent, API identity variables removed and external sockets blocked. Shared result tables match README/report exactly and report regeneration preserves content. Evidence default and highlight passed. Final test suite rerun: 187 passed in 29.93s. The validation harness initially needed src added to sys.path for direct module imports, then newline normalization for Git's Windows checkout; neither was an app failure. The corrected third harness run passed. See reports/archive/canonical-fresh-clone.txt.
+
+## Presentation fixes — review counts and reader formatting
+
+- Relabeled the dashboard card "Unverified · flagged for review" and added "includes 2 caught baseline errors". The shared presentation module computes both the total unverified count and the caught-baseline-error subset from runs.db; README.md and reports/results.md include the same summary.
+- Shared display formatters show costs to two decimals and times in whole seconds across the dashboard and generated reader reports. Regenerated README.md and reports/results.md from the canonical database. Stored measurements retain their original precision.
+- Validation: `.venv/Scripts/python.exe -m pytest -q` passed 189 tests. Regression checks verify reproducible generated documents, independent database-driven review counts, and full-precision measurements. Offline Streamlit AppTest confirmed the review card/caption, result table, cost cards, step costs, and replay formatting.
+- Database SHA-256 remains 8101052963c66b5ef6ee715600579b28d69722f27d646370aaba2b07091230bc. No known issues.

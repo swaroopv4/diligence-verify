@@ -5,6 +5,9 @@ import sqlite3
 from pathlib import Path
 from typing import Any
 from dv.models import DataModel, EvaluationRow, FactResult
+from dv.report import format_cost, format_seconds
+
+REVIEW_LABEL = "Unverified · flagged for review"
 
 CHECK_NAMES = {
     "V1": "Source belongs to this filing", "V2": "Quote matches the source exactly",
@@ -230,6 +233,12 @@ def headline(db: sqlite3.Connection, studies: list[Study]) -> str:
     return f"Code verification caught {len(errors)} of {wrong} baseline errors; {remaining} wrong verified answers remain."
 
 
+def review_summary(db: sqlite3.Connection, studies: list[Study]) -> tuple[int, str]:
+    total = sum(row['Unverified'] for row in result_rows(db, studies) if row['Mode'] == 'Verified')
+    caught = sum(not error.corrected for study in studies for error in caught_errors(db, study))
+    return total, f"includes {caught} caught baseline errors"
+
+
 def cost_rows(db: sqlite3.Connection, study: Study) -> list[dict[str, object]]:
     from dv.report import summarize
     rows=[]
@@ -249,7 +258,10 @@ def average_steps(db: sqlite3.Connection, study: Study) -> list[dict[str, object
 def generate_final_report(db: sqlite3.Connection, destination: Path) -> Path:
     from dv.report import markdown_table,percent
     studies=select_studies(db);rows=result_rows(db,studies)
-    sections=['# Diligence Verify','',headline(db,studies),'',markdown_table(list(rows[0]),[list(row.values()) for row in rows]),'']
+    review_total, review_caption = review_summary(db, studies)
+    sections=['# Diligence Verify','',headline(db,studies),'',
+        f"**{REVIEW_LABEL}: {review_total}**",review_caption,'',
+        markdown_table(list(rows[0]),[list(row.values()) for row in rows]),'']
     for study in studies:
         total=len(study.companies)*len(study.metrics)
         sections += [f"Each mode covers {total} facts: {len(study.companies)} companies × {len(study.metrics)} metrics. Missing ground truth is excluded from precision.", '', '## Caught errors','']
@@ -258,14 +270,14 @@ def generate_final_report(db: sqlite3.Connection, destination: Path) -> Path:
             [[e.ticker,metric_name(e.metric),format_number(e.baseline_value,e.metric),format_number(e.ground_truth,e.metric),e.outcome,e.first_check,e.quote] for e in errors[:5]]) if errors else 'No baseline errors were corrected or flagged.', '', '## Cost per company','']
         costs=cost_rows(db,study)
         sections += [markdown_table(['Mode','Reference cost / company','Avg time / company'],
-            [[r['Mode'],f"${r['Reference cost / company']:.6f}",f"{r['Avg time / company (s)']:.2f}s"] for r in costs]),
+            [[r['Mode'],format_cost(r['Reference cost / company']),format_seconds(r['Avg time / company (s)'])] for r in costs]),
             '', '## Average verified cost by step','',markdown_table(['Step','Requests','Avg reference cost / company'],
-            [[r['Step'],r['Requests'],f"${r['Avg reference cost / company']:.6f}"] for r in average_steps(db,study)]),'',
+            [[r['Step'],r['Requests'],format_cost(r['Avg reference cost / company'])] for r in average_steps(db,study)]),'',
             '## Verified replay','']
         usage=[]
         for label,run in [('Cold verified',study.verified_run),('Cached replay',study.cache_run)]:
             u=call_usage(db,run,'verified')
-            usage.append([label,u.input_tokens+u.output_tokens,f"{u.seconds:.2f}s",f"${u.cost:.6f}",percent(u.hit_rate)])
+            usage.append([label,u.input_tokens+u.output_tokens,format_seconds(u.seconds),format_cost(u.cost),percent(u.hit_rate)])
         sections += [markdown_table(['Run','New tokens','Time','Reference cost','Cache hit rate'],usage),'',
             'Reference costs use the token prices stored with each run. Measured time includes free-tier pacing and recovery waits.', '',
             '## Per-metric results','']
@@ -292,14 +304,16 @@ def generate_final_report(db: sqlite3.Connection, destination: Path) -> Path:
 def generate_readme(db: sqlite3.Connection, destination: Path) -> Path:
     from dv.report import markdown_table
     studies=select_studies(db);study=studies[0];rows=result_rows(db,studies);costs=cost_rows(db,study)
+    review_total, review_caption = review_summary(db, studies)
     examples=caught_errors(db,study)[:3]
     lines=['# Diligence Verify','',
         f"Diligence Verify extracts {len(study.metrics)} financial numbers from {len(study.companies)} public companies’ SEC 10-K filings, verifies source quotes, numbers, scales, fiscal columns and financial row labels with deterministic code, and checks the results against SEC XBRL. The read-only Streamlit dashboard includes traceable filing evidence, caught errors and measured cost per company. No API keys are required.", '',
         markdown_table(list(rows[0]),[list(row.values()) for row in rows]),'',headline(db,studies),'',
+        f"**{REVIEW_LABEL}: {review_total}**",review_caption,'',
         f"Each mode covers {len(study.companies)*len(study.metrics)} facts; missing ground truth is excluded from precision.",'', '## Examples','']
     lines += [f"- {e.ticker} {metric_name(e.metric).lower()}: {format_number(e.baseline_value,e.metric)} vs XBRL {format_number(e.ground_truth,e.metric)}; {e.outcome[:1].lower() + e.outcome[1:]}." for e in examples]
     lines += ['', '## Verification','',*['- '+code+': '+name+'.' for code,name in CHECK_NAMES.items()], '', '## Cost per company','']
-    lines += [f"- {r['Mode']}: ${r['Reference cost / company']:.6f} at reference token prices; {r['Avg time / company (s)']:.2f}s average." for r in costs]
+    lines += [f"- {r['Mode']}: {format_cost(r['Reference cost / company'])} at reference token prices; {format_seconds(r['Avg time / company (s)'])} average." for r in costs]
     lines += ['', '## Limitations','',f"One model, {len(study.companies)} companies, 10-K filings only. Ground-truth coverage is incomplete; precision does not measure missing answers. Intel section labels remain unknown because its Item references are in an index rather than body headings. Results describe this sample and do not guarantee financial correctness.", '',
         '## Run locally','', 'Use Python 3.11, then:', '', '```bash', 'git clone https://github.com/swaroopV4/diligence-verify.git', 'cd diligence-verify', 'python -m venv .venv', '# Activate .venv (Windows: .venv\\Scripts\\Activate.ps1; Linux/macOS: source .venv/bin/activate)',
         'python -m pip install -r requirements.txt','streamlit run app/streamlit_app.py','```','',
