@@ -1,0 +1,330 @@
+2026-10-28 02:35:21.612 WARNING streamlit.runtime.caching.cache_data_api: No runtime found, using MemoryCacheStorageManager
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=AAPL step=revenue mode=baseline status=answered value=416161000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=AAPL step=net_income mode=baseline status=answered value=112010000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=AAPL step=operating_income mode=baseline status=answered value=133050000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=AAPL step=operating_cash_flow mode=baseline status=answered value=111482000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=AAPL step=eps_diluted mode=baseline status=answered value=7.46
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=AAPL step=total_assets mode=baseline status=answered value=359241000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=AAPL step=total_liabilities mode=baseline status=answered value=285508000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=AAPL step=cash mode=baseline status=answered value=35934000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=AAPL step=stockholders_equity mode=baseline status=answered value=73733000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=MSFT step=revenue mode=baseline status=answered value=331839000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=MSFT step=net_income mode=baseline status=answered value=133749000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=MSFT step=operating_income mode=baseline status=answered value=155237000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=MSFT step=operating_cash_flow mode=baseline status=answered value=182935000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=MSFT step=eps_diluted mode=baseline status=answered value=17.95
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=MSFT step=total_assets mode=baseline status=answered value=758376000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=MSFT step=total_liabilities mode=baseline status=answered value=315989000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=MSFT step=cash mode=baseline status=answered value=20935000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=MSFT step=stockholders_equity mode=baseline status=answered value=442387000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=GOOGL step=revenue mode=baseline status=answered value=402836000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=GOOGL step=net_income mode=baseline status=answered value=132170000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=GOOGL step=operating_income mode=baseline status=answered value=129039000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=GOOGL step=operating_cash_flow mode=baseline status=answered value=164713000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=GOOGL step=eps_diluted mode=baseline status=answered value=10.81
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=GOOGL step=total_assets mode=baseline status=answered value=595281000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=GOOGL step=total_liabilities mode=baseline status=answered value=180016000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=GOOGL step=cash mode=baseline status=answered value=30708000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=GOOGL step=stockholders_equity mode=baseline status=answered value=415265000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=AMZN step=revenue mode=baseline status=answered value=716924000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=AMZN step=net_income mode=baseline status=answered value=77670000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=AMZN step=operating_income mode=baseline status=answered value=79975000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=AMZN step=operating_cash_flow mode=baseline status=answered value=139514000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=AMZN step=eps_diluted mode=baseline status=answered value=7.17
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=AMZN step=total_assets mode=baseline status=answered value=818042000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=AMZN step=total_liabilities mode=baseline status=not_found value=None
+INFO dv.pipeline ticker=AMZN step=total_liabilities mode=baseline retrieved_chunks=['AMZN_0001018724-26-000004_unknown_0226', 'AMZN_0001018724-26-000004_unknown_0227', 'AMZN_0001018724-26-000004_unknown_0162', 'AMZN_0001018724-26-000004_unknown_0272', 'AMZN_0001018724-26-000004_unknown_0242']
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=AMZN step=cash mode=baseline status=answered value=86810000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=AMZN step=stockholders_equity mode=baseline status=answered value=411065000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=META step=revenue mode=baseline status=answered value=200966000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=META step=net_income mode=baseline status=answered value=60458000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=META step=operating_income mode=baseline status=answered value=83276000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=META step=operating_cash_flow mode=baseline status=answered value=115800000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=META step=eps_diluted mode=baseline status=answered value=23.49
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=META step=total_assets mode=baseline status=answered value=366021000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=META step=total_liabilities mode=baseline status=answered value=148778000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=META step=cash mode=baseline status=answered value=35873000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=META step=stockholders_equity mode=baseline status=answered value=217243000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NVDA step=revenue mode=baseline status=answered value=215938000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NVDA step=net_income mode=baseline status=answered value=120067000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NVDA step=operating_income mode=baseline status=answered value=130387000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NVDA step=operating_cash_flow mode=baseline status=answered value=102718000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NVDA step=eps_diluted mode=baseline status=answered value=4.9
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NVDA step=total_assets mode=baseline status=answered value=206803000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NVDA step=total_liabilities mode=baseline status=answered value=49510000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NVDA step=cash mode=baseline status=answered value=10605000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NVDA step=stockholders_equity mode=baseline status=answered value=157293000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=ADBE step=revenue mode=baseline status=answered value=23769000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=ADBE step=net_income mode=baseline status=answered value=7130000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=ADBE step=operating_income mode=baseline status=answered value=8706000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=ADBE step=operating_cash_flow mode=baseline status=answered value=10031000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=ADBE step=eps_diluted mode=baseline status=answered value=16.7
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=ADBE step=total_assets mode=baseline status=answered value=29496000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=ADBE step=total_liabilities mode=baseline status=answered value=17873000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=ADBE step=cash mode=baseline status=answered value=5431000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=ADBE step=stockholders_equity mode=baseline status=answered value=11623000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=CRM step=revenue mode=baseline status=answered value=41525000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=CRM step=net_income mode=baseline status=answered value=7457000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=CRM step=operating_income mode=baseline status=answered value=8331000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=CRM step=operating_cash_flow mode=baseline status=answered value=14996000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=CRM step=eps_diluted mode=baseline status=answered value=7.8
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=CRM step=total_assets mode=baseline status=answered value=112305000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=CRM step=total_liabilities mode=baseline status=answered value=53163000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=CRM step=cash mode=baseline status=answered value=7327000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=CRM step=stockholders_equity mode=baseline status=answered value=59142000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=ORCL step=revenue mode=baseline status=answered value=67357000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=ORCL step=net_income mode=baseline status=answered value=17087000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=ORCL step=operating_income mode=baseline status=not_found value=None
+INFO dv.pipeline ticker=ORCL step=operating_income mode=baseline retrieved_chunks=['ORCL_0001193125-26-277521_item_15_0154', 'ORCL_0001193125-26-277521_item_15_0153', 'ORCL_0001193125-26-277521_item_15_0129', 'ORCL_0001193125-26-277521_item_15_0056', 'ORCL_0001193125-26-277521_item_7_0049']
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=ORCL step=operating_cash_flow mode=baseline status=answered value=31977000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=ORCL step=eps_diluted mode=baseline status=answered value=5.83
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=ORCL step=total_assets mode=baseline status=not_found value=None
+INFO dv.pipeline ticker=ORCL step=total_assets mode=baseline retrieved_chunks=['ORCL_0001193125-26-277521_item_15_0099', 'ORCL_0001193125-26-277521_item_15_0112', 'ORCL_0001193125-26-277521_item_15_0101', 'ORCL_0001193125-26-277521_item_7_0070', 'ORCL_0001193125-26-277521_item_15_0098']
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=ORCL step=total_liabilities mode=baseline status=not_found value=None
+INFO dv.pipeline ticker=ORCL step=total_liabilities mode=baseline retrieved_chunks=['ORCL_0001193125-26-277521_item_15_0099', 'ORCL_0001193125-26-277521_item_15_0012', 'ORCL_0001193125-26-277521_item_15_0063', 'ORCL_0001193125-26-277521_item_15_0140', 'ORCL_0001193125-26-277521_item_15_0097']
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=ORCL step=cash mode=baseline status=answered value=31289000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=ORCL step=stockholders_equity mode=baseline status=answered value=43056000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+ERROR dv.llm ticker=INTC step=revenue.attempt_1 mode=baseline provider=gemini invalid JSON; repairing once
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 221, in _validated
+    value = schema.model_validate_json(response.content)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ExtractedFact_revenue
+source_quote
+  String should have at most 300 characters [type=string_too_long, input_value='Dec 27, 2025\n |  | Inte...83 ) |  |  | $ | 52,853', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/string_too_long
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=INTC step=revenue mode=baseline status=answered value=52853000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=INTC step=net_income mode=baseline status=answered value=26000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=INTC step=operating_income mode=baseline status=answered value=12700000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=INTC step=operating_cash_flow mode=baseline status=answered value=9697000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=INTC step=eps_diluted mode=baseline status=answered value=-0.06
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=INTC step=total_assets mode=baseline status=not_found value=None
+INFO dv.pipeline ticker=INTC step=total_assets mode=baseline retrieved_chunks=['INTC_0000050863-26-000011_unknown_0526', 'INTC_0000050863-26-000011_unknown_0622', 'INTC_0000050863-26-000011_unknown_0616', 'INTC_0000050863-26-000011_unknown_0438', 'INTC_0000050863-26-000011_unknown_0544']
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=INTC step=total_liabilities mode=baseline status=answered value=85069000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=INTC step=cash mode=baseline status=answered value=14265000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=INTC step=stockholders_equity mode=baseline status=answered value=126360000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=CSCO step=revenue mode=baseline status=answered value=63325000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=CSCO step=net_income mode=baseline status=answered value=13267000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=CSCO step=operating_income mode=baseline status=answered value=15368000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=CSCO step=operating_cash_flow mode=baseline status=answered value=14177000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=CSCO step=eps_diluted mode=baseline status=answered value=3.33
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=CSCO step=total_assets mode=baseline status=not_found value=None
+INFO dv.pipeline ticker=CSCO step=total_assets mode=baseline retrieved_chunks=['CSCO_0000858877-26-000132_unknown_0397', 'CSCO_0000858877-26-000132_unknown_0341', 'CSCO_0000858877-26-000132_unknown_0351', 'CSCO_0000858877-26-000132_unknown_0340', 'CSCO_0000858877-26-000132_unknown_0206']
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=CSCO step=total_liabilities mode=baseline status=answered value=79352000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=CSCO step=cash mode=baseline status=answered value=7218000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=CSCO step=stockholders_equity mode=baseline status=answered value=50285000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=IBM step=revenue mode=baseline status=not_found value=None
+INFO dv.pipeline ticker=IBM step=revenue mode=baseline retrieved_chunks=['IBM_0000051143-26-000010_item_5_0001', 'IBM_0000051143-26-000010_item_1a_0010', 'IBM_0000051143-26-000010_item_1a_0004', 'IBM_0000051143-26-000010_item_1a_0006', 'IBM_0000051143-26-000010_item_12_0001']
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=IBM step=net_income mode=baseline status=not_found value=None
+INFO dv.pipeline ticker=IBM step=net_income mode=baseline retrieved_chunks=['IBM_0000051143-26-000010_item_1a_0009', 'IBM_0000051143-26-000010_item_1a_0026', 'IBM_0000051143-26-000010_item_1a_0010', 'IBM_0000051143-26-000010_item_1a_0022', 'IBM_0000051143-26-000010_item_1a_0021']
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=IBM step=operating_income mode=baseline status=not_found value=None
+INFO dv.pipeline ticker=IBM step=operating_income mode=baseline retrieved_chunks=['IBM_0000051143-26-000010_item_1a_0022', 'IBM_0000051143-26-000010_item_1a_0021', 'IBM_0000051143-26-000010_item_15_0000', 'IBM_0000051143-26-000010_item_1a_0009', 'IBM_0000051143-26-000010_item_1a_0026']
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=IBM step=operating_cash_flow mode=baseline status=not_found value=None
+INFO dv.pipeline ticker=IBM step=operating_cash_flow mode=baseline retrieved_chunks=['IBM_0000051143-26-000010_item_1a_0009', 'IBM_0000051143-26-000010_item_1a_0023', 'IBM_0000051143-26-000010_item_1a_0007', 'IBM_0000051143-26-000010_item_1_0008', 'IBM_0000051143-26-000010_item_15_0009']
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=IBM step=eps_diluted mode=baseline status=not_found value=None
+INFO dv.pipeline ticker=IBM step=eps_diluted mode=baseline retrieved_chunks=['IBM_0000051143-26-000010_item_5_0001', 'IBM_0000051143-26-000010_unknown_0004', 'IBM_0000051143-26-000010_item_15_0009', 'IBM_0000051143-26-000010_item_12_0005', 'IBM_0000051143-26-000010_item_5_0002']
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=IBM step=total_assets mode=baseline status=not_found value=None
+INFO dv.pipeline ticker=IBM step=total_assets mode=baseline retrieved_chunks=['IBM_0000051143-26-000010_item_15_0000', 'IBM_0000051143-26-000010_item_16_0007', 'IBM_0000051143-26-000010_item_1a_0010', 'IBM_0000051143-26-000010_item_5_0001', 'IBM_0000051143-26-000010_item_1a_0009']
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=IBM step=total_liabilities mode=baseline status=not_found value=None
+INFO dv.pipeline ticker=IBM step=total_liabilities mode=baseline retrieved_chunks=['IBM_0000051143-26-000010_item_5_0001', 'IBM_0000051143-26-000010_item_12_0001', 'IBM_0000051143-26-000010_item_1a_0003', 'IBM_0000051143-26-000010_item_1a_0004', 'IBM_0000051143-26-000010_item_1a_0010']
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=IBM step=cash mode=baseline status=not_found value=None
+INFO dv.pipeline ticker=IBM step=cash mode=baseline retrieved_chunks=['IBM_0000051143-26-000010_item_15_0009', 'IBM_0000051143-26-000010_item_15_0000', 'IBM_0000051143-26-000010_item_1a_0021', 'IBM_0000051143-26-000010_item_1a_0022', 'IBM_0000051143-26-000010_item_1a_0025']
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=IBM step=stockholders_equity mode=baseline status=not_found value=None
+INFO dv.pipeline ticker=IBM step=stockholders_equity mode=baseline retrieved_chunks=['IBM_0000051143-26-000010_item_12_0001', 'IBM_0000051143-26-000010_item_12_0002', 'IBM_0000051143-26-000010_item_5_0000', 'IBM_0000051143-26-000010_item_5_0001', 'IBM_0000051143-26-000010_item_15_0009']
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NFLX step=revenue mode=baseline status=not_found value=None
+INFO dv.pipeline ticker=NFLX step=revenue mode=baseline retrieved_chunks=['NFLX_0001065280-26-000034_item_16_0027', 'NFLX_0001065280-26-000034_item_7_0005', 'NFLX_0001065280-26-000034_item_7_0002', 'NFLX_0001065280-26-000034_item_7_0011', 'NFLX_0001065280-26-000034_item_16_0035']
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NFLX step=net_income mode=baseline status=answered value=10981201000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NFLX step=operating_income mode=baseline status=not_found value=None
+INFO dv.pipeline ticker=NFLX step=operating_income mode=baseline retrieved_chunks=['NFLX_0001065280-26-000034_item_16_0107', 'NFLX_0001065280-26-000034_item_7_0002', 'NFLX_0001065280-26-000034_item_16_0108', 'NFLX_0001065280-26-000034_item_16_0090', 'NFLX_0001065280-26-000034_item_7_0042']
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NFLX step=operating_cash_flow mode=baseline status=answered value=10149273000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NFLX step=eps_diluted mode=baseline status=answered value=2.53
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NFLX step=total_assets mode=baseline status=not_found value=None
+INFO dv.pipeline ticker=NFLX step=total_assets mode=baseline retrieved_chunks=['NFLX_0001065280-26-000034_item_16_0046', 'NFLX_0001065280-26-000034_item_16_0045', 'NFLX_0001065280-26-000034_item_16_0118', 'NFLX_0001065280-26-000034_item_1a_0043', 'NFLX_0001065280-26-000034_item_16_0120']
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NFLX step=total_liabilities mode=baseline status=answered value=28981505000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NFLX step=cash mode=baseline status=answered value=5208710000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NFLX step=stockholders_equity mode=baseline status=answered value=26615488000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=INTU step=revenue mode=baseline status=not_found value=None
+INFO dv.pipeline ticker=INTU step=revenue mode=baseline retrieved_chunks=['INTU_0000896878-26-000037_unknown_0418', 'INTU_0000896878-26-000037_unknown_0060', 'INTU_0000896878-26-000037_unknown_0305', 'INTU_0000896878-26-000037_unknown_0306', 'INTU_0000896878-26-000037_unknown_0403']
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+ERROR dv.llm ticker=INTU step=net_income.attempt_1 mode=baseline provider=gemini invalid JSON; repairing once
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 221, in _validated
+    value = schema.model_validate_json(response.content)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ExtractedFact_net_income
+  Input should be an object [type=model_type, input_value=[{'metric': 'net_income',...et income | $ | 4,566'}], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.14/v/model_type
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=INTU step=net_income mode=baseline status=answered value=4566000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=INTU step=operating_income mode=baseline status=answered value=5884000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=INTU step=operating_cash_flow mode=baseline status=answered value=8838000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=INTU step=eps_diluted mode=baseline status=answered value=16.46
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=INTU step=total_assets mode=baseline status=not_found value=None
+INFO dv.pipeline ticker=INTU step=total_assets mode=baseline retrieved_chunks=['INTU_0000896878-26-000037_unknown_0614', 'INTU_0000896878-26-000037_unknown_0513', 'INTU_0000896878-26-000037_unknown_0618', 'INTU_0000896878-26-000037_unknown_0631', 'INTU_0000896878-26-000037_unknown_0633']
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=INTU step=total_liabilities mode=baseline status=answered value=17794000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=INTU step=cash mode=baseline status=answered value=4705000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=INTU step=stockholders_equity mode=baseline status=answered value=18992000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NOW step=revenue mode=baseline status=answered value=13278000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NOW step=net_income mode=baseline status=answered value=1748000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NOW step=operating_income mode=baseline status=answered value=1824000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NOW step=operating_cash_flow mode=baseline status=answered value=5444000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NOW step=eps_diluted mode=baseline status=answered value=1.67
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NOW step=total_assets mode=baseline status=answered value=26038000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NOW step=total_liabilities mode=baseline status=answered value=13074000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NOW step=cash mode=baseline status=answered value=3726000000.0
+INFO httpx HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO dv.pipeline ticker=NOW step=stockholders_equity mode=baseline status=answered value=12964000000.0
+# Cold accuracy comparison
+
+| Run | Mode | Correct | Wrong | Unverified | Not found | No ground truth | Error | Precision |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| full-gemini-lite-v1 | baseline | 109 | 5 | 0 | 17 | 4 | 0 | 95.6% |
+| cold-final-baseline-v1 | baseline | 109 | 5 | 0 | 17 | 4 | 0 | 95.6% |
+
+Isolated database: `.deploy-check/benchmarks/cold-final-baseline-v1/data/runs.db`. Initial cache entries: 0. Model: `gemini-3.5-flash-lite`; temperature: 0.
+New input tokens: 448,669; output: 16,834; reference cost: $1.598517; cache hits: 0/137.
+Companies measured: 15; total wall time: 681.04s; average: 45.40s/company; reference cost/company: $0.106568.
+Time includes free-tier request pacing and any provider recovery waits.
+
+Cold accuracy gate passed: all per-fact classifications match the previous run.
+

@@ -1,0 +1,15 @@
+{
+  "publishable_files": 150,
+  "history_blobs_scanned": 138,
+  "credential_findings": 0,
+  "files_over_50MB": [],
+  "largest_file": "tests/fixtures/AAPL_companyfacts.json",
+  "largest_bytes": 4195471,
+  "database_bytes": 2408448,
+  "canonical_runs": [
+    "cold-final-baseline-v1",
+    "cold-final-verified-v1",
+    "cached-final-verified-v1"
+  ],
+  "snapshots_verified": 15
+}

@@ -43,8 +43,9 @@ def summarize(db: sqlite3.Connection, run_id: str, mode: str, metric: str | None
         FROM llm_calls WHERE run_id=? AND mode=?"""
     usage_params: list[object] = [run_id,mode]
     if metric:
-        sql += " AND (step=? OR step=?)"
-        usage_params.extend([metric,metric+".repair"])
+        prefix=metric+".attempt_"
+        sql += " AND (step=? OR step=? OR substr(step,1,?)=?)"
+        usage_params.extend([metric,metric+".repair",len(prefix),prefix])
     usage = db.execute(sql,usage_params).fetchone()
     timing = db.execute("SELECT AVG(latency_ms)/1000.0 AS average FROM company_timings WHERE run_id=? AND mode=?",(run_id,mode)).fetchone()
     return ModeSummary(run_id=run_id,mode=mode,model=run["model"],correct=counts["correct"],wrong=counts["wrong"],
@@ -104,6 +105,9 @@ def markdown_table(headers: list[str], rows: list[list[object]]) -> str:
 def generate_report(run_ids: list[str] | None = None, cache_run_ids: list[str] | None = None,
                     *, db_path: Path | None = None, destination: Path | None = None) -> Path:
     with read_database(db_path) as db:
+        if run_ids is None and db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='canonical_studies'").fetchone():
+            from dv.study import generate_final_report
+            return generate_final_report(db,destination or project_root()/"reports"/"results.md")
         run_ids=run_ids or study_runs(db)
         if not run_ids:
             raise ValueError("The report requires a completed, evaluated model comparison")

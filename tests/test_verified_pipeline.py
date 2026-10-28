@@ -69,3 +69,39 @@ def test_null_value_stops_without_retries(tmp_path: Path) -> None:
     assert result.attempts == 1
     assert result.verification is None
     assert len(provider.prompts) == 1
+
+
+def test_null_after_rejection_preserves_last_failure(tmp_path: Path) -> None:
+    filing, index, fact = fixture_inputs()
+    bad = fact.model_copy(update={"scale_as_written":"billions"})
+    null = fact.model_copy(update={"value_as_written":None,"source_quote":None,"source_chunk_id":None})
+    provider = FakeProvider("local", [response(bad),response(null)])
+    config = load_config()
+    with LLMClient(config.llm,tmp_path/"runs.db",[provider]) as client:
+        prepare_database(client.db)
+        result = verified_fact(client,config,"r","TEST","revenue",filing,index,{})
+    assert result.status == "unverified" and result.attempts == 2
+    assert result.fact == bad and result.final_value is None
+    assert result.verification.failed_check == "V5"
+    assert "detected scale" in result.verification.reason
+
+
+def test_stored_null_revision_is_offline_and_audited(tmp_path: Path) -> None:
+    from dv.pipeline import restore_review_status, save_result
+    from dv.models import FactResult, VerificationResult
+
+    filing,index,fact = fixture_inputs()
+    failed = VerificationResult(passed=False,failed_check="V8",reason="wrong row",normalized_value=None)
+    null = fact.model_copy(update={"value_as_written":None})
+    result = FactResult(run_id="r",mode="verified",ticker="TEST",metric="revenue",fact=null,
+                        verification=None,attempts=2,status="not_found",final_value=None)
+    with LLMClient(load_config().llm,tmp_path/"runs.db",[]) as client:
+        prepare_database(client.db)
+        save_result(client.db,result)
+        client.db.execute("INSERT INTO verification_attempts VALUES (?,?,?,?,?,?)",("r","TEST","revenue",1,fact.model_dump_json(),failed.model_dump_json()))
+        client.db.commit()
+        assert restore_review_status(client.db,"r") == 1
+        stored = FactResult.model_validate_json(client.db.execute("SELECT result_json FROM fact_results").fetchone()[0])
+        assert stored.status == "unverified" and stored.verification == failed and stored.fact == fact
+        assert restore_review_status(client.db,"r") == 0
+        assert client.db.execute("SELECT count(*) FROM result_policy_revisions").fetchone()[0] == 1

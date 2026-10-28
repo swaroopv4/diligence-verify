@@ -1,13 +1,13 @@
 {
-  "description": "Public SEC snapshots read by the dashboard, including first-study/cache evidence. Historical partial runs remain in the audit database but are not deployed as completed studies.",
+  "description": "Public SEC snapshots and stored measurements for the canonical cold baseline, cold verified run, and identical cached verified replay.",
   "run_ids": [
-    "full-gemini-lite-cache-v1",
-    "full-gemini-lite-phase5b-v1",
-    "full-gemini-lite-v1"
+    "cold-final-baseline-v1",
+    "cold-final-verified-v1",
+    "cached-final-verified-v1"
   ],
   "database": {
     "path": "data/runs.db",
-    "bytes": 1503232
+    "bytes": 2408448
   },
   "chunks": [
     {

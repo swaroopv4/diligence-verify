@@ -46,8 +46,10 @@ class PacedProvider(CompatibleProvider):
 
 
 class MeasuredClient(LLMClient):
-    def __init__(self, settings: LLMSettings, path: Path, *, interval: float = 5.0) -> None:
-        super().__init__(settings, path, [PacedProvider(settings, interval)])
+    def __init__(self, settings: LLMSettings, path: Path, *, interval: float = 5.0, allow_network: bool = True) -> None:
+        self.allow_network = allow_network
+        provider = PacedProvider(settings, interval) if allow_network else CacheOnlyProvider(settings)
+        super().__init__(settings, path, [provider])
         self.attempts: defaultdict[tuple[str, str, str, str], int] = defaultdict(int)
         self.db.execute("""CREATE TABLE IF NOT EXISTS benchmark_request_identity (
             run_id TEXT,mode TEXT,ticker TEXT,metric TEXT,extraction_attempt INTEGER,
@@ -60,11 +62,29 @@ class MeasuredClient(LLMClient):
         key = (context.run_id, context.mode, context.ticker, context.step)
         self.attempts[key] += 1
         attempt = self.attempts[key]
+        cache_key = self.cache_key(self.providers[0], prompt, schema)
+        if not self.allow_network and not self.db.execute("SELECT 1 FROM llm_cache WHERE cache_key=?", (cache_key,)).fetchone():
+            raise RuntimeError("Cached replay has no matching response; live requests are prohibited")
         self.db.execute("INSERT INTO benchmark_request_identity VALUES (?,?,?,?,?,?,?)",
             (*key, attempt, hashlib.sha256(prompt.encode()).hexdigest(), self.cache_key(self.providers[0], prompt, schema)))
         self.db.commit()
         measured = context.model_copy(update={"step": f"{context.step}.attempt_{attempt}"})
         return super().complete(prompt, schema, measured, pin_model=pin_model)
+
+
+class CacheOnlyProvider:
+    """Identical cache identity; no client or network endpoint is opened."""
+
+    def __init__(self, settings: LLMSettings) -> None:
+        active = next(entry for entry in settings.providers if not entry.model.startswith("FILL_IN"))
+        self.name, self.model, self.base_url = active.name, active.model, active.base_url
+        self.thinking_level = active.thinking_level
+
+    def complete(self, prompt: str, *, temperature: int, max_tokens: int) -> ProviderResponse:
+        raise AssertionError("A cached replay must never call a model")
+
+    def close(self) -> None:
+        pass
 
 
 class Difference(DataModel):

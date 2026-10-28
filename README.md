@@ -1,70 +1,53 @@
 # Diligence Verify
 
-Diligence Verify compares LLM extraction of 9 financial metrics from 15 public companies' SEC 10-K filings with deterministic source, scale, period-column and row-scope checks, then evaluates the results against accession-matched SEC XBRL. The read-only dashboard presents the measured baseline and latest verified results, caught errors, exact filing evidence, and recorded cost/cache statistics. It runs entirely from the committed SQLite database and public filing snapshots, with no API keys or live model calls.
+Diligence Verify extracts 9 financial numbers from 15 public companies’ SEC 10-K filings, verifies source quotes, numbers, scales, fiscal columns and financial row labels with deterministic code, and checks the results against SEC XBRL. The read-only Streamlit dashboard includes traceable filing evidence, caught errors and measured cost per company. No API keys are required.
 
-**Live app:** [YOUR-APP-NAME.streamlit.app](https://YOUR-APP-NAME.streamlit.app) — placeholder; deployment has not been published.
+| Mode | Model | Correct | Wrong | Unverified | Not found | No ground truth | Precision on answered |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Baseline | gemini-3.5-flash-lite | 109 | 5 | 0 | 17 | 4 | 95.6% |
+| Verified | gemini-3.5-flash-lite | 111 | 0 | 3 | 17 | 4 | 100.0% |
 
-## Headline results
+Code verification removed all 5 wrong answers: 3 corrected on retry, 2 flagged for human review.
 
-| Mode | Model | Correct | Wrong | Unverified | Not found | Precision |
-| --- | --- | --- | --- | --- | --- | --- |
-| Baseline | gemini-3.5-flash-lite | 109 | 5 | 0 | 17 | 95.6% |
-| Verified | gemini-3.5-flash-lite | 111 | 0 | 3 | 17 | 100.0% |
+Each mode covers 135 facts; missing ground truth is excluded from precision.
 
-The table is generated from `data/runs.db`. Each mode has 131 facts with ground truth; 4 cases without matching XBRL data are excluded from accuracy. Precision is correct / (correct + wrong), not coverage. The second-model benchmark remains pending. These observed results do not guarantee financial correctness on other filings. Detailed diagnosis and limitations: [Phase 5b results](reports/phase5b-results.md). A subsequent uncached verified run retained the same correct/wrong counts but changed one Netflix cash abstention from unverified to not found; the requested parity gate stopped further UI changes. See the [cold-run comparison](reports/cold-final-verified-comparison.md).
+## Examples
 
-## Run the dashboard locally
+- INTC operating income: $12.70B vs XBRL −$2.21B; corrected to −$2.21B.
+- INTC stockholders equity: $126.36B vs XBRL $114.28B; corrected to $114.28B.
+- ORCL stockholders equity: $43.06B vs XBRL $42.51B; corrected to $42.51B.
 
-Use **Python 3.11** (the version tested for deployment). Clone this standalone repository, then run from its root:
+## Verification
+
+- V1: Source belongs to this filing.
+- V2: Quote matches the source exactly.
+- V3: Displayed number is copied exactly.
+- V4: Number can be parsed.
+- V5: Scale and per-share units are supported.
+- V6: Selected column matches the fiscal period.
+- V7: Financial sanity checks.
+- V8: Row label and financial scope match.
+
+## Cost per company
+
+- Baseline: $0.106568 at reference token prices; 45.40s average.
+- Verified: $0.136189 at reference token prices; 58.21s average.
+
+## Limitations
+
+One model, 15 companies, 10-K filings only. Ground-truth coverage is incomplete; precision does not measure missing answers. Intel section labels remain unknown because its Item references are in an index rather than body headings. Results describe this sample and do not guarantee financial correctness.
+
+## Run locally
+
+Use Python 3.11, then:
 
 ```bash
-git clone https://github.com/swaroopV4/diligence-verify.git diligence-verify
+git clone https://github.com/swaroopV4/diligence-verify.git
 cd diligence-verify
 python -m venv .venv
-```
-
-Activate the environment:
-
-```powershell
-# Windows PowerShell
-.\.venv\Scripts\Activate.ps1
-```
-
-```bash
-# macOS / Linux
-source .venv/bin/activate
-```
-
-Install only the dashboard dependencies and start it:
-
-```bash
+# Activate .venv (Windows: .venv\Scripts\Activate.ps1; Linux/macOS: source .venv/bin/activate)
 python -m pip install -r requirements.txt
 streamlit run app/streamlit_app.py
 ```
 
-No `.env`, Streamlit secrets, SEC identity or model credentials are required. The app opens the database read-only, verifies source snapshot hashes, and makes no live SEC or LLM requests. It can run without an internet connection after dependencies are installed. The source checkout is loaded directly; do not run `pip install -e .` for deployment, because that installs the separate research pipeline dependencies.
-
-## Deploy on Streamlit Community Cloud
-
-1. Push this standalone repository to your own GitHub repository. The prepared local branch is `codex/streamlit-cloud`.
-2. In Community Cloud, create an app using that repository and branch.
-3. Set the entrypoint to `app/streamlit_app.py`.
-4. In Advanced settings, choose **Python 3.11** and leave Secrets empty.
-5. Deploy, then replace the live-app placeholder above with the assigned URL.
-
-Community Cloud installs the pinned dashboard-only `requirements.txt` from the repository root. The research `pyproject.toml` is not the deployment dependency file. See the official [dependency guidance](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/app-dependencies) and [deployment settings](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy).
-
-## Committed data and cost interpretation
-
-`data/runs.db` and the 15 immutable source snapshots listed in [data/deployment-manifest.json](data/deployment-manifest.json) are included in Git. The manifest records sizes and SHA-256 hashes; source paths written on Windows are normalized when read on Linux. Raw downloads and unused working copies are excluded. Partial research trials remain in the database audit history but do not appear as completed comparisons.
-
-Accuracy uses the latest verified rules and the compatible original baseline. Cost cards/charts use recorded uncached-call costs from the first completed study, never the all-cache replay. That first study already had some cache reuse, so no fully cold end-to-end cost or speed claim is made. The cache comparison uses the original verified run and its same-settings, identical-result replay.
-
-## Optional research development
-
-To download filings or run new model experiments, install the full project separately with `python -m pip install -e .`, copy `.env.example` to `.env`, and configure your own SEC contact/model credentials. These steps are unnecessary for the deployed dashboard. Never commit `.env` or `.streamlit/secrets.toml`. The benchmark's source-verification and answer-key isolation rules are in [AGENTS.md](AGENTS.md); validation and development history are in [PROGRESS.md](PROGRESS.md).
-
-```bash
-python -m pytest
-python -m dv.cli --help
-```
+[Full results](reports/results.md) · [GitHub](https://github.com/swaroopV4/diligence-verify)

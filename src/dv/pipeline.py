@@ -120,12 +120,18 @@ def verified_fact(client: LLMClient, config: AppConfig, run_id: str, ticker: str
     store = {chunk.chunk_id: chunk for chunk in index.chunks}
     feedback = None
     last_verification = None
+    last_candidate = None
     for attempt in range(1, 2 + config.verification.max_retries):
         context = CallContext(run_id=run_id, mode="verified", ticker=ticker, step=metric)
         fact = extract_fact(client, context, metric, definition.query, filing, chunks, feedback)
         if fact.value_as_written is None:
+            if last_verification is not None and last_candidate is not None:
+                return FactResult(run_id=run_id, mode="verified", ticker=ticker, metric=metric,
+                                  fact=last_candidate, verification=last_verification, attempts=attempt,
+                                  status="unverified", final_value=None)
             return FactResult(run_id=run_id, mode="verified", ticker=ticker, metric=metric,
                               fact=fact, verification=None, attempts=attempt, status="not_found", final_value=None)
+        last_candidate = fact
         last_verification = verify(fact, store, filing, known_values, definition)
         client.db.execute("INSERT OR REPLACE INTO verification_attempts VALUES (?, ?, ?, ?, ?, ?)",
                           (run_id, ticker, metric, attempt, fact.model_dump_json(), last_verification.model_dump_json()))
@@ -141,6 +147,37 @@ def verified_fact(client: LLMClient, config: AppConfig, run_id: str, ticker: str
             chunks += index.retrieve(definition.query, config.retrieval.retry_extra_k, offset=len(chunks))
     return FactResult(run_id=run_id, mode="verified", ticker=ticker, metric=metric, fact=fact,
                       verification=last_verification, attempts=attempt, status="unverified", final_value=None)
+
+
+def restore_review_status(db: sqlite3.Connection, run_id: str) -> int:
+    """Apply the explicit abstention policy to stored attempts, without a model.
+
+    Original and revised results are retained so this is an auditable policy
+    correction, never a replacement of extracted values or source evidence.
+    """
+    from dv.models import VerificationResult
+
+    db.execute("""CREATE TABLE IF NOT EXISTS result_policy_revisions (
+        run_id TEXT,ticker TEXT,metric TEXT,policy TEXT,original_json TEXT,revised_json TEXT,
+        PRIMARY KEY(run_id,ticker,metric,policy))""")
+    changed = 0
+    for ticker, metric, content in db.execute("SELECT ticker,metric,result_json FROM fact_results WHERE run_id=? AND mode='verified' AND status='not_found'", (run_id,)).fetchall():
+        result = FactResult.model_validate_json(content)
+        if result.fact.value_as_written is not None:
+            continue
+        last = db.execute("SELECT fact_json,verification_json FROM verification_attempts WHERE run_id=? AND ticker=? AND metric=? ORDER BY attempt DESC LIMIT 1", (run_id,ticker,metric)).fetchone()
+        if last is None:
+            continue
+        candidate = ExtractedFact.model_validate_json(last[0])
+        verification = VerificationResult.model_validate_json(last[1])
+        if verification.passed or candidate.value_as_written is None:
+            continue
+        revised = result.model_copy(update={"fact":candidate,"verification":verification,"status":"unverified","final_value":None})
+        db.execute("INSERT OR IGNORE INTO result_policy_revisions VALUES (?,?,?,?,?,?)", (run_id,ticker,metric,"retain_failure_on_null_retry_v1",content,revised.model_dump_json()))
+        db.execute("UPDATE fact_results SET status='unverified',final_value=NULL,result_json=? WHERE run_id=? AND ticker=? AND metric=? AND mode='verified'", (revised.model_dump_json(),run_id,ticker,metric))
+        changed += 1
+    db.commit()
+    return changed
 
 
 def run_extraction(run_id: str, mode: Literal["baseline", "verified"], companies: str,

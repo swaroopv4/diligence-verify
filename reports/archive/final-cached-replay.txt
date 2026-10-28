@@ -1,0 +1,21 @@
+WARNING:dv.pipeline:ticker=AAPL step=net_income mode=verified attempt=1 failed_check=V2 reason=source quote is not an exact substring after whitespace/quote/dash normalization
+WARNING:dv.pipeline:ticker=MSFT step=cash mode=verified attempt=1 failed_check=V2 reason=source quote is not an exact substring after whitespace/quote/dash normalization
+WARNING:dv.pipeline:ticker=MSFT step=stockholders_equity mode=verified attempt=1 failed_check=V2 reason=source quote is not an exact substring after whitespace/quote/dash normalization
+WARNING:dv.pipeline:ticker=AMZN step=operating_cash_flow mode=verified attempt=1 failed_check=V2 reason=source quote is not an exact substring after whitespace/quote/dash normalization
+WARNING:dv.pipeline:ticker=AMZN step=cash mode=verified attempt=1 failed_check=V5 reason=scale unknown
+WARNING:dv.pipeline:ticker=AMZN step=cash mode=verified attempt=2 failed_check=V5 reason=scale unknown
+WARNING:dv.pipeline:ticker=AMZN step=cash mode=verified attempt=3 failed_check=V5 reason=scale unknown
+WARNING:dv.pipeline:ticker=NVDA step=eps_diluted mode=verified attempt=1 failed_check=V2 reason=source quote is not an exact substring after whitespace/quote/dash normalization
+WARNING:dv.pipeline:ticker=ORCL step=stockholders_equity mode=verified attempt=1 failed_check=V8 reason=row "Total stockholders' equity" does not establish parent-only stockholders_equity scope; noncontrolling interests are disclosed. Expected parent row: Total Oracle Corporation stockholders� equity
+WARNING:dv.pipeline:ticker=INTC step=revenue mode=verified attempt=1 failed_check=V2 reason=source quote is not an exact substring after whitespace/quote/dash normalization
+WARNING:dv.pipeline:ticker=INTC step=net_income mode=verified attempt=1 failed_check=V8 reason=row 'Net income (loss)' does not establish parent-only net_income scope; noncontrolling interests are disclosed. Expected parent row: Net income (loss) attributable to Intel
+WARNING:dv.pipeline:ticker=INTC step=net_income mode=verified attempt=2 failed_check=V3 reason=displayed value is absent from the source quote
+WARNING:dv.pipeline:ticker=INTC step=net_income mode=verified attempt=3 failed_check=V8 reason=row 'Net income (loss)' does not establish parent-only net_income scope; noncontrolling interests are disclosed. Expected parent row: Net income (loss) attributable to Intel
+WARNING:dv.pipeline:ticker=INTC step=operating_income mode=verified attempt=1 failed_check=V6 reason=value cell is missing or ambiguous (0 matches); expected column 2025-12-27
+WARNING:dv.pipeline:ticker=INTC step=stockholders_equity mode=verified attempt=1 failed_check=V8 reason=row "Total stockholders' equity" does not establish parent-only stockholders_equity scope; noncontrolling interests are disclosed. Expected parent row: Total Intel stockholders' equity
+WARNING:dv.pipeline:ticker=NFLX step=eps_diluted mode=verified attempt=1 failed_check=V8 reason=row 'Diluted earnings per share' is under share-count heading 'Shares used in computation: '; expected diluted earnings per share
+WARNING:dv.pipeline:ticker=NFLX step=cash mode=verified attempt=1 failed_check=V8 reason=row 'Cash' does not match expected cash row labels: cash and cash equivalents, cash cash equivalents
+WARNING:dv.pipeline:ticker=INTU step=operating_cash_flow mode=verified attempt=1 failed_check=V2 reason=source quote is not an exact substring after whitespace/quote/dash normalization
+WARNING:dv.pipeline:ticker=NOW step=net_income mode=verified attempt=1 failed_check=V2 reason=source quote is not an exact substring after whitespace/quote/dash normalization
+WARNING:dv.pipeline:ticker=NOW step=eps_diluted mode=verified attempt=1 failed_check=V5 reason=EPS scale must be units; per-share amounts are never scaled
+Completed cache-only replay: cached-final-verified-v1
