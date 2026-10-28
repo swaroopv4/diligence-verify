@@ -1,0 +1,109 @@
+ticker=AAPL step=revenue mode=smoke provider=gemini model=gemma-4-31b-it attempt=1
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 213, in _request
+    response = provider.complete(prompt, temperature=0, max_tokens=self.settings.max_output_tokens)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 76, in complete
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 500 - [{'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}]
+ticker=AAPL step=revenue mode=smoke provider=gemini model=gemma-4-31b-it attempt=2
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 213, in _request
+    response = provider.complete(prompt, temperature=0, max_tokens=self.settings.max_output_tokens)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 76, in complete
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 500 - [{'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}]
+ticker=AAPL step=revenue mode=smoke provider=gemini model=gemma-4-31b-it attempt=3
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 213, in _request
+    response = provider.complete(prompt, temperature=0, max_tokens=self.settings.max_output_tokens)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 76, in complete
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 500 - [{'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}]
+ticker=AAPL step=revenue mode=smoke provider=gemini model=gemma-4-31b-it recovery_round=0
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 266, in complete
+    value, response = self._validated(provider, prompt, schema, context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 226, in _validated
+    response = self._request(provider, prompt, context)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 208, in _request
+    for attempt in Retrying(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=2, max=8),
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 514, in __iter__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 440, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 482, in exc_check
+    retry_exc.reraise()
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 216, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 213, in _request
+    response = provider.complete(prompt, temperature=0, max_tokens=self.settings.max_output_tokens)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 76, in complete
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 500 - [{'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}]
+Traceback (most recent call last):
+  File "<stdin>", line 16, in <module>
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 279, in complete
+    raise AllProvidersFailed("; ".join(errors) or "No configured provider: set a model and its key, or start local Ollama")
+dv.llm.AllProvidersFailed: gemini/gemma-4-31b-it: InternalServerError

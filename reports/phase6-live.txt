@@ -1,0 +1,16 @@
+Consistency red flags: 5
+CRM net_income: table=7457000000.0 prose=7500000000.0
+Net income | $ | 7,457
+The net cash provided by operating activities during fiscal 2026 was primarily comprised of net income of $7.5 billion, adjusted for non-cash items, including $3.6 billion of depreciation and amortization and $3.5 billion of stock-based compensation expense.
+CRM operating_cash_flow: table=14996000000.0 prose=7500000000.0
+Net cash provided by operating activities | 14,996
+The net cash provided by operating activities during fiscal 2026 was primarily comprised of net income of $7.5 billion, adjusted for non-cash items, including $3.6 billion of depreciation and amortization and $3.5 billion of stock-based compensation expense.
+CRM operating_cash_flow: table=14996000000.0 prose=1000000000.0
+Net cash provided by operating activities | 14,996
+Net cash provided by operating activities during fiscal 2026 was further benefited by the changes in accounts payable and accrued expenses and other liabilities of $1.0 billion and unearned revenue of $2.9 billion, partially offset by the change in accounts receivable, net of $2.2 billion and costs
+CRM revenue: table=41525000000.0 prose=72400000000.0
+Total revenues | 41,525
+maining Performance Obligation: Total remaining performance obligation, which represents all future revenue under contract yet to be recognized, as of January 31, 2026 was approximately $72.4 billion, an increase of 14 percent year-over-year .
+CRM revenue: table=41525000000.0 prose=388000000.0
+Total revenues | 41,525
+(2) Agentforce 360 Platform, Slack and Other revenue for the year ended January 31, 2026 includes $388 million in subscription and support revenue from Informatica, Inc.

@@ -1,0 +1,17 @@
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.2.0, pluggy-1.7.0
+rootdir: C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.15.1
+collected 57 items
+
+tests\test_chunk.py .............                                        [ 22%]
+tests\test_config.py ...                                                 [ 28%]
+tests\test_extract.py ...                                                [ 33%]
+tests\test_groundtruth.py .................                              [ 63%]
+tests\test_llm.py ...........                                            [ 82%]
+tests\test_retrieve.py ....                                              [ 89%]
+tests\test_sec_client.py ......                                          [100%]
+
+============================= 57 passed in 2.31s ==============================

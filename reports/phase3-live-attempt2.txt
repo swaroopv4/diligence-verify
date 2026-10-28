@@ -1,0 +1,5 @@
+WARNING dv.llm ticker=- step=provider_config mode=- provider=gemini disabled: placeholder model
+WARNING dv.llm ticker=- step=provider_config mode=- provider=openrouter disabled: placeholder model
+WARNING dv.llm ticker=- step=provider_config mode=- provider=ollama disabled: placeholder model
+INFO httpx HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+PASS groq model=openai/gpt-oss-20b input_tokens=123 output_tokens=91 latency_ms=967 cache_hit=False

@@ -1,0 +1,18 @@
+GOOGL chunks= 515 max= 4341 sections= ['item_1', 'item_10', 'item_11', 'item_12', 'item_13', 'item_14', 'item_15', 'item_16', 'item_1a', 'item_1b', 'item_1c', 'item_2', 'item_3', 'item_4', 'item_5', 'item_6', 'item_7', 'item_7a', 'item_8', 'item_9', 'item_9a', 'item_9b', 'item_9c', 'unknown']
+ticker=AMZN step=sections mode=ingest fallback=whole_document_unknown
+AMZN chunks= 333 max= 4009 sections= ['unknown']
+META chunks= 494 max= 3805 sections= ['item_1', 'item_10', 'item_11', 'item_12', 'item_13', 'item_14', 'item_15', 'item_16', 'item_1a', 'item_1b', 'item_1c', 'item_2', 'item_3', 'item_4', 'item_5', 'item_6', 'item_7', 'item_7a', 'item_8', 'item_9', 'item_9a', 'item_9b', 'item_9c', 'unknown']
+NVDA chunks= 351 max= 3512 sections= ['item_1', 'item_10', 'item_11', 'item_12', 'item_13', 'item_14', 'item_15', 'item_16', 'item_1a', 'item_1b', 'item_1c', 'item_2', 'item_3', 'item_4', 'item_5', 'item_6', 'item_7', 'item_7a', 'item_8', 'item_9', 'item_9a', 'item_9b', 'item_9c', 'unknown']
+ADBE chunks= 365 max= 4564 sections= ['item_1', 'item_10', 'item_11', 'item_12', 'item_13', 'item_14', 'item_15', 'item_16', 'item_1a', 'item_1b', 'item_1c', 'item_2', 'item_3', 'item_4', 'item_5', 'item_6', 'item_7', 'item_7a', 'item_8', 'item_9', 'item_9a', 'item_9b', 'item_9c', 'unknown']
+ORCL chunks= 432 max= 5979 sections= ['item_1', 'item_10', 'item_11', 'item_12', 'item_13', 'item_14', 'item_15', 'item_1a', 'item_1b', 'item_1c', 'item_2', 'item_3', 'item_4', 'item_5', 'item_6', 'item_7', 'item_7a', 'item_8', 'item_9', 'item_9a', 'item_9b', 'item_9c', 'unknown']
+ticker=INTC step=sections mode=ingest fallback=whole_document_unknown
+INTC chunks= 725 max= 5486 sections= ['unknown']
+ticker=CSCO step=sections mode=ingest fallback=whole_document_unknown
+CSCO chunks= 501 max= 3732 sections= ['unknown']
+IBM chunks= 107 max= 4290 sections= ['item_1', 'item_10', 'item_11', 'item_12', 'item_13', 'item_14', 'item_15', 'item_16', 'item_1a', 'item_1b', 'item_1c', 'item_2', 'item_3', 'item_4', 'item_5', 'item_6', 'item_7', 'item_7a', 'item_8', 'item_9', 'item_9a', 'item_9b', 'item_9c', 'unknown']
+NFLX chunks= 309 max= 4255 sections= ['item_1', 'item_10', 'item_11', 'item_12', 'item_13', 'item_14', 'item_15', 'item_16', 'item_1a', 'item_1b', 'item_1c', 'item_2', 'item_3', 'item_4', 'item_5', 'item_6', 'item_7', 'item_7a', 'item_8', 'item_9', 'item_9a', 'item_9b', 'item_9c', 'unknown']
+ticker=INTU step=sections mode=ingest fallback=whole_document_unknown
+INTU chunks= 789 max= 3585 sections= ['unknown']
+ticker=NOW step=sections mode=ingest fallback=whole_document_unknown
+NOW chunks= 555 max= 3612 sections= ['unknown']
+Ingestion failures: []

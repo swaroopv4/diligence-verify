@@ -1,0 +1,1095 @@
+ticker=- step=provider_config mode=- provider=groq disabled: placeholder model
+ticker=- step=provider_config mode=- provider=openrouter disabled: placeholder model
+ticker=- step=provider_config mode=- provider=ollama disabled: placeholder model
+ticker=AAPL step=revenue mode=baseline provider=gemini invalid JSON; repairing once
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 220, in _validated
+    value = schema.model_validate_json(response.content)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ExtractedFact_revenue
+metric
+  Input should be 'revenue' [type=literal_error, input_value='total net sales', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/literal_error
+ticker=AAPL step=net_income mode=baseline provider=gemini invalid JSON; repairing once
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 220, in _validated
+    value = schema.model_validate_json(response.content)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ExtractedFact_net_income
+  Input should be an object [type=model_type, input_value=[{'metric': 'net_income',...,010 | | | $ | 93,736'}], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.14/v/model_type
+ticker=AAPL step=operating_income mode=baseline provider=gemini model=gemma-4-26b-a4b-it attempt=1
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    response = provider.complete(prompt, temperature=0, max_tokens=self.settings.max_output_tokens)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 55.010532285s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-26b'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '55s'}]}}]
+ticker=AAPL step=operating_income mode=baseline provider=gemini model=gemma-4-26b-a4b-it attempt=2
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    response = provider.complete(prompt, temperature=0, max_tokens=self.settings.max_output_tokens)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 52.876012051s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-26b'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '52s'}]}}]
+ticker=AAPL step=operating_cash_flow mode=baseline provider=gemini invalid JSON; repairing once
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 220, in _validated
+    value = schema.model_validate_json(response.content)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ExtractedFact_operating_cash_flow
+  Input should be an object [type=model_type, input_value=[{'metric': 'operating_ca... activities | 111,482'}], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.14/v/model_type
+ticker=AAPL step=eps_diluted mode=baseline provider=gemini invalid JSON; repairing once
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 220, in _validated
+    value = schema.model_validate_json(response.content)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ExtractedFact_eps_diluted
+  Input should be an object [type=model_type, input_value=[{'metric': 'eps_diluted'...: 'Diluted | $ | 7.46'}], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.14/v/model_type
+ticker=AAPL step=eps_diluted.repair mode=baseline provider=gemini model=gemma-4-26b-a4b-it attempt=1
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    response = provider.complete(prompt, temperature=0, max_tokens=self.settings.max_output_tokens)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 34.960814004s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-26b'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '34s'}]}}]
+ticker=AAPL step=eps_diluted.repair mode=baseline provider=gemini model=gemma-4-26b-a4b-it attempt=2
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    response = provider.complete(prompt, temperature=0, max_tokens=self.settings.max_output_tokens)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 32.835071429s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-26b'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '32s'}]}}]
+ticker=AAPL step=eps_diluted.repair mode=baseline provider=gemini model=gemma-4-26b-a4b-it attempt=3
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    response = provider.complete(prompt, temperature=0, max_tokens=self.settings.max_output_tokens)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 28.709419016s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-26b'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '28s'}]}}]
+ticker=AAPL step=eps_diluted mode=baseline provider=gemini model=gemma-4-26b-a4b-it recovery_round=0
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 256, in complete
+    value, response = self._validated(provider, prompt, schema, context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 230, in _validated
+    response = self._request(provider, repair_prompt, repair_context)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 200, in _request
+    for attempt in Retrying(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=2, max=8),
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 514, in __iter__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 440, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 482, in exc_check
+    retry_exc.reraise()
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 216, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    response = provider.complete(prompt, temperature=0, max_tokens=self.settings.max_output_tokens)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 28.709419016s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-26b'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '28s'}]}}]
+ticker=AAPL step=eps_diluted mode=baseline provider=gemini invalid JSON; repairing once
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 220, in _validated
+    value = schema.model_validate_json(response.content)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ExtractedFact_eps_diluted
+  Input should be an object [type=model_type, input_value=[{'metric': 'eps_diluted'...: 'Diluted | $ | 7.46'}], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.14/v/model_type
+ticker=AAPL step=total_assets mode=baseline provider=gemini invalid JSON; repairing once
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 220, in _validated
+    value = schema.model_validate_json(response.content)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 3 validation errors for ExtractedFact_total_assets
+additionalProperties
+  Extra inputs are not permitted [type=extra_forbidden, input_value=False, input_type=bool]
+    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden
+properties
+  Extra inputs are not permitted [type=extra_forbidden, input_value={'metric': 'total_assets'...l assets | $ | 359,241'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden
+required
+  Extra inputs are not permitted [type=extra_forbidden, input_value=['metric', 'value_as_writ...unk_id', 'source_quote'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden
+ticker=AAPL step=total_assets mode=baseline provider=gemini model=gemma-4-26b-a4b-it recovery_round=0
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 256, in complete
+    value, response = self._validated(provider, prompt, schema, context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 231, in _validated
+    value = schema.model_validate_json(response.content)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ExtractedFact_total_assets
+  Input should be an object [type=model_type, input_value=[{'metric': 'total_assets... assets | $ | 359,241'}], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.14/v/model_type
+ticker=AAPL step=total_assets mode=baseline provider=gemini invalid JSON; repairing once
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 220, in _validated
+    self._log(context, provider, started, response)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 3 validation errors for ExtractedFact_total_assets
+additionalProperties
+  Extra inputs are not permitted [type=extra_forbidden, input_value=False, input_type=bool]
+    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden
+properties
+  Extra inputs are not permitted [type=extra_forbidden, input_value={'metric': 'total_assets'...l assets | $ | 359,241'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden
+required
+  Extra inputs are not permitted [type=extra_forbidden, input_value=['metric', 'value_as_writ...unk_id', 'source_quote'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden
+ticker=AAPL step=total_assets mode=baseline provider=gemini model=gemma-4-26b-a4b-it recovery_round=1
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 256, in complete
+    logger.exception("ticker=%s step=%s mode=%s provider=%s corrupt cache entry",
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 231, in _validated
+    context.ticker, context.step, context.mode, provider.name)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ExtractedFact_total_assets
+  Input should be an object [type=model_type, input_value=[{'metric': 'total_assets... assets | $ | 359,241'}], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.14/v/model_type
+ticker=MSFT step=revenue mode=baseline provider=gemini invalid JSON; repairing once
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 220, in _validated
+    self._log(context, provider, started, response)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ExtractedFact_revenue
+metric
+  Input should be 'revenue' [type=literal_error, input_value='total revenue', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/literal_error
+ticker=MSFT step=net_income mode=baseline provider=gemini model=gemma-4-26b-a4b-it attempt=1
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    self.db.commit()
+                     
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    if temperature != 0:
+               ^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 32.082346099s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-26b'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '32s'}]}}]
+ticker=MSFT step=net_income mode=baseline provider=gemini model=gemma-4-26b-a4b-it attempt=2
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    self.db.commit()
+                     
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    if temperature != 0:
+               ^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 29.9504208s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-26b'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '29s'}]}}]
+ticker=MSFT step=net_income mode=baseline provider=gemini model=gemma-4-26b-a4b-it attempt=3
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    self.db.commit()
+                     
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    if temperature != 0:
+               ^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 25.836800712s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-26b'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '25s'}]}}]
+ticker=MSFT step=net_income mode=baseline provider=gemini model=gemma-4-26b-a4b-it recovery_round=0
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 256, in complete
+    logger.exception("ticker=%s step=%s mode=%s provider=%s corrupt cache entry",
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 218, in _validated
+    provider.model, attempt.retry_state.attempt_number)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 200, in _request
+    cost_reference_usd=(input_tokens * prices.input + output_tokens * prices.output) / 1_000_000,
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 514, in __iter__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 440, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 482, in exc_check
+    retry_exc.reraise()
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 216, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    self.db.commit()
+                     
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    if temperature != 0:
+               ^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 25.836800712s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-26b'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '25s'}]}}]
+ticker=MSFT step=total_assets mode=baseline provider=gemini model=gemma-4-26b-a4b-it attempt=1
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    self.db.commit()
+                     
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    if temperature != 0:
+               ^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 10.098049378s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemma-4-26b', 'location': 'global'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '10s'}]}}]
+ticker=MSFT step=total_assets mode=baseline provider=gemini model=gemma-4-26b-a4b-it attempt=2
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    self.db.commit()
+                     
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    if temperature != 0:
+               ^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 7.717983035s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemma-4-26b', 'location': 'global'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '7s'}]}}]
+ticker=MSFT step=total_assets mode=baseline provider=gemini model=gemma-4-26b-a4b-it attempt=3
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    self.db.commit()
+                     
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    if temperature != 0:
+               ^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 3.535553925s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-26b'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '3s'}]}}]
+ticker=MSFT step=total_assets mode=baseline provider=gemini model=gemma-4-26b-a4b-it recovery_round=0
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 256, in complete
+    logger.exception("ticker=%s step=%s mode=%s provider=%s corrupt cache entry",
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 218, in _validated
+    provider.model, attempt.retry_state.attempt_number)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 200, in _request
+    cost_reference_usd=(input_tokens * prices.input + output_tokens * prices.output) / 1_000_000,
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 514, in __iter__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 440, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 482, in exc_check
+    retry_exc.reraise()
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 216, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    self.db.commit()
+                     
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    if temperature != 0:
+               ^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 3.535553925s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-26b'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '3s'}]}}]
+ticker=GOOGL step=revenue mode=baseline provider=gemini invalid JSON; repairing once
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 220, in _validated
+    self._log(context, provider, started, response)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 3 validation errors for ExtractedFact_revenue
+additionalProperties
+  Extra inputs are not permitted [type=extra_forbidden, input_value=False, input_type=bool]
+    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden
+properties
+  Extra inputs are not permitted [type=extra_forbidden, input_value={'metric': 'revenue', 'va...Revenues | $ | 402,836'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden
+required
+  Extra inputs are not permitted [type=extra_forbidden, input_value=['metric', 'value_as_writ...unk_id', 'source_quote'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden
+ticker=GOOGL step=revenue mode=baseline provider=gemini model=gemma-4-26b-a4b-it recovery_round=0
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 256, in complete
+    logger.exception("ticker=%s step=%s mode=%s provider=%s corrupt cache entry",
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 231, in _validated
+    context.ticker, context.step, context.mode, provider.name)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ExtractedFact_revenue
+  Input should be an object [type=model_type, input_value=[{'metric': 'revenue', 'v...evenues | $ | 402,836'}], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.14/v/model_type
+ticker=GOOGL step=revenue mode=baseline provider=gemini invalid JSON; repairing once
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 220, in _validated
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 3 validation errors for ExtractedFact_revenue
+additionalProperties
+  Extra inputs are not permitted [type=extra_forbidden, input_value=False, input_type=bool]
+    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden
+properties
+  Extra inputs are not permitted [type=extra_forbidden, input_value={'metric': 'revenue', 'va...Revenues | $ | 402,836'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden
+required
+  Extra inputs are not permitted [type=extra_forbidden, input_value=['metric', 'value_as_writ...unk_id', 'source_quote'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden
+ticker=GOOGL step=revenue mode=baseline provider=gemini model=gemma-4-26b-a4b-it recovery_round=1
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 256, in complete
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 231, in _validated
+    response = self._request(provider, repair_prompt, repair_context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ExtractedFact_revenue
+  Input should be an object [type=model_type, input_value=[{'metric': 'revenue', 'v...evenues | $ | 402,836'}], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.14/v/model_type
+ticker=GOOGL step=revenue mode=baseline provider=gemini invalid JSON; repairing once
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 220, in _validated
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 3 validation errors for ExtractedFact_revenue
+additionalProperties
+  Extra inputs are not permitted [type=extra_forbidden, input_value=False, input_type=bool]
+    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden
+properties
+  Extra inputs are not permitted [type=extra_forbidden, input_value={'metric': 'revenue', 'va...Revenues | $ | 402,836'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden
+required
+  Extra inputs are not permitted [type=extra_forbidden, input_value=['metric', 'value_as_writ...unk_id', 'source_quote'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden
+ticker=GOOGL step=revenue mode=baseline provider=gemini model=gemma-4-26b-a4b-it recovery_round=2
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 256, in complete
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 231, in _validated
+    response = self._request(provider, repair_prompt, repair_context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ExtractedFact_revenue
+  Input should be an object [type=model_type, input_value=[{'metric': 'revenue', 'v...evenues | $ | 402,836'}], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.14/v/model_type
+ticker=GOOGL step=revenue mode=baseline provider=gemini invalid JSON; repairing once
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 220, in _validated
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 3 validation errors for ExtractedFact_revenue
+additionalProperties
+  Extra inputs are not permitted [type=extra_forbidden, input_value=False, input_type=bool]
+    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden
+properties
+  Extra inputs are not permitted [type=extra_forbidden, input_value={'metric': 'revenue', 'va...Revenues | $ | 402,836'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden
+required
+  Extra inputs are not permitted [type=extra_forbidden, input_value=['metric', 'value_as_writ...unk_id', 'source_quote'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden
+ticker=GOOGL step=revenue mode=baseline provider=gemini model=gemma-4-26b-a4b-it recovery_round=3
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 256, in complete
+    value = schema.model_validate_json(cached["content"])
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 231, in _validated
+    context.ticker, context.step, context.mode, provider.name)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ExtractedFact_revenue
+  Input should be an object [type=model_type, input_value=[{'metric': 'revenue', 'v...evenues | $ | 402,836'}], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.14/v/model_type
+ticker=GOOGL step=revenue mode=baseline provider=gemini invalid JSON; repairing once
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 220, in _validated
+    self._log(context, provider, started, response)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 3 validation errors for ExtractedFact_revenue
+additionalProperties
+  Extra inputs are not permitted [type=extra_forbidden, input_value=False, input_type=bool]
+    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden
+properties
+  Extra inputs are not permitted [type=extra_forbidden, input_value={'metric': 'revenue', 'va...Revenues | $ | 402,836'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden
+required
+  Extra inputs are not permitted [type=extra_forbidden, input_value=['metric', 'value_as_writ...unk_id', 'source_quote'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden
+ticker=GOOGL step=revenue mode=baseline provider=gemini model=gemma-4-26b-a4b-it recovery_round=4
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 256, in complete
+    value = schema.model_validate_json(cached["content"])
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 231, in _validated
+    context.ticker, context.step, context.mode, provider.name)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ExtractedFact_revenue
+  Input should be an object [type=model_type, input_value=[{'metric': 'revenue', 'v...evenues | $ | 402,836'}], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.14/v/model_type
+ticker=GOOGL step=revenue mode=baseline provider=gemini invalid JSON; repairing once
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 220, in _validated
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 3 validation errors for ExtractedFact_revenue
+additionalProperties
+  Extra inputs are not permitted [type=extra_forbidden, input_value=False, input_type=bool]
+    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden
+properties
+  Extra inputs are not permitted [type=extra_forbidden, input_value={'metric': 'revenue', 'va...Revenues | $ | 402,836'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden
+required
+  Extra inputs are not permitted [type=extra_forbidden, input_value=['metric', 'value_as_writ...unk_id', 'source_quote'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden
+ticker=GOOGL step=revenue mode=baseline provider=gemini model=gemma-4-26b-a4b-it recovery_round=5
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 256, in complete
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 231, in _validated
+    response = self._request(provider, repair_prompt, repair_context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ExtractedFact_revenue
+  Input should be an object [type=model_type, input_value=[{'metric': 'revenue', 'v...evenues | $ | 402,836'}], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.14/v/model_type
+ticker=GOOGL step=company mode=baseline
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\pipeline.py", line 198, in run_extraction
+    result = baseline_fact(client, config, run_id, ticker, metric, filing, index)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\pipeline.py", line 108, in baseline_fact
+    fact = extract_fact(client, context, metric, definition.query, filing, chunks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\extract.py", line 16, in extract_fact
+    fact = client.complete(prompt, schema, context, pin_model=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 269, in complete
+    self.sleep(60)
+dv.llm.AllProvidersFailed: gemini/gemma-4-26b-a4b-it: ValidationError; gemini/gemma-4-26b-a4b-it: ValidationError; gemini/gemma-4-26b-a4b-it: ValidationError; gemini/gemma-4-26b-a4b-it: ValidationError; gemini/gemma-4-26b-a4b-it: ValidationError; gemini/gemma-4-26b-a4b-it: ValidationError
+ticker=AMZN step=revenue mode=baseline provider=gemini invalid JSON; repairing once
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 220, in _validated
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ExtractedFact_revenue
+metric
+  Input should be 'revenue' [type=literal_error, input_value='total net sales', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/literal_error
+ticker=AMZN step=revenue.repair mode=baseline provider=gemini model=gemma-4-26b-a4b-it attempt=1
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    options: dict[str,Any] = {"response_format":{"type":"json_object"}}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 16.228718353s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-26b'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '16s'}]}}]
+ticker=AMZN step=revenue.repair mode=baseline provider=gemini model=gemma-4-26b-a4b-it attempt=2
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    options: dict[str,Any] = {"response_format":{"type":"json_object"}}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 14.060623034s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-26b'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '14s'}]}}]
+ticker=AMZN step=revenue.repair mode=baseline provider=gemini model=gemma-4-26b-a4b-it attempt=3
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    options: dict[str,Any] = {"response_format":{"type":"json_object"}}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 9.901982865s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-26b'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '9s'}]}}]
+ticker=AMZN step=revenue mode=baseline provider=gemini model=gemma-4-26b-a4b-it recovery_round=0
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 256, in complete
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 230, in _validated
+    repair_context = context.model_copy(update={"step": context.step + ".repair"})
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 200, in _request
+    def _request(self, provider: Provider, prompt: str, context: CallContext) -> ProviderResponse:
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 514, in __iter__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 440, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 482, in exc_check
+    retry_exc.reraise()
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 216, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    options: dict[str,Any] = {"response_format":{"type":"json_object"}}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 9.901982865s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-26b'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '9s'}]}}]
+ticker=AMZN step=revenue mode=baseline provider=gemini invalid JSON; repairing once
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 220, in _validated
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ExtractedFact_revenue
+metric
+  Input should be 'revenue' [type=literal_error, input_value='total net sales', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/literal_error
+ticker=AMZN step=operating_cash_flow mode=baseline provider=gemini model=gemma-4-26b-a4b-it attempt=1
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    options: dict[str,Any] = {"response_format":{"type":"json_object"}}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 54.263153396s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-26b'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '54s'}]}}]
+ticker=AMZN step=operating_cash_flow mode=baseline provider=gemini model=gemma-4-26b-a4b-it attempt=2
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    options: dict[str,Any] = {"response_format":{"type":"json_object"}}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 52.116297705s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-26b'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '52s'}]}}]
+ticker=AMZN step=total_liabilities mode=baseline provider=gemini invalid JSON; repairing once
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 220, in _validated
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ExtractedFact_total_liabilities
+  Input should be an object [type=model_type, input_value=[{'metric': 'total_liabil..., 'source_quote': None}], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.14/v/model_type
+ticker=AMZN step=cash mode=baseline provider=gemini model=gemma-4-26b-a4b-it attempt=1
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    options: dict[str,Any] = {"response_format":{"type":"json_object"}}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 32.061450525s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemma-4-26b', 'location': 'global'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '32s'}]}}]
+ticker=AMZN step=cash mode=baseline provider=gemini model=gemma-4-26b-a4b-it attempt=2
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    options: dict[str,Any] = {"response_format":{"type":"json_object"}}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 29.933856886s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-26b'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '29s'}]}}]
+ticker=AMZN step=cash mode=baseline provider=gemini model=gemma-4-26b-a4b-it attempt=3
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    options: dict[str,Any] = {"response_format":{"type":"json_object"}}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 25.8251926s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-26b'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '25s'}]}}]
+ticker=AMZN step=cash mode=baseline provider=gemini model=gemma-4-26b-a4b-it recovery_round=0
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 256, in complete
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 218, in _validated
+    context: CallContext) -> tuple[Output, ProviderResponse]:
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 200, in _request
+    def _request(self, provider: Provider, prompt: str, context: CallContext) -> ProviderResponse:
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 514, in __iter__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 440, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 482, in exc_check
+    retry_exc.reraise()
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 216, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    options: dict[str,Any] = {"response_format":{"type":"json_object"}}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 25.8251926s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-26b'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '25s'}]}}]
+ticker=AMZN step=cash mode=baseline provider=gemini invalid JSON; repairing once
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 220, in _validated
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\pydantic\main.py", line 845, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ExtractedFact_cash
+metric
+  Input should be 'cash' [type=literal_error, input_value='cash and cash equivalents', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/literal_error
+ticker=META step=net_income mode=baseline provider=gemini model=gemma-4-26b-a4b-it attempt=1
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    options: dict[str,Any] = {"response_format":{"type":"json_object"}}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 11.24613849s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemma-4-26b', 'location': 'global'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '11s'}]}}]
+ticker=META step=net_income mode=baseline provider=gemini model=gemma-4-26b-a4b-it attempt=2
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    options: dict[str,Any] = {"response_format":{"type":"json_object"}}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 9.116560377s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-26b'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '9s'}]}}]
+ticker=META step=net_income mode=baseline provider=gemini model=gemma-4-26b-a4b-it attempt=3
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    options: dict[str,Any] = {"response_format":{"type":"json_object"}}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 5.001467414s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-26b'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '5s'}]}}]
+ticker=META step=net_income mode=baseline provider=gemini model=gemma-4-26b-a4b-it recovery_round=0
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 256, in complete
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 218, in _validated
+    context: CallContext) -> tuple[Output, ProviderResponse]:
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 200, in _request
+    def _request(self, provider: Provider, prompt: str, context: CallContext) -> ProviderResponse:
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 514, in __iter__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 440, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 482, in exc_check
+    retry_exc.reraise()
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 216, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 205, in _request
+    try:
+         
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 67, in complete
+    options: dict[str,Any] = {"response_format":{"type":"json_object"}}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 16000, model: gemma-4-26b, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\nPlease retry in 5.001467414s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-26b'}, 'quotaValue': '16000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '5s'}]}}]

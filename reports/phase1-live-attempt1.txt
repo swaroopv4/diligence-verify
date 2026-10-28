@@ -1,0 +1,14 @@
+INFO httpx HTTP Request: GET https://www.sec.gov/files/company_tickers.json "HTTP/1.1 200 OK"
+INFO httpx HTTP Request: GET https://data.sec.gov/submissions/CIK0000320193.json "HTTP/1.1 200 OK"
+INFO httpx HTTP Request: GET https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json "HTTP/1.1 200 OK"
+metric	value	unit	tag	status
+revenue	416161000000.0	USD	RevenueFromContractWithCustomerExcludingAssessedTax	matched
+net_income	112010000000.0	USD	NetIncomeLoss	matched
+operating_income	133050000000.0	USD	OperatingIncomeLoss	matched
+operating_cash_flow	111482000000.0	USD	NetCashProvidedByUsedInOperatingActivities	matched
+eps_diluted	7.46	USD/shares	EarningsPerShareDiluted	matched
+total_assets	359241000000.0	USD	Assets	matched
+total_liabilities	285508000000.0	USD	Liabilities	matched
+cash	35934000000.0	USD	CashAndCashEquivalentsAtCarryingValue	matched
+stockholders_equity	73733000000.0	USD	StockholdersEquity	matched
+Matched 9/9 metrics

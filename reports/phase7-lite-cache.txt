@@ -1,0 +1,337 @@
+run_id=full-gemini-lite-cache-v1
+WARNING dv.llm ticker=- step=provider_config mode=- provider=groq disabled: placeholder model
+WARNING dv.llm ticker=- step=provider_config mode=- provider=openrouter disabled: placeholder model
+WARNING dv.llm ticker=- step=provider_config mode=- provider=ollama disabled: placeholder model
+INFO dv.pipeline ticker=AAPL step=revenue mode=verified status=answered value=416161000000.0
+INFO dv.pipeline ticker=AAPL step=net_income mode=verified status=answered value=112010000000.0
+INFO dv.pipeline ticker=AAPL step=operating_income mode=verified status=answered value=133050000000.0
+INFO dv.pipeline ticker=AAPL step=operating_cash_flow mode=verified status=answered value=111482000000.0
+WARNING dv.pipeline ticker=AAPL step=eps_diluted mode=verified attempt=1 failed_check=V5 reason=EPS scale must be units; per-share amounts are never scaled
+WARNING dv.pipeline ticker=AAPL step=eps_diluted mode=verified attempt=2 failed_check=V2 reason=source quote is not an exact substring after whitespace/quote/dash normalization
+WARNING dv.pipeline ticker=AAPL step=eps_diluted mode=verified attempt=3 failed_check=V5 reason=EPS scale must be units; per-share amounts are never scaled
+INFO dv.pipeline ticker=AAPL step=eps_diluted mode=verified status=unverified value=None
+INFO dv.pipeline ticker=AAPL step=total_assets mode=verified status=answered value=359241000000.0
+INFO dv.pipeline ticker=AAPL step=total_liabilities mode=verified status=answered value=285508000000.0
+INFO dv.pipeline ticker=AAPL step=cash mode=verified status=answered value=35934000000.0
+INFO dv.pipeline ticker=AAPL step=stockholders_equity mode=verified status=answered value=73733000000.0
+INFO dv.pipeline ticker=MSFT step=revenue mode=verified status=answered value=331839000000.0
+INFO dv.pipeline ticker=MSFT step=net_income mode=verified status=answered value=133749000000.0
+INFO dv.pipeline ticker=MSFT step=operating_income mode=verified status=answered value=155237000000.0
+INFO dv.pipeline ticker=MSFT step=operating_cash_flow mode=verified status=answered value=182935000000.0
+WARNING dv.pipeline ticker=MSFT step=eps_diluted mode=verified attempt=1 failed_check=V5 reason=EPS scale must be units; per-share amounts are never scaled
+WARNING dv.pipeline ticker=MSFT step=eps_diluted mode=verified attempt=2 failed_check=V2 reason=source quote is not an exact substring after whitespace/quote/dash normalization
+WARNING dv.pipeline ticker=MSFT step=eps_diluted mode=verified attempt=3 failed_check=V5 reason=EPS scale must be units; per-share amounts are never scaled
+INFO dv.pipeline ticker=MSFT step=eps_diluted mode=verified status=unverified value=None
+INFO dv.pipeline ticker=MSFT step=total_assets mode=verified status=answered value=758376000000.0
+INFO dv.pipeline ticker=MSFT step=total_liabilities mode=verified status=answered value=315989000000.0
+WARNING dv.pipeline ticker=MSFT step=cash mode=verified attempt=1 failed_check=V2 reason=source quote is not an exact substring after whitespace/quote/dash normalization
+WARNING dv.pipeline ticker=MSFT step=cash mode=verified attempt=2 failed_check=V2 reason=source quote is not an exact substring after whitespace/quote/dash normalization
+WARNING dv.pipeline ticker=MSFT step=cash mode=verified attempt=3 failed_check=V2 reason=source quote is not an exact substring after whitespace/quote/dash normalization
+INFO dv.pipeline ticker=MSFT step=cash mode=verified status=unverified value=None
+WARNING dv.pipeline ticker=MSFT step=stockholders_equity mode=verified attempt=1 failed_check=V1 reason=source chunk does not exist in this filing
+INFO dv.pipeline ticker=MSFT step=stockholders_equity mode=verified status=answered value=442387000000.0
+INFO dv.pipeline ticker=GOOGL step=revenue mode=verified status=answered value=402836000000.0
+INFO dv.pipeline ticker=GOOGL step=net_income mode=verified status=answered value=132170000000.0
+INFO dv.pipeline ticker=GOOGL step=operating_income mode=verified status=answered value=129039000000.0
+INFO dv.pipeline ticker=GOOGL step=operating_cash_flow mode=verified status=answered value=164713000000.0
+WARNING dv.pipeline ticker=GOOGL step=eps_diluted mode=verified attempt=1 failed_check=V5 reason=EPS scale must be units; per-share amounts are never scaled
+INFO dv.pipeline ticker=GOOGL step=eps_diluted mode=verified status=answered value=10.81
+INFO dv.pipeline ticker=GOOGL step=total_assets mode=verified status=answered value=595281000000.0
+INFO dv.pipeline ticker=GOOGL step=total_liabilities mode=verified status=answered value=180016000000.0
+INFO dv.pipeline ticker=GOOGL step=cash mode=verified status=answered value=30708000000.0
+INFO dv.pipeline ticker=GOOGL step=stockholders_equity mode=verified status=answered value=415265000000.0
+INFO dv.pipeline ticker=AMZN step=revenue mode=verified status=answered value=716924000000.0
+INFO dv.pipeline ticker=AMZN step=net_income mode=verified status=answered value=77670000000.0
+INFO dv.pipeline ticker=AMZN step=operating_income mode=verified status=answered value=79975000000.0
+INFO dv.pipeline ticker=AMZN step=operating_cash_flow mode=verified status=answered value=139514000000.0
+WARNING dv.pipeline ticker=AMZN step=eps_diluted mode=verified attempt=1 failed_check=V5 reason=EPS scale must be units; per-share amounts are never scaled
+WARNING dv.pipeline ticker=AMZN step=eps_diluted mode=verified attempt=2 failed_check=V5 reason=EPS scale must be units; per-share amounts are never scaled
+WARNING dv.pipeline ticker=AMZN step=eps_diluted mode=verified attempt=3 failed_check=V5 reason=EPS scale must be units; per-share amounts are never scaled
+INFO dv.pipeline ticker=AMZN step=eps_diluted mode=verified status=unverified value=None
+INFO dv.pipeline ticker=AMZN step=total_assets mode=verified status=answered value=818042000000.0
+INFO dv.pipeline ticker=AMZN step=total_liabilities mode=verified status=not_found value=None
+INFO dv.pipeline ticker=AMZN step=total_liabilities mode=verified retrieved_chunks=['AMZN_0001018724-26-000004_unknown_0226', 'AMZN_0001018724-26-000004_unknown_0227', 'AMZN_0001018724-26-000004_unknown_0162', 'AMZN_0001018724-26-000004_unknown_0272', 'AMZN_0001018724-26-000004_unknown_0242']
+WARNING dv.pipeline ticker=AMZN step=cash mode=verified attempt=1 failed_check=V5 reason=scale unknown
+WARNING dv.pipeline ticker=AMZN step=cash mode=verified attempt=2 failed_check=V5 reason=scale unknown
+WARNING dv.pipeline ticker=AMZN step=cash mode=verified attempt=3 failed_check=V5 reason=scale unknown
+INFO dv.pipeline ticker=AMZN step=cash mode=verified status=unverified value=None
+INFO dv.pipeline ticker=AMZN step=stockholders_equity mode=verified status=answered value=411065000000.0
+INFO dv.pipeline ticker=META step=revenue mode=verified status=answered value=200966000000.0
+INFO dv.pipeline ticker=META step=net_income mode=verified status=answered value=60458000000.0
+INFO dv.pipeline ticker=META step=operating_income mode=verified status=answered value=83276000000.0
+INFO dv.pipeline ticker=META step=operating_cash_flow mode=verified status=answered value=115800000000.0
+WARNING dv.pipeline ticker=META step=eps_diluted mode=verified attempt=1 failed_check=V1 reason=source chunk does not exist in this filing
+WARNING dv.pipeline ticker=META step=eps_diluted mode=verified attempt=2 failed_check=V5 reason=EPS scale must be units; per-share amounts are never scaled
+INFO dv.pipeline ticker=META step=eps_diluted mode=verified status=answered value=23.49
+INFO dv.pipeline ticker=META step=total_assets mode=verified status=answered value=366021000000.0
+INFO dv.pipeline ticker=META step=total_liabilities mode=verified status=answered value=148778000000.0
+INFO dv.pipeline ticker=META step=cash mode=verified status=answered value=35873000000.0
+INFO dv.pipeline ticker=META step=stockholders_equity mode=verified status=answered value=217243000000.0
+INFO dv.pipeline ticker=NVDA step=revenue mode=verified status=answered value=215938000000.0
+INFO dv.pipeline ticker=NVDA step=net_income mode=verified status=answered value=120067000000.0
+INFO dv.pipeline ticker=NVDA step=operating_income mode=verified status=answered value=130387000000.0
+INFO dv.pipeline ticker=NVDA step=operating_cash_flow mode=verified status=answered value=102718000000.0
+WARNING dv.pipeline ticker=NVDA step=eps_diluted mode=verified attempt=1 failed_check=V5 reason=EPS scale must be units; per-share amounts are never scaled
+WARNING dv.pipeline ticker=NVDA step=eps_diluted mode=verified attempt=2 failed_check=V5 reason=EPS scale must be units; per-share amounts are never scaled
+WARNING dv.pipeline ticker=NVDA step=eps_diluted mode=verified attempt=3 failed_check=V5 reason=EPS scale must be units; per-share amounts are never scaled
+INFO dv.pipeline ticker=NVDA step=eps_diluted mode=verified status=unverified value=None
+INFO dv.pipeline ticker=NVDA step=total_assets mode=verified status=answered value=206803000000.0
+INFO dv.pipeline ticker=NVDA step=total_liabilities mode=verified status=answered value=49510000000.0
+INFO dv.pipeline ticker=NVDA step=cash mode=verified status=answered value=10605000000.0
+INFO dv.pipeline ticker=NVDA step=stockholders_equity mode=verified status=answered value=157293000000.0
+INFO dv.pipeline ticker=ADBE step=revenue mode=verified status=answered value=23769000000.0
+INFO dv.pipeline ticker=ADBE step=net_income mode=verified status=answered value=7130000000.0
+INFO dv.pipeline ticker=ADBE step=operating_income mode=verified status=answered value=8706000000.0
+INFO dv.pipeline ticker=ADBE step=operating_cash_flow mode=verified status=answered value=10031000000.0
+WARNING dv.pipeline ticker=ADBE step=eps_diluted mode=verified attempt=1 failed_check=V5 reason=EPS scale must be units; per-share amounts are never scaled
+WARNING dv.pipeline ticker=ADBE step=eps_diluted mode=verified attempt=2 failed_check=V5 reason=EPS scale must be units; per-share amounts are never scaled
+INFO dv.pipeline ticker=ADBE step=eps_diluted mode=verified status=answered value=16.7
+INFO dv.pipeline ticker=ADBE step=total_assets mode=verified status=answered value=29496000000.0
+INFO dv.pipeline ticker=ADBE step=total_liabilities mode=verified status=answered value=17873000000.0
+INFO dv.pipeline ticker=ADBE step=cash mode=verified status=answered value=5431000000.0
+INFO dv.pipeline ticker=ADBE step=stockholders_equity mode=verified status=answered value=11623000000.0
+INFO dv.pipeline ticker=CRM step=revenue mode=verified status=answered value=41525000000.0
+INFO dv.pipeline ticker=CRM step=net_income mode=verified status=answered value=7457000000.0
+INFO dv.pipeline ticker=CRM step=operating_income mode=verified status=answered value=8331000000.0
+INFO dv.pipeline ticker=CRM step=operating_cash_flow mode=verified status=answered value=14996000000.0
+WARNING dv.pipeline ticker=CRM step=eps_diluted mode=verified attempt=1 failed_check=V5 reason=EPS scale must be units; per-share amounts are never scaled
+WARNING dv.pipeline ticker=CRM step=eps_diluted mode=verified attempt=2 failed_check=V5 reason=EPS scale must be units; per-share amounts are never scaled
+WARNING dv.pipeline ticker=CRM step=eps_diluted mode=verified attempt=3 failed_check=V5 reason=EPS scale must be units; per-share amounts are never scaled
+INFO dv.pipeline ticker=CRM step=eps_diluted mode=verified status=unverified value=None
+INFO dv.pipeline ticker=CRM step=total_assets mode=verified status=answered value=112305000000.0
+INFO dv.pipeline ticker=CRM step=total_liabilities mode=verified status=answered value=53163000000.0
+INFO dv.pipeline ticker=CRM step=cash mode=verified status=answered value=7327000000.0
+INFO dv.pipeline ticker=CRM step=stockholders_equity mode=verified status=answered value=59142000000.0
+INFO dv.pipeline ticker=ORCL step=revenue mode=verified status=answered value=67357000000.0
+INFO dv.pipeline ticker=ORCL step=net_income mode=verified status=answered value=17087000000.0
+INFO dv.pipeline ticker=ORCL step=operating_income mode=verified status=not_found value=None
+INFO dv.pipeline ticker=ORCL step=operating_income mode=verified retrieved_chunks=['ORCL_0001193125-26-277521_item_15_0154', 'ORCL_0001193125-26-277521_item_15_0153', 'ORCL_0001193125-26-277521_item_15_0129', 'ORCL_0001193125-26-277521_item_15_0056', 'ORCL_0001193125-26-277521_item_7_0049']
+INFO dv.pipeline ticker=ORCL step=operating_cash_flow mode=verified status=answered value=31977000000.0
+WARNING dv.pipeline ticker=ORCL step=eps_diluted mode=verified attempt=1 failed_check=V5 reason=EPS scale must be units; per-share amounts are never scaled
+WARNING dv.pipeline ticker=ORCL step=eps_diluted mode=verified attempt=2 failed_check=V2 reason=source quote is not an exact substring after whitespace/quote/dash normalization
+WARNING dv.pipeline ticker=ORCL step=eps_diluted mode=verified attempt=3 failed_check=V5 reason=EPS scale must be units; per-share amounts are never scaled
+INFO dv.pipeline ticker=ORCL step=eps_diluted mode=verified status=unverified value=None
+INFO dv.pipeline ticker=ORCL step=total_assets mode=verified status=not_found value=None
+INFO dv.pipeline ticker=ORCL step=total_assets mode=verified retrieved_chunks=['ORCL_0001193125-26-277521_item_15_0099', 'ORCL_0001193125-26-277521_item_15_0112', 'ORCL_0001193125-26-277521_item_15_0101', 'ORCL_0001193125-26-277521_item_7_0070', 'ORCL_0001193125-26-277521_item_15_0098']
+INFO dv.pipeline ticker=ORCL step=total_liabilities mode=verified status=not_found value=None
+INFO dv.pipeline ticker=ORCL step=total_liabilities mode=verified retrieved_chunks=['ORCL_0001193125-26-277521_item_15_0099', 'ORCL_0001193125-26-277521_item_15_0012', 'ORCL_0001193125-26-277521_item_15_0063', 'ORCL_0001193125-26-277521_item_15_0140', 'ORCL_0001193125-26-277521_item_15_0097']
+INFO dv.pipeline ticker=ORCL step=cash mode=verified status=answered value=31289000000.0
+INFO dv.pipeline ticker=ORCL step=stockholders_equity mode=verified status=answered value=43056000000.0
+WARNING dv.pipeline ticker=INTC step=revenue mode=verified attempt=1 failed_check=V2 reason=source quote is not an exact substring after whitespace/quote/dash normalization
+INFO dv.pipeline ticker=INTC step=revenue mode=verified status=answered value=52853000000.0
+INFO dv.pipeline ticker=INTC step=net_income mode=verified status=answered value=26000000.0
+INFO dv.pipeline ticker=INTC step=operating_income mode=verified status=answered value=12700000000.0
+INFO dv.pipeline ticker=INTC step=operating_cash_flow mode=verified status=answered value=9697000000.0
+INFO dv.pipeline ticker=INTC step=eps_diluted mode=verified status=answered value=-0.06
+INFO dv.pipeline ticker=INTC step=total_assets mode=verified status=not_found value=None
+INFO dv.pipeline ticker=INTC step=total_assets mode=verified retrieved_chunks=['INTC_0000050863-26-000011_unknown_0526', 'INTC_0000050863-26-000011_unknown_0622', 'INTC_0000050863-26-000011_unknown_0616', 'INTC_0000050863-26-000011_unknown_0438', 'INTC_0000050863-26-000011_unknown_0544']
+INFO dv.pipeline ticker=INTC step=total_liabilities mode=verified status=not_found value=None
+INFO dv.pipeline ticker=INTC step=total_liabilities mode=verified retrieved_chunks=['INTC_0000050863-26-000011_unknown_0566', 'INTC_0000050863-26-000011_unknown_0398', 'INTC_0000050863-26-000011_unknown_0602', 'INTC_0000050863-26-000011_unknown_0540', 'INTC_0000050863-26-000011_unknown_0616']
+INFO dv.pipeline ticker=INTC step=cash mode=verified status=answered value=14265000000.0
+INFO dv.pipeline ticker=INTC step=stockholders_equity mode=verified status=answered value=126360000000.0
+INFO dv.pipeline ticker=CSCO step=revenue mode=verified status=answered value=63325000000.0
+INFO dv.pipeline ticker=CSCO step=net_income mode=verified status=answered value=13267000000.0
+INFO dv.pipeline ticker=CSCO step=operating_income mode=verified status=answered value=15368000000.0
+INFO dv.pipeline ticker=CSCO step=operating_cash_flow mode=verified status=answered value=14177000000.0
+WARNING dv.pipeline ticker=CSCO step=eps_diluted mode=verified attempt=1 failed_check=V2 reason=source quote is not an exact substring after whitespace/quote/dash normalization
+WARNING dv.pipeline ticker=CSCO step=eps_diluted mode=verified attempt=2 failed_check=V5 reason=EPS scale must be units; per-share amounts are never scaled
+WARNING dv.pipeline ticker=CSCO step=eps_diluted mode=verified attempt=3 failed_check=V5 reason=EPS scale must be units; per-share amounts are never scaled
+INFO dv.pipeline ticker=CSCO step=eps_diluted mode=verified status=unverified value=None
+INFO dv.pipeline ticker=CSCO step=total_assets mode=verified status=not_found value=None
+INFO dv.pipeline ticker=CSCO step=total_assets mode=verified retrieved_chunks=['CSCO_0000858877-26-000132_unknown_0397', 'CSCO_0000858877-26-000132_unknown_0341', 'CSCO_0000858877-26-000132_unknown_0351', 'CSCO_0000858877-26-000132_unknown_0340', 'CSCO_0000858877-26-000132_unknown_0206']
+INFO dv.pipeline ticker=CSCO step=total_liabilities mode=verified status=answered value=79352000000.0
+INFO dv.pipeline ticker=CSCO step=cash mode=verified status=answered value=7218000000.0
+INFO dv.pipeline ticker=CSCO step=stockholders_equity mode=verified status=answered value=50285000000.0
+INFO dv.pipeline ticker=IBM step=revenue mode=verified status=not_found value=None
+INFO dv.pipeline ticker=IBM step=revenue mode=verified retrieved_chunks=['IBM_0000051143-26-000010_item_5_0001', 'IBM_0000051143-26-000010_item_1a_0010', 'IBM_0000051143-26-000010_item_1a_0004', 'IBM_0000051143-26-000010_item_1a_0006', 'IBM_0000051143-26-000010_item_12_0001']
+INFO dv.pipeline ticker=IBM step=net_income mode=verified status=not_found value=None
+INFO dv.pipeline ticker=IBM step=net_income mode=verified retrieved_chunks=['IBM_0000051143-26-000010_item_1a_0009', 'IBM_0000051143-26-000010_item_1a_0026', 'IBM_0000051143-26-000010_item_1a_0010', 'IBM_0000051143-26-000010_item_1a_0022', 'IBM_0000051143-26-000010_item_1a_0021']
+INFO dv.pipeline ticker=IBM step=operating_income mode=verified status=not_found value=None
+INFO dv.pipeline ticker=IBM step=operating_income mode=verified retrieved_chunks=['IBM_0000051143-26-000010_item_1a_0022', 'IBM_0000051143-26-000010_item_1a_0021', 'IBM_0000051143-26-000010_item_15_0000', 'IBM_0000051143-26-000010_item_1a_0009', 'IBM_0000051143-26-000010_item_1a_0026']
+INFO dv.pipeline ticker=IBM step=operating_cash_flow mode=verified status=not_found value=None
+INFO dv.pipeline ticker=IBM step=operating_cash_flow mode=verified retrieved_chunks=['IBM_0000051143-26-000010_item_1a_0009', 'IBM_0000051143-26-000010_item_1a_0023', 'IBM_0000051143-26-000010_item_1a_0007', 'IBM_0000051143-26-000010_item_1_0008', 'IBM_0000051143-26-000010_item_15_0009']
+INFO dv.pipeline ticker=IBM step=eps_diluted mode=verified status=not_found value=None
+INFO dv.pipeline ticker=IBM step=eps_diluted mode=verified retrieved_chunks=['IBM_0000051143-26-000010_item_5_0001', 'IBM_0000051143-26-000010_unknown_0004', 'IBM_0000051143-26-000010_item_15_0009', 'IBM_0000051143-26-000010_item_12_0005', 'IBM_0000051143-26-000010_item_5_0002']
+INFO dv.pipeline ticker=IBM step=total_assets mode=verified status=not_found value=None
+INFO dv.pipeline ticker=IBM step=total_assets mode=verified retrieved_chunks=['IBM_0000051143-26-000010_item_15_0000', 'IBM_0000051143-26-000010_item_16_0007', 'IBM_0000051143-26-000010_item_1a_0010', 'IBM_0000051143-26-000010_item_5_0001', 'IBM_0000051143-26-000010_item_1a_0009']
+INFO dv.pipeline ticker=IBM step=total_liabilities mode=verified status=not_found value=None
+INFO dv.pipeline ticker=IBM step=total_liabilities mode=verified retrieved_chunks=['IBM_0000051143-26-000010_item_5_0001', 'IBM_0000051143-26-000010_item_12_0001', 'IBM_0000051143-26-000010_item_1a_0003', 'IBM_0000051143-26-000010_item_1a_0004', 'IBM_0000051143-26-000010_item_1a_0010']
+INFO dv.pipeline ticker=IBM step=cash mode=verified status=not_found value=None
+INFO dv.pipeline ticker=IBM step=cash mode=verified retrieved_chunks=['IBM_0000051143-26-000010_item_15_0009', 'IBM_0000051143-26-000010_item_15_0000', 'IBM_0000051143-26-000010_item_1a_0021', 'IBM_0000051143-26-000010_item_1a_0022', 'IBM_0000051143-26-000010_item_1a_0025']
+INFO dv.pipeline ticker=IBM step=stockholders_equity mode=verified status=not_found value=None
+INFO dv.pipeline ticker=IBM step=stockholders_equity mode=verified retrieved_chunks=['IBM_0000051143-26-000010_item_12_0001', 'IBM_0000051143-26-000010_item_12_0002', 'IBM_0000051143-26-000010_item_5_0000', 'IBM_0000051143-26-000010_item_5_0001', 'IBM_0000051143-26-000010_item_15_0009']
+INFO dv.pipeline ticker=NFLX step=revenue mode=verified status=not_found value=None
+INFO dv.pipeline ticker=NFLX step=revenue mode=verified retrieved_chunks=['NFLX_0001065280-26-000034_item_16_0027', 'NFLX_0001065280-26-000034_item_7_0005', 'NFLX_0001065280-26-000034_item_7_0002', 'NFLX_0001065280-26-000034_item_7_0011', 'NFLX_0001065280-26-000034_item_16_0035']
+INFO dv.pipeline ticker=NFLX step=net_income mode=verified status=answered value=10981201000.0
+INFO dv.pipeline ticker=NFLX step=operating_income mode=verified status=not_found value=None
+INFO dv.pipeline ticker=NFLX step=operating_income mode=verified retrieved_chunks=['NFLX_0001065280-26-000034_item_16_0107', 'NFLX_0001065280-26-000034_item_7_0002', 'NFLX_0001065280-26-000034_item_16_0108', 'NFLX_0001065280-26-000034_item_16_0090', 'NFLX_0001065280-26-000034_item_7_0042']
+INFO dv.pipeline ticker=NFLX step=operating_cash_flow mode=verified status=answered value=10149273000.0
+INFO dv.pipeline ticker=NFLX step=eps_diluted mode=verified status=answered value=2.53
+INFO dv.pipeline ticker=NFLX step=total_assets mode=verified status=not_found value=None
+INFO dv.pipeline ticker=NFLX step=total_assets mode=verified retrieved_chunks=['NFLX_0001065280-26-000034_item_16_0046', 'NFLX_0001065280-26-000034_item_16_0045', 'NFLX_0001065280-26-000034_item_16_0118', 'NFLX_0001065280-26-000034_item_1a_0043', 'NFLX_0001065280-26-000034_item_16_0120']
+WARNING dv.pipeline ticker=NFLX step=total_liabilities mode=verified attempt=1 failed_check=V2 reason=source quote is not an exact substring after whitespace/quote/dash normalization
+INFO dv.pipeline ticker=NFLX step=total_liabilities mode=verified status=answered value=28981505000.0
+WARNING dv.pipeline ticker=NFLX step=cash mode=verified attempt=1 failed_check=V2 reason=source quote is not an exact substring after whitespace/quote/dash normalization
+INFO dv.pipeline ticker=NFLX step=cash mode=verified status=answered value=5208710000.0
+INFO dv.pipeline ticker=NFLX step=stockholders_equity mode=verified status=answered value=26615488000.0
+INFO dv.pipeline ticker=INTU step=revenue mode=verified status=not_found value=None
+INFO dv.pipeline ticker=INTU step=revenue mode=verified retrieved_chunks=['INTU_0000896878-26-000037_unknown_0418', 'INTU_0000896878-26-000037_unknown_0060', 'INTU_0000896878-26-000037_unknown_0305', 'INTU_0000896878-26-000037_unknown_0306', 'INTU_0000896878-26-000037_unknown_0403']
+INFO dv.pipeline ticker=INTU step=net_income mode=verified status=answered value=4566000000.0
+INFO dv.pipeline ticker=INTU step=operating_income mode=verified status=answered value=5884000000.0
+WARNING dv.pipeline ticker=INTU step=operating_cash_flow mode=verified attempt=1 failed_check=V2 reason=source quote is not an exact substring after whitespace/quote/dash normalization
+INFO dv.pipeline ticker=INTU step=operating_cash_flow mode=verified status=answered value=8838000000.0
+WARNING dv.pipeline ticker=INTU step=eps_diluted mode=verified attempt=1 failed_check=V5 reason=EPS scale must be units; per-share amounts are never scaled
+WARNING dv.pipeline ticker=INTU step=eps_diluted mode=verified attempt=2 failed_check=V5 reason=EPS scale must be units; per-share amounts are never scaled
+INFO dv.pipeline ticker=INTU step=eps_diluted mode=verified status=answered value=16.46
+INFO dv.pipeline ticker=INTU step=total_assets mode=verified status=not_found value=None
+INFO dv.pipeline ticker=INTU step=total_assets mode=verified retrieved_chunks=['INTU_0000896878-26-000037_unknown_0614', 'INTU_0000896878-26-000037_unknown_0513', 'INTU_0000896878-26-000037_unknown_0618', 'INTU_0000896878-26-000037_unknown_0631', 'INTU_0000896878-26-000037_unknown_0633']
+INFO dv.pipeline ticker=INTU step=total_liabilities mode=verified status=answered value=17794000000.0
+INFO dv.pipeline ticker=INTU step=cash mode=verified status=answered value=4705000000.0
+INFO dv.pipeline ticker=INTU step=stockholders_equity mode=verified status=answered value=18992000000.0
+INFO dv.pipeline ticker=NOW step=revenue mode=verified status=answered value=13278000000.0
+INFO dv.pipeline ticker=NOW step=net_income mode=verified status=answered value=1748000000.0
+INFO dv.pipeline ticker=NOW step=operating_income mode=verified status=answered value=1824000000.0
+INFO dv.pipeline ticker=NOW step=operating_cash_flow mode=verified status=answered value=5444000000.0
+WARNING dv.pipeline ticker=NOW step=eps_diluted mode=verified attempt=1 failed_check=V5 reason=EPS scale must be units; per-share amounts are never scaled
+INFO dv.pipeline ticker=NOW step=eps_diluted mode=verified status=answered value=1.67
+INFO dv.pipeline ticker=NOW step=total_assets mode=verified status=answered value=26038000000.0
+INFO dv.pipeline ticker=NOW step=total_liabilities mode=verified status=answered value=13074000000.0
+INFO dv.pipeline ticker=NOW step=cash mode=verified status=answered value=3726000000.0
+INFO dv.pipeline ticker=NOW step=stockholders_equity mode=verified status=answered value=12964000000.0
+ticker	metric	value_as_written	final_value	status	attempts
+AAPL	cash	35,934	35934000000.0	answered	1
+AAPL	eps_diluted	7.46	None	unverified	3
+AAPL	net_income	112,010	112010000000.0	answered	1
+AAPL	operating_cash_flow	111,482	111482000000.0	answered	1
+AAPL	operating_income	133,050	133050000000.0	answered	1
+AAPL	revenue	416,161	416161000000.0	answered	1
+AAPL	stockholders_equity	73,733	73733000000.0	answered	1
+AAPL	total_assets	359,241	359241000000.0	answered	1
+AAPL	total_liabilities	285,508	285508000000.0	answered	1
+ADBE	cash	5,431	5431000000.0	answered	1
+ADBE	eps_diluted	16.70	16.7	answered	3
+ADBE	net_income	7,130	7130000000.0	answered	1
+ADBE	operating_cash_flow	10,031	10031000000.0	answered	1
+ADBE	operating_income	8,706	8706000000.0	answered	1
+ADBE	revenue	23,769	23769000000.0	answered	1
+ADBE	stockholders_equity	11,623	11623000000.0	answered	1
+ADBE	total_assets	29,496	29496000000.0	answered	1
+ADBE	total_liabilities	17,873	17873000000.0	answered	1
+AMZN	cash	86,810	None	unverified	3
+AMZN	eps_diluted	7.17	None	unverified	3
+AMZN	net_income	77,670	77670000000.0	answered	1
+AMZN	operating_cash_flow	139,514	139514000000.0	answered	1
+AMZN	operating_income	79,975	79975000000.0	answered	1
+AMZN	revenue	716,924	716924000000.0	answered	1
+AMZN	stockholders_equity	411,065	411065000000.0	answered	1
+AMZN	total_assets	818,042	818042000000.0	answered	1
+AMZN	total_liabilities	None	None	not_found	1
+CRM	cash	7,327	7327000000.0	answered	1
+CRM	eps_diluted	7.80	None	unverified	3
+CRM	net_income	7,457	7457000000.0	answered	1
+CRM	operating_cash_flow	14,996	14996000000.0	answered	1
+CRM	operating_income	8,331	8331000000.0	answered	1
+CRM	revenue	41,525	41525000000.0	answered	1
+CRM	stockholders_equity	59,142	59142000000.0	answered	1
+CRM	total_assets	112,305	112305000000.0	answered	1
+CRM	total_liabilities	53,163	53163000000.0	answered	1
+CSCO	cash	7,218	7218000000.0	answered	1
+CSCO	eps_diluted	3.33	None	unverified	3
+CSCO	net_income	13,267	13267000000.0	answered	1
+CSCO	operating_cash_flow	14,177	14177000000.0	answered	1
+CSCO	operating_income	15,368	15368000000.0	answered	1
+CSCO	revenue	63,325	63325000000.0	answered	1
+CSCO	stockholders_equity	50,285	50285000000.0	answered	1
+CSCO	total_assets	None	None	not_found	1
+CSCO	total_liabilities	79,352	79352000000.0	answered	1
+GOOGL	cash	30,708	30708000000.0	answered	1
+GOOGL	eps_diluted	10.81	10.81	answered	2
+GOOGL	net_income	132,170	132170000000.0	answered	1
+GOOGL	operating_cash_flow	164,713	164713000000.0	answered	1
+GOOGL	operating_income	129,039	129039000000.0	answered	1
+GOOGL	revenue	402,836	402836000000.0	answered	1
+GOOGL	stockholders_equity	415,265	415265000000.0	answered	1
+GOOGL	total_assets	595,281	595281000000.0	answered	1
+GOOGL	total_liabilities	180,016	180016000000.0	answered	1
+IBM	cash	None	None	not_found	1
+IBM	eps_diluted	None	None	not_found	1
+IBM	net_income	None	None	not_found	1
+IBM	operating_cash_flow	None	None	not_found	1
+IBM	operating_income	None	None	not_found	1
+IBM	revenue	None	None	not_found	1
+IBM	stockholders_equity	None	None	not_found	1
+IBM	total_assets	None	None	not_found	1
+IBM	total_liabilities	None	None	not_found	1
+INTC	cash	14,265	14265000000.0	answered	1
+INTC	eps_diluted	( 0.06 )	-0.06	answered	1
+INTC	net_income	26	26000000.0	answered	1
+INTC	operating_cash_flow	9,697	9697000000.0	answered	1
+INTC	operating_income	12.7	12700000000.0	answered	1
+INTC	revenue	52,853	52853000000.0	answered	2
+INTC	stockholders_equity	126,360	126360000000.0	answered	1
+INTC	total_assets	None	None	not_found	1
+INTC	total_liabilities	None	None	not_found	1
+INTU	cash	4,705	4705000000.0	answered	1
+INTU	eps_diluted	16.46	16.46	answered	3
+INTU	net_income	4,566	4566000000.0	answered	1
+INTU	operating_cash_flow	8,838	8838000000.0	answered	2
+INTU	operating_income	5,884	5884000000.0	answered	1
+INTU	revenue	None	None	not_found	1
+INTU	stockholders_equity	18,992	18992000000.0	answered	1
+INTU	total_assets	None	None	not_found	1
+INTU	total_liabilities	17,794	17794000000.0	answered	1
+META	cash	35,873	35873000000.0	answered	1
+META	eps_diluted	23.49	23.49	answered	3
+META	net_income	60,458	60458000000.0	answered	1
+META	operating_cash_flow	115,800	115800000000.0	answered	1
+META	operating_income	83,276	83276000000.0	answered	1
+META	revenue	200,966	200966000000.0	answered	1
+META	stockholders_equity	217,243	217243000000.0	answered	1
+META	total_assets	366,021	366021000000.0	answered	1
+META	total_liabilities	148,778	148778000000.0	answered	1
+MSFT	cash	20,935	None	unverified	3
+MSFT	eps_diluted	17.95	None	unverified	3
+MSFT	net_income	133,749	133749000000.0	answered	1
+MSFT	operating_cash_flow	182,935	182935000000.0	answered	1
+MSFT	operating_income	155,237	155237000000.0	answered	1
+MSFT	revenue	331,839	331839000000.0	answered	1
+MSFT	stockholders_equity	442,387	442387000000.0	answered	2
+MSFT	total_assets	758,376	758376000000.0	answered	1
+MSFT	total_liabilities	315,989	315989000000.0	answered	1
+NFLX	cash	5,208,710	5208710000.0	answered	2
+NFLX	eps_diluted	2.53	2.53	answered	1
+NFLX	net_income	10,981,201	10981201000.0	answered	1
+NFLX	operating_cash_flow	10,149,273	10149273000.0	answered	1
+NFLX	operating_income	None	None	not_found	1
+NFLX	revenue	None	None	not_found	1
+NFLX	stockholders_equity	26,615,488	26615488000.0	answered	1
+NFLX	total_assets	None	None	not_found	1
+NFLX	total_liabilities	28,981,505	28981505000.0	answered	2
+NOW	cash	3,726	3726000000.0	answered	1
+NOW	eps_diluted	1.67	1.67	answered	2
+NOW	net_income	1,748	1748000000.0	answered	1
+NOW	operating_cash_flow	5,444	5444000000.0	answered	1
+NOW	operating_income	1,824	1824000000.0	answered	1
+NOW	revenue	13,278	13278000000.0	answered	1
+NOW	stockholders_equity	12,964	12964000000.0	answered	1
+NOW	total_assets	26,038	26038000000.0	answered	1
+NOW	total_liabilities	13,074	13074000000.0	answered	1
+NVDA	cash	10,605	10605000000.0	answered	1
+NVDA	eps_diluted	4.90	None	unverified	3
+NVDA	net_income	120,067	120067000000.0	answered	1
+NVDA	operating_cash_flow	102,718	102718000000.0	answered	1
+NVDA	operating_income	130,387	130387000000.0	answered	1
+NVDA	revenue	215,938	215938000000.0	answered	1
+NVDA	stockholders_equity	157,293	157293000000.0	answered	1
+NVDA	total_assets	206,803	206803000000.0	answered	1
+NVDA	total_liabilities	49,510	49510000000.0	answered	1
+ORCL	cash	31,289	31289000000.0	answered	1
+ORCL	eps_diluted	5.83	None	unverified	3
+ORCL	net_income	17,087	17087000000.0	answered	1
+ORCL	operating_cash_flow	31,977	31977000000.0	answered	1
+ORCL	operating_income	None	None	not_found	1
+ORCL	revenue	67,357	67357000000.0	answered	1
+ORCL	stockholders_equity	43,056	43056000000.0	answered	1
+ORCL	total_assets	None	None	not_found	1
+ORCL	total_liabilities	None	None	not_found	1
+Stored 135 valid FactResult rows

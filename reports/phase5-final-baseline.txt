@@ -1,0 +1,60 @@
+run_id=dev-20b-v4
+WARNING dv.llm ticker=- step=provider_config mode=- provider=gemini disabled: placeholder model
+WARNING dv.llm ticker=- step=provider_config mode=- provider=openrouter disabled: placeholder model
+WARNING dv.llm ticker=- step=provider_config mode=- provider=ollama disabled: placeholder model
+INFO dv.pipeline ticker=AAPL step=revenue mode=baseline status=answered value=416161000000.0
+INFO dv.pipeline ticker=AAPL step=net_income mode=baseline status=answered value=112010000000.0
+INFO dv.pipeline ticker=AAPL step=operating_income mode=baseline status=answered value=133050000000.0
+INFO dv.pipeline ticker=AAPL step=operating_cash_flow mode=baseline status=answered value=111482000000.0
+INFO dv.pipeline ticker=AAPL step=eps_diluted mode=baseline status=answered value=7.46
+INFO dv.pipeline ticker=AAPL step=total_assets mode=baseline status=answered value=359241000000.0
+INFO dv.pipeline ticker=AAPL step=total_liabilities mode=baseline status=answered value=285508000000.0
+INFO dv.pipeline ticker=AAPL step=cash mode=baseline status=answered value=35934000000.0
+INFO dv.pipeline ticker=AAPL step=stockholders_equity mode=baseline status=answered value=73733000000.0
+INFO dv.pipeline ticker=MSFT step=revenue mode=baseline status=answered value=331839000000.0
+INFO dv.pipeline ticker=MSFT step=net_income mode=baseline status=answered value=133749000000.0
+INFO dv.pipeline ticker=MSFT step=operating_income mode=baseline status=answered value=155237000000.0
+INFO dv.pipeline ticker=MSFT step=operating_cash_flow mode=baseline status=answered value=182935000000.0
+INFO dv.pipeline ticker=MSFT step=eps_diluted mode=baseline status=answered value=17.95
+INFO dv.pipeline ticker=MSFT step=total_assets mode=baseline status=answered value=758376000000.0
+INFO dv.pipeline ticker=MSFT step=total_liabilities mode=baseline status=answered value=315989000000.0
+INFO dv.pipeline ticker=MSFT step=cash mode=baseline status=answered value=20935000000.0
+INFO dv.pipeline ticker=MSFT step=stockholders_equity mode=baseline status=answered value=442387000000.0
+INFO dv.pipeline ticker=CRM step=revenue mode=baseline status=answered value=41525000000.0
+INFO dv.pipeline ticker=CRM step=net_income mode=baseline status=answered value=7457000000.0
+INFO dv.pipeline ticker=CRM step=operating_income mode=baseline status=answered value=8331000000.0
+INFO dv.pipeline ticker=CRM step=operating_cash_flow mode=baseline status=answered value=14996000000.0
+INFO dv.pipeline ticker=CRM step=eps_diluted mode=baseline status=answered value=7.8
+INFO dv.pipeline ticker=CRM step=total_assets mode=baseline status=answered value=112305000000.0
+INFO dv.pipeline ticker=CRM step=total_liabilities mode=baseline status=answered value=53163000000.0
+INFO dv.pipeline ticker=CRM step=cash mode=baseline status=answered value=7327000000.0
+INFO dv.pipeline ticker=CRM step=stockholders_equity mode=baseline status=answered value=59142000000.0
+ticker	metric	value_as_written	final_value	status	attempts
+AAPL	cash	35,934	35934000000.0	answered	1
+AAPL	eps_diluted	7.46	7.46	answered	1
+AAPL	net_income	112,010	112010000000.0	answered	1
+AAPL	operating_cash_flow	111,482	111482000000.0	answered	1
+AAPL	operating_income	133,050	133050000000.0	answered	1
+AAPL	revenue	416,161	416161000000.0	answered	1
+AAPL	stockholders_equity	73,733	73733000000.0	answered	1
+AAPL	total_assets	359,241	359241000000.0	answered	1
+AAPL	total_liabilities	285,508	285508000000.0	answered	1
+CRM	cash	7,327	7327000000.0	answered	1
+CRM	eps_diluted	7.80	7.8	answered	1
+CRM	net_income	7,457	7457000000.0	answered	1
+CRM	operating_cash_flow	14,996	14996000000.0	answered	1
+CRM	operating_income	8,331	8331000000.0	answered	1
+CRM	revenue	41,525	41525000000.0	answered	1
+CRM	stockholders_equity	59,142	59142000000.0	answered	1
+CRM	total_assets	112,305	112305000000.0	answered	1
+CRM	total_liabilities	53,163	53163000000.0	answered	1
+MSFT	cash	20,935	20935000000.0	answered	1
+MSFT	eps_diluted	17.95	17.95	answered	1
+MSFT	net_income	$ 133,749	133749000000.0	answered	1
+MSFT	operating_cash_flow	182,935	182935000000.0	answered	1
+MSFT	operating_income	155,237	155237000000.0	answered	1
+MSFT	revenue	331,839	331839000000.0	answered	1
+MSFT	stockholders_equity	442,387	442387000000.0	answered	1
+MSFT	total_assets	758,376	758376000000.0	answered	1
+MSFT	total_liabilities	315,989	315989000000.0	answered	1
+Stored 27 valid FactResult rows

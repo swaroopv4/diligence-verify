@@ -1,0 +1,140 @@
+Consistency red flags: 44
+ADBE revenue: table=23769000000.0 prose=17650000000.0
+Total revenue | 23,769
+Digital Media segment revenue grew to $17.65 billion in fiscal 2025, up from $15.86 billion in fiscal 2024, representing 11% year-over-year growth.
+ADBE revenue: table=23769000000.0 prose=5860000000.0
+Total revenue | 23,769
+Digital Experience revenue was $5.86 billion in fiscal 2025, up from $5.37 billion in fiscal 2024, representing 9% year-over-year growth.
+ADBE revenue: table=23769000000.0 prose=5410000000.0
+Total revenue | 23,769
+Subscription revenue grew to $5.41 billion in fiscal 2025, up from $4.86 billion in fiscal 2024, representing 11%
+ADBE revenue: table=23769000000.0 prose=5410000000.0
+Total revenue | 23,769
+Subscription revenue grew to $5.41 billion in fiscal 2025, up from $4.86 billion in fiscal 2024, representing 11% year-over-year growth.
+ADBE revenue: table=23769000000.0 prose=17650000000.0
+Total revenue | 23,769
+Digital Media revenue of $17.65 billion during fiscal 2025 increased by $1.79 billion, or 11%, compared to fiscal 2024.
+ADBE revenue: table=23769000000.0 prose=5860000000.0
+Total revenue | 23,769
+Digital Experience revenue of $5.86 billion during fiscal 2025 increased by $498 million, or 9%, compared to fiscal 2024.
+ADBE revenue: table=23769000000.0 prose=2550000000.0
+Total revenue | 23,769
+Cost of revenue of $2.55 billion during fiscal 2025 increased by $193 million, or 8%, compared to fiscal 2024.
+ADBE revenue: table=23769000000.0 prose=1790000000.0
+Total revenue | 23,769
+Revenue from Digital Media increased $1.79 billion and revenue from Digital Experience increased $498 million during fiscal 2025 as compared to fiscal 2024.
+CRM net_income: table=7457000000.0 prose=7500000000.0
+Net income | $ | 7,457
+The net cash provided by operating activities during fiscal 2026 was primarily comprised of net income of $7.5 billion, adjusted for non-cash items, including $3.6 billion of depreciation and amortization and $3.5 billion of stock-based compensation expense.
+CRM operating_cash_flow: table=14996000000.0 prose=7500000000.0
+Net cash provided by operating activities | 14,996
+The net cash provided by operating activities during fiscal 2026 was primarily comprised of net income of $7.5 billion, adjusted for non-cash items, including $3.6 billion of depreciation and amortization and $3.5 billion of stock-based compensation expense.
+CRM operating_cash_flow: table=14996000000.0 prose=1000000000.0
+Net cash provided by operating activities | 14,996
+Net cash provided by operating activities during fiscal 2026 was further benefited by the changes in accounts payable and accrued expenses and other liabilities of $1.0 billion and unearned revenue of $2.9 billion, partially offset by the change in accounts receivable, net of $2.2 billion and costs
+CRM revenue: table=41525000000.0 prose=72400000000.0
+Total revenues | 41,525
+maining Performance Obligation: Total remaining performance obligation, which represents all future revenue under contract yet to be recognized, as of January 31, 2026 was approximately $72.4 billion, an increase of 14 percent year-over-year .
+CRM revenue: table=41525000000.0 prose=388000000.0
+Total revenues | 41,525
+(2) Agentforce 360 Platform, Slack and Other revenue for the year ended January 31, 2026 includes $388 million in subscription and support revenue from Informatica, Inc.
+GOOGL operating_income: table=129039000000.0 prose=18100000000.0
+Income from operations | 84,293 |  |  | 112,390 |  |  | 129,039
+Google Services operating income increased $18.1 billion from 2024 to 2025.
+GOOGL operating_income: table=129039000000.0 prose=7800000000.0
+Income from operations | 84,293 |  |  | 112,390 |  |  | 129,039
+Google Cloud operating income increased $7.8 billion from 2024 to 2025.
+GOOGL revenue: table=402836000000.0 prose=26400000000.0
+Revenues | $ | 307,394 |  |  | $ | 350,018 |  |  | $ | 402,836
+Google Search & other revenues increased $26.4 billion from 2024 to 2025.
+GOOGL revenue: table=402836000000.0 prose=4200000000.0
+Revenues | $ | 307,394 |  |  | $ | 350,018 |  |  | $ | 402,836
+YouTube ads revenues increased $4.2 billion from 2024 to 2025.
+GOOGL revenue: table=402836000000.0 prose=567000000.0
+Revenues | $ | 307,394 |  |  | $ | 350,018 |  |  | $ | 402,836
+Google Network revenues decreased $567 million from 2024 to 2025, primarily due to a decrease in AdSense revenues, partially offset by an increase in AdMob revenues.
+GOOGL revenue: table=402836000000.0 prose=7700000000.0
+Revenues | $ | 307,394 |  |  | $ | 350,018 |  |  | $ | 402,836
+Google subscriptions, platforms, and devices revenues increased $7.7 billion from 2024 to 2025.
+GOOGL revenue: table=402836000000.0 prose=15500000000.0
+Revenues | $ | 307,394 |  |  | $ | 350,018 |  |  | $ | 402,836
+Google Cloud revenues increased $15.5 billion from 2024 to 2025, primarily driven by growth in Google Cloud Platform largely from infrastructure and platform services.
+GOOGL revenue: table=402836000000.0 prose=16200000000.0
+Revenues | $ | 307,394 |  |  | $ | 350,018 |  |  | $ | 402,836
+Cost of revenues increased $16.2 billion from 2024 to 2025 due to an increase in other cost of revenues and TAC of $11.2 billion and $5.0 billion, respectively.
+META net_income: table=60458000000.0 prose=20430000000.0
+Net income | $ | 60,458
+Cash provided by operating activities during 2025 mostly consisted of $60.46 billion net income adjusted for certain non-cash items, such as $20.43 billion of share-based compensation expense, $18.74 billion of deferred income taxes, and $18.62 billion of depreciation and amortization expense.
+META operating_cash_flow: table=115800000000.0 prose=60460000000.0
+Net cash provided by operating activities | 115,800
+Cash provided by operating activities during 2025 mostly consisted of $60.46 billion net income adjusted for certain non-cash items, such as $20.43 billion of share-based compensation expense, $18.74 billion of deferred income taxes, and $18.62 billion of depreciation and amortization expense.
+META operating_income: table=83276000000.0 prose=15360000000.0
+Total costs and expenses | 117,690 |  |  | 95,121 |  |  | 88,151 | 
+Income from operations | 83,276
+FoA income from operations in 2025 increased $15.36 billion, or 18%, compared to 2024.
+META revenue: table=200966000000.0 prose=36400000000.0
+Revenue | $ | 200,966
+FoA revenue in 2025 increased $36.40 billion, or 22%, compared to 2024.
+META revenue: table=200966000000.0 prose=35540000000.0
+Revenue | $ | 200,966
+Advertising revenue in 2025 increased $35.54 billion, or 22%, compared to 2024 due to increases in ad impressions delivered and average price per ad.
+META revenue: table=200966000000.0 prose=862000000.0
+Revenue | $ | 200,966
+FoA other revenue in 2025 increased $862 million, or 50%, compared to 2024.
+META revenue: table=200966000000.0 prose=61000000.0
+Revenue | $ | 200,966
+RL revenue in 2025 increased $61 million, or 3%, compared to 2024.
+META revenue: table=200966000000.0 prose=6010000000.0
+Revenue | $ | 200,966
+Cost of revenue in 2025 increased $6.01 billion, or 20%, compared to 2024.
+NFLX net_income: table=10981201000.0 prose=2270000000.0
+CONSOLIDATED STATEMENTS OF COMPREHENSIVE INCOME
+(in thousands)
+ | Year ended December 31,
+ | 2025 |  | 2024 |  | 2023
+Net income | $ | 10,981,201
+Net income for the year ended December 31, 2025 increased $2,270 million as compared to the prior comparative period, primarily due to a $2,909 million increase in operating income, driven by a $6,182 million increase in revenues and partially offset by a $2,237 million increase in cost of revenues
+NFLX operating_cash_flow: table=10149273000.0 prose=2788000000.0
+Net cash provided by operating activities | $ | 10,149,273
+Net cash provided by operating activities for the year ended December 31, 2025 increased $2,788 million as compared to the year ended December 31, 2024, primarily driven by a $2,270 million or 26% increase in net income and a $1,646 million increase in adjustments for non-cash expenses, partially of
+NVDA operating_income: table=130387000000.0 prose=4500000000.0
+Operating income | 130,387
+Reportable segment operating income � The year over year increase in Compute & Networking segment operating income was driven by growth in revenue, partially offset by a $4.5 billion charge associated with H20 excess inventory and purchase obligations in the first quarter of fiscal year 2026.
+NVDA revenue: table=215938000000.0 prose=4500000000.0
+Revenue | $ | 215,938
+he year over year increase in Compute & Networking segment operating income was driven by growth in revenue, partially offset by a $4.5 billion charge associated with H20 excess inventory and purchase obligations in the first quarter of fiscal year 2026.
+ORCL net_income: table=17087000000.0 prose=42700000000.0
+Net income |  | $ | 17,087
+apital as of May 31, 2026 in comparison to May 31, 2025 was primarily due to favorable impacts from net income; proceeds from the issuance of senior notes, net of issuance costs, of $42.7 billion during fiscal 2026; $5.0 billion of cash proceeds from the issuance of Mandatory Convertible Preferred S
+ORCL net_income: table=17087000000.0 prose=4600000000.0
+Net income |  | $ | 17,087
+ctivities increased by $11.2 billion in fiscal 2026 relative to fiscal 2025 primarily due to higher net income adjusted for certain non-cash charges and higher cash favorable working capital changes, net, which includes $4.6 billion cash inflows from customer prepayments with significant financing c
+ORCL operating_cash_flow: table=31977000000.0 prose=11200000000.0
+Year Ended May 31, | 
+(Dollars in millions) |  | 2026 |  |  | Change |  | 2025 | 
+Net cash provided by operating activities |  | $ | 31,977
+Net cash provided by operating activities increased by $11.2 billion in fiscal 2026 relative to fiscal 2025 primarily due to higher net income adjusted for certain non-cash charges and higher cash favorable working capital changes, net, which includes $4.6 billion cash inflows from customer prepayme
+ORCL revenue: table=67357000000.0 prose=1000000.0
+Total revenues |  |  | 67,357
+For example, if an entity reporting in Euros had revenues of 1.0 million Euros from products sold on May 31, 2026 and 2025, our financial statements would reflect reported revenues of $1.16 million in fiscal 2026 (using 1.16 as the applicable average exchange rate for the period) and $1.13 million
+ORCL revenue: table=67357000000.0 prose=1160000.0
+Total revenues |  |  | 67,357
+Euros from products sold on May 31, 2026 and 2025, our financial statements would reflect reported revenues of $1.16 million in fiscal 2026 (using 1.16 as the applicable average exchange rate for the period) and $1.13 million in fiscal 2025 (using 1.13 as the applicable average exchange rate for th
+ORCL revenue: table=67357000000.0 prose=10000000000.0
+Total revenues |  |  | 67,357
+Total revenues increased by $10.0 billion in reported currency in fiscal 2026 relative to fiscal 2025 due to a $9.3 billion increase in cloud and software revenues, a $510 million increase in services revenues and a $148 million increase in hardware revenues, in each case during fiscal 2026 relative
+ORCL revenue: table=67357000000.0 prose=510000000.0
+Total revenues |  |  | 67,357
+urrency in fiscal 2026 relative to fiscal 2025 due to a $9.3 billion increase in cloud and software revenues, a $510 million increase in services revenues and a $148 million increase in hardware revenues, in each case during fiscal 2026 relative to fiscal 2025.
+ORCL revenue: table=67357000000.0 prose=148000000.0
+Total revenues |  |  | 67,357
+due to a $9.3 billion increase in cloud and software revenues, a $510 million increase in services revenues and a $148 million increase in hardware revenues, in each case during fiscal 2026 relative to fiscal 2025.
+ORCL revenue: table=67357000000.0 prose=9300000000.0
+Total revenues |  |  | 67,357
+Our cloud and software business� total revenues increased by $9.3 billion in reported currency in fiscal 2026 relative to fiscal 2025 primarily due to an increase in cloud revenues as customers purchased our applications and infrastructure technologies and renewed their related cloud contracts.
+ORCL revenue: table=67357000000.0 prose=148000000.0
+Total revenues |  |  | 67,357
+Total hardware revenues increased by $148 million in reported currency in fiscal 2026 relative to fiscal 2025.
+ORCL revenue: table=67357000000.0 prose=510000000.0
+Total revenues |  |  | 67,357
+Total services revenues increased by $510 million in reported currency in fiscal 2026 relative to fiscal 2025.

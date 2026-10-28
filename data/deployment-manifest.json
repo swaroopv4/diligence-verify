@@ -1,0 +1,89 @@
+{
+  "description": "Public SEC snapshots read by the dashboard, including first-study/cache evidence. Historical partial runs remain in the audit database but are not deployed as completed studies.",
+  "run_ids": [
+    "full-gemini-lite-cache-v1",
+    "full-gemini-lite-phase5b-v1",
+    "full-gemini-lite-v1"
+  ],
+  "database": {
+    "path": "data/runs.db",
+    "bytes": 1503232
+  },
+  "chunks": [
+    {
+      "path": "data/processed/AAPL_0000320193-25-000079_1f465aaeabea.jsonl",
+      "bytes": 299305,
+      "sha256": "1f465aaeabea6ce41b1619b970640ac3aaa2f5bad0596b11d1c9ad9af9f48138"
+    },
+    {
+      "path": "data/processed/ADBE_0000796343-26-000003_59034e2f0d18.jsonl",
+      "bytes": 492503,
+      "sha256": "59034e2f0d18caa926b7e254427cf52ce4b9f6cb5f1677bd320b4cdcbf5a5c03"
+    },
+    {
+      "path": "data/processed/AMZN_0001018724-26-000004_e356ccfe2a9d.jsonl",
+      "bytes": 411253,
+      "sha256": "e356ccfe2a9d5bf93e4f4cabfcede17632cfd4b72a0f0acfc721db826cb09aae"
+    },
+    {
+      "path": "data/processed/CRM_0001108524-26-000060_8b02d92f4bc8.jsonl",
+      "bytes": 580806,
+      "sha256": "8b02d92f4bc85f68a91395fbaa8ad917bef7f7b7661a92dd0e9887a5503212c1"
+    },
+    {
+      "path": "data/processed/CSCO_0000858877-26-000132_2746debc6fe2.jsonl",
+      "bytes": 600971,
+      "sha256": "2746debc6fe2bb78840b34520f0fdac2ef6f07749c86caae2323eeae0eff330c"
+    },
+    {
+      "path": "data/processed/GOOGL_0001652044-26-000018_9fe6fe416484.jsonl",
+      "bytes": 528160,
+      "sha256": "9fe6fe4164842bae119dddc332cea8fe36da25f1f78bb2ec325094ffc4d73bf7"
+    },
+    {
+      "path": "data/processed/IBM_0000051143-26-000010_94cfce2fa76b.jsonl",
+      "bytes": 139288,
+      "sha256": "94cfce2fa76bf9b40e4c1e31390f8a831bc4df0ac479df8ce87fff6868bbebbb"
+    },
+    {
+      "path": "data/processed/INTC_0000050863-26-000011_0dffa4ed70d7.jsonl",
+      "bytes": 783078,
+      "sha256": "0dffa4ed70d7d64f0e46ec7beaf60d190e5dd71410ee44aa0ed1203183481b12"
+    },
+    {
+      "path": "data/processed/INTU_0000896878-26-000037_81f82767d2d3.jsonl",
+      "bytes": 686477,
+      "sha256": "81f82767d2d30d67bd2589cec262e5446fd9e4afa0804607f24ec97ba6d4fa43"
+    },
+    {
+      "path": "data/processed/META_0001628280-26-003942_7ae7ebb7ccb5.jsonl",
+      "bytes": 711232,
+      "sha256": "7ae7ebb7ccb5743ca6d630ec9855013bcf6e899de83fd067c01cf070c4148f3c"
+    },
+    {
+      "path": "data/processed/MSFT_0001193125-26-323660_155be5d8b460.jsonl",
+      "bytes": 483078,
+      "sha256": "155be5d8b460a16a300262f6145c9cceeaba00293e9aba91b4d5a6c9857e7892"
+    },
+    {
+      "path": "data/processed/NFLX_0001065280-26-000034_edc64c5b0eba.jsonl",
+      "bytes": 395100,
+      "sha256": "edc64c5b0eba7716874086c2283298ad41f42ed22d01714254e6fd25b4ced356"
+    },
+    {
+      "path": "data/processed/NOW_0001373715-26-000007_24ac1ec7a8dd.jsonl",
+      "bytes": 537435,
+      "sha256": "24ac1ec7a8ddeb3942621c1c6f9d9bfb51fb51a7de67383e96644302bd19d911"
+    },
+    {
+      "path": "data/processed/NVDA_0001045810-26-000021_93a003e5663a.jsonl",
+      "bytes": 480356,
+      "sha256": "93a003e5663aec0ed7322f0e725a0de04a4976ccaaed54ce6298ddf4e0205488"
+    },
+    {
+      "path": "data/processed/ORCL_0001193125-26-277521_18db9c41b340.jsonl",
+      "bytes": 598434,
+      "sha256": "18db9c41b340caea6e398bd2e55cf0e6c1fa749cda669fb1d1b1e8b09d41d9d0"
+    }
+  ]
+}

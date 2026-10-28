@@ -1,0 +1,32 @@
+{"model":"gemini-3.5-flash-lite","baseline_run":"full-gemini-lite-v1","verified_run":"full-gemini-lite-phase5b-v1","first_baseline_run":"full-gemini-lite-v1","first_verified_run":"full-gemini-lite-v1","cache_run":"full-gemini-lite-cache-v1","companies":["AAPL","MSFT","GOOGL","AMZN","META","NVDA","ADBE","CRM","ORCL","INTC","CSCO","IBM","NFLX","INTU","NOW"],"metrics":["cash","eps_diluted","net_income","operating_cash_flow","operating_income","revenue","stockholders_equity","total_assets","total_liabilities"]}
+PASS gemini-3.5-flash-lite AAPL verified: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite AAPL baseline: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite MSFT verified: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite MSFT baseline: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite GOOGL verified: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite GOOGL baseline: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite AMZN verified: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite AMZN baseline: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite META verified: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite META baseline: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite NVDA verified: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite NVDA baseline: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite ADBE verified: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite ADBE baseline: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite CRM verified: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite CRM baseline: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite ORCL verified: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite ORCL baseline: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite INTC verified: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite INTC baseline: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite CSCO verified: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite CSCO baseline: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite IBM verified: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite IBM baseline: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite NFLX verified: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite NFLX baseline: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite INTU verified: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite INTU baseline: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite NOW verified: 9 facts, four cards, first/cache comparison
+PASS gemini-3.5-flash-lite NOW baseline: 9 facts, four cards, first/cache comparison
+All views passed: 30

@@ -1,0 +1,5 @@
+WARNING dv.llm ticker=- step=provider_config mode=- provider=gemini disabled: placeholder model
+WARNING dv.llm ticker=- step=provider_config mode=- provider=groq disabled: placeholder model
+WARNING dv.llm ticker=- step=provider_config mode=- provider=openrouter disabled: placeholder model
+WARNING dv.llm ticker=- step=provider_config mode=- provider=ollama disabled: placeholder model
+DISABLED: no configured free/local provider. Set a model in config.yaml and start its endpoint.

@@ -1,0 +1,44 @@
+INFO httpx HTTP Request: GET https://data.sec.gov/api/xbrl/companyfacts/CIK0000796343.json "HTTP/1.1 200 OK"
+INFO httpx HTTP Request: GET https://data.sec.gov/api/xbrl/companyfacts/CIK0001018724.json "HTTP/1.1 200 OK"
+INFO httpx HTTP Request: GET https://data.sec.gov/api/xbrl/companyfacts/CIK0000858877.json "HTTP/1.1 200 OK"
+INFO httpx HTTP Request: GET https://data.sec.gov/api/xbrl/companyfacts/CIK0001652044.json "HTTP/1.1 200 OK"
+INFO httpx HTTP Request: GET https://data.sec.gov/api/xbrl/companyfacts/CIK0000051143.json "HTTP/1.1 200 OK"
+INFO httpx HTTP Request: GET https://data.sec.gov/api/xbrl/companyfacts/CIK0000050863.json "HTTP/1.1 200 OK"
+INFO httpx HTTP Request: GET https://data.sec.gov/api/xbrl/companyfacts/CIK0000896878.json "HTTP/1.1 200 OK"
+INFO httpx HTTP Request: GET https://data.sec.gov/api/xbrl/companyfacts/CIK0001326801.json "HTTP/1.1 200 OK"
+INFO httpx HTTP Request: GET https://data.sec.gov/api/xbrl/companyfacts/CIK0001065280.json "HTTP/1.1 200 OK"
+INFO httpx HTTP Request: GET https://data.sec.gov/api/xbrl/companyfacts/CIK0001373715.json "HTTP/1.1 200 OK"
+INFO httpx HTTP Request: GET https://data.sec.gov/api/xbrl/companyfacts/CIK0001045810.json "HTTP/1.1 200 OK"
+INFO httpx HTTP Request: GET https://data.sec.gov/api/xbrl/companyfacts/CIK0001341439.json "HTTP/1.1 200 OK"
+baseline: {'correct': 109, 'no_ground_truth': 4, 'not_found': 17, 'wrong': 5}
+verified: {'correct': 100, 'unverified': 9, 'no_ground_truth': 4, 'not_found': 17, 'wrong': 5}
+REVIEW baseline INTC net_income: value=26000000.0 ground_truth=-267000000.0 tag=NetIncomeLoss
+quote=Net income (loss) |  | 26 |
+error=None
+REVIEW baseline INTC operating_income: value=12700000000.0 ground_truth=-2214000000.0 tag=OperatingIncomeLoss
+quote=Total Intel Products operating income was $12.7 billion in 2025
+error=None
+REVIEW baseline INTC stockholders_equity: value=126360000000.0 ground_truth=114281000000.0 tag=StockholdersEquity
+quote=Total stockholders' equity |  | 126,360
+error=None
+REVIEW verified INTC net_income: value=26000000.0 ground_truth=-267000000.0 tag=NetIncomeLoss
+quote=Net income (loss) |  | 26 |
+error=None
+REVIEW verified INTC operating_income: value=12700000000.0 ground_truth=-2214000000.0 tag=OperatingIncomeLoss
+quote=Total Intel Products operating income was $12.7 billion in 2025
+error=None
+REVIEW verified INTC stockholders_equity: value=126360000000.0 ground_truth=114281000000.0 tag=StockholdersEquity
+quote=Total stockholders' equity |  | 126,360
+error=None
+REVIEW baseline NFLX cash: value=5208710000.0 ground_truth=9033681000.0 tag=CashAndCashEquivalentsAtCarryingValue
+quote=Cash and cash equivalents | $ | 5,208,710
+error=None
+REVIEW verified NFLX cash: value=5208710000.0 ground_truth=9033681000.0 tag=CashAndCashEquivalentsAtCarryingValue
+quote=Cash | $ | 5,214,163 |  |  | $ | � |  |  | $ | � |  |  | $ | 5,214,163 |  |  | $ | 5,208,710 |
+error=None
+REVIEW baseline ORCL stockholders_equity: value=43056000000.0 ground_truth=42508000000.0 tag=StockholdersEquity
+quote=Total stockholders� equity |  |  | 43,056
+error=None
+REVIEW verified ORCL stockholders_equity: value=43056000000.0 ground_truth=42508000000.0 tag=StockholdersEquity
+quote=Total stockholders� equity |  |  | 43,056
+error=None

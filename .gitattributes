@@ -1,0 +1,4 @@
+* text=auto
+# Evidence hashes cover exact bytes, including original newline characters.
+data/processed/*.jsonl -text
+data/runs.db binary

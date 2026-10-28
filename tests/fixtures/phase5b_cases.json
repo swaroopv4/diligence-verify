@@ -1,0 +1,478 @@
+[
+  {
+    "filing": {
+      "ticker": "AAPL",
+      "cik": 320193,
+      "accession": "0000320193-25-000079",
+      "period_of_report": "2025-09-27",
+      "filing_date": "2025-10-31",
+      "primary_document": "aapl-20250927.htm"
+    },
+    "chunk": {
+      "chunk_id": "AAPL_0000320193-25-000079_item_8_0003",
+      "ticker": "AAPL",
+      "accession": "0000320193-25-000079",
+      "section": "item_8",
+      "text": "Apple Inc.\nCONSOLIDATED STATEMENTS OF OPERATIONS\n(In millions, except number of shares, which are reflected in thousands, and per-share amounts)\n | Years ended\n | September 27, 2025 |  | September 28, 2024 |  | September 30, 2023\nNet sales: |  |  |  |  | \nProducts | $ | 307,003 |  |  | $ | 294,866 |  |  | $ | 298,085 | \nServices | 109,158 |  |  | 96,169 |  |  | 85,200 | \nTotal net sales | 416,161 |  |  | 391,035 |  |  | 383,285 | \nCost of sales: |  |  |  |  | \nProducts | 194,116 |  |  | 185,233 |  |  | 189,282 | \nServices | 26,844 |  |  | 25,119 |  |  | 24,855 | \nTotal cost of sales | 220,960 |  |  | 210,352 |  |  | 214,137 | \nGross margin | 195,201 |  |  | 180,683 |  |  | 169,148 | \nOperating expenses: |  |  |  |  | \nResearch and development | 34,550 |  |  | 31,370 |  |  | 29,915 | \nSelling, general and administrative | 27,601 |  |  | 26,097 |  |  | 24,932 | \nTotal operating expenses | 62,151 |  |  | 57,467 |  |  | 54,847 | \nOperating income | 133,050 |  |  | 123,216 |  |  | 114,301 | \nOther income/(expense), net | ( 321 ) |  |  | 269 |  |  | ( 565 ) | \nIncome before provision for income taxes | 132,729 |  |  | 123,485 |  |  | 113,736 | \nProvision for income taxes | 20,719 |  |  | 29,749 |  |  | 16,741 | \nNet income | $ | 112,010 |  |  | $ | 93,736 |  |  | $ | 96,995 | \nEarnings per share: |  |  |  |  | \nBasic | $ | 7.49 |  |  | $ | 6.11 |  |  | $ | 6.16 | \nDiluted | $ | 7.46 |  |  | $ | 6.08 |  |  | $ | 6.13 | \nShares used in computing earnings per share: |  |  |  |  | \nBasic | 14,948,500 |  |  | 15,343,783 |  |  | 15,744,231 | \nDiluted | 15,004,697 |  |  | 15,408,095 |  |  | 15,812,547 | ",
+      "is_table": true,
+      "detected_scale": "millions",
+      "scale_excludes_per_share": true
+    },
+    "fact": {
+      "metric": "eps_diluted",
+      "value_as_written": "7.46",
+      "scale_as_written": null,
+      "period_end": "2025-09-27",
+      "source_chunk_id": "AAPL_0000320193-25-000079_item_8_0003",
+      "source_quote": "Diluted | $ | 7.46"
+    }
+  },
+  {
+    "filing": {
+      "ticker": "AMZN",
+      "cik": 1018724,
+      "accession": "0001018724-26-000004",
+      "period_of_report": "2025-12-31",
+      "filing_date": "2026-02-06",
+      "primary_document": "amzn-20251231.htm"
+    },
+    "chunk": {
+      "chunk_id": "AMZN_0001018724-26-000004_unknown_0218",
+      "ticker": "AMZN",
+      "accession": "0001018724-26-000004",
+      "section": "unknown",
+      "text": "Table of Contents\nConsolidated Statements of Cash Flows Reconciliation\n | December 31, 2024 |  | December 31, 2025\nCash and cash equivalents | $ | 78,779 |  |  | $ | 86,810 | \nRestricted cash included in accounts receivable, net and other | 247 |  |  | 300 | \nRestricted cash included in other assets | 3,286 |  |  | 2,996 | \nTotal cash, cash equivalents, and restricted cash shown in the consolidated statements of cash flows | $ | 82,312 |  |  | $ | 90,106 | ",
+      "is_table": true,
+      "detected_scale": null,
+      "scale_excludes_per_share": false
+    },
+    "fact": {
+      "metric": "cash",
+      "value_as_written": "86,810",
+      "scale_as_written": "millions",
+      "period_end": "2025-12-31",
+      "source_chunk_id": "AMZN_0001018724-26-000004_unknown_0218",
+      "source_quote": "Cash and cash equivalents | $ | 78,779 |  |  | $ | 86,810"
+    }
+  },
+  {
+    "filing": {
+      "ticker": "AMZN",
+      "cik": 1018724,
+      "accession": "0001018724-26-000004",
+      "period_of_report": "2025-12-31",
+      "filing_date": "2026-02-06",
+      "primary_document": "amzn-20251231.htm"
+    },
+    "chunk": {
+      "chunk_id": "AMZN_0001018724-26-000004_unknown_0158",
+      "ticker": "AMZN",
+      "accession": "0001018724-26-000004",
+      "section": "unknown",
+      "text": "AMAZON.COM, INC.\nCONSOLIDATED STATEMENTS OF OPERATIONS\n(in millions, except per share data)\n | Year Ended December 31,\n | 2023 |  | 2024 |  | 2025\nNet product sales | $ | 255,887 |  |  | $ | 272,311 |  |  | $ | 296,266 | \nNet service sales | 318,898 |  |  | 365,648 |  |  | 420,658 | \nTotal net sales | 574,785 |  |  | 637,959 |  |  | 716,924 | \nOperating expenses: |  |  |  |  | \nCost of sales | 304,739 |  |  | 326,288 |  |  | 356,414 | \nFulfillment | 90,619 |  |  | 98,505 |  |  | 109,074 | \nTechnology and infrastructure | 85,622 |  |  | 88,544 |  |  | 108,521 | \nSales and marketing | 44,370 |  |  | 43,907 |  |  | 47,129 | \nGeneral and administrative | 11,816 |  |  | 11,359 |  |  | 11,172 | \nOther operating expense (income), net | 767 |  |  | 763 |  |  | 4,639 | \nTotal operating expenses | 537,933 |  |  | 569,366 |  |  | 636,949 | \nOperating income | 36,852 |  |  | 68,593 |  |  | 79,975 | \nInterest income | 2,949 |  |  | 4,677 |  |  | 4,381 | \nInterest expense | ( 3,182 ) |  |  | ( 2,406 ) |  |  | ( 2,274 ) | \nOther income (expense), net | 938 |  |  | ( 2,250 ) |  |  | 15,229 | \nTotal non-operating income | 705 |  |  | 21 |  |  | 17,336 | \nIncome before income taxes | 37,557 |  |  | 68,614 |  |  | 97,311 | \nProvision for income taxes | ( 7,120 ) |  |  | ( 9,265 ) |  |  | ( 19,087 ) | \nEquity-method investment activity, net of tax | ( 12 ) |  |  | ( 101 ) |  |  | ( 554 ) | \nNet income | $ | 30,425 |  |  | $ | 59,248 |  |  | $ | 77,670 | \nBasic earnings per share | $ | 2.95 |  |  | $ | 5.66 |  |  | $ | 7.29 | \nDiluted earnings per share | $ | 2.90 |  |  | $ | 5.53 |  |  | $ | 7.17 | \nWeighted-average shares used in computation of earnings per share: |  |  |  |  | \nBasic | 10,304 |  |  | 10,473 |  |  | 10,656 | \nDiluted | 10,492 |  |  | 10,721 |  |  | 10,827 | ",
+      "is_table": true,
+      "detected_scale": "millions",
+      "scale_excludes_per_share": true
+    },
+    "fact": {
+      "metric": "eps_diluted",
+      "value_as_written": "7.17",
+      "scale_as_written": null,
+      "period_end": "2025-12-31",
+      "source_chunk_id": "AMZN_0001018724-26-000004_unknown_0158",
+      "source_quote": "Diluted earnings per share | $ | 2.90 |  |  | $ | 5.53 |  |  | $ | 7.17"
+    }
+  },
+  {
+    "filing": {
+      "ticker": "CRM",
+      "cik": 1108524,
+      "accession": "0001108524-26-000060",
+      "period_of_report": "2026-01-31",
+      "filing_date": "2026-03-02",
+      "primary_document": "crm-20260131.htm"
+    },
+    "chunk": {
+      "chunk_id": "CRM_0001108524-26-000060_item_8_0012",
+      "ticker": "CRM",
+      "accession": "0001108524-26-000060",
+      "section": "item_8",
+      "text": "Salesforce, Inc.\nConsolidated Statements of Operations\n(in millions, except per share data)\n4 | Fiscal Year Ended January 31,\n | 2026 |  | 2025 |  | 2024\nRevenues: |  |  |  |  | \nSubscription and support | $ | 39,388 |  |  | $ | 35,679 |  |  | $ | 32,537 | \nProfessional services and other | 2,137 |  |  | 2,216 |  |  | 2,320 | \nTotal revenues | 41,525 |  |  | 37,895 |  |  | 34,857 | \nCost of revenues (1)(2): |  |  |  |  | \nSubscription and support | 6,796 |  |  | 6,198 |  |  | 6,177 | \nProfessional services and other | 2,474 |  |  | 2,445 |  |  | 2,364 | \nTotal cost of revenues | 9,270 |  |  | 8,643 |  |  | 8,541 | \nGross profit | 32,255 |  |  | 29,252 |  |  | 26,316 | \nOperating expenses (1)(2): |  |  |  |  | \nResearch and development | 5,993 |  |  | 5,493 |  |  | 4,906 | \nSales and marketing | 14,345 |  |  | 13,257 |  |  | 12,877 | \nGeneral and administrative | 3,000 |  |  | 2,836 |  |  | 2,534 | \nRestructuring | 586 |  |  | 461 |  |  | 988 | \nTotal operating expenses | 23,924 |  |  | 22,047 |  |  | 21,305 | \nIncome from operations | 8,331 |  |  | 7,205 |  |  | 5,011 | \nGains (losses) on strategic investments, net | 1,017 |  |  | ( 121 ) |  |  | ( 277 ) | \nOther income | 172 |  |  | 354 |  |  | 216 | \nIncome before provision for income taxes | 9,520 |  |  | 7,438 |  |  | 4,950 | \nProvision for income taxes | ( 2,063 ) |  |  | ( 1,241 ) |  |  | ( 814 ) | \nNet income | $ | 7,457 |  |  | $ | 6,197 |  |  | $ | 4,136 | \nBasic net income per share | $ | 7.85 |  |  | $ | 6.44 |  |  | $ | 4.25 | \nDiluted net income per share | $ | 7.80 |  |  | $ | 6.36 |  |  | $ | 4.20 | \nShares used in computing basic net income per share | 950 |  |  | 962 |  |  | 974 | \nShares used in computing diluted net income per share | 956 |  |  | 974 |  |  | 984 | ",
+      "is_table": true,
+      "detected_scale": "millions",
+      "scale_excludes_per_share": true
+    },
+    "fact": {
+      "metric": "eps_diluted",
+      "value_as_written": "7.80",
+      "scale_as_written": null,
+      "period_end": "2026-01-31",
+      "source_chunk_id": "CRM_0001108524-26-000060_item_8_0012",
+      "source_quote": "Diluted net income per share | $ | 7.80"
+    }
+  },
+  {
+    "filing": {
+      "ticker": "CSCO",
+      "cik": 858877,
+      "accession": "0000858877-26-000132",
+      "period_of_report": "2026-07-25",
+      "filing_date": "2026-09-02",
+      "primary_document": "csco-20260725.htm"
+    },
+    "chunk": {
+      "chunk_id": "CSCO_0000858877-26-000132_unknown_0266",
+      "ticker": "CSCO",
+      "accession": "0000858877-26-000132",
+      "section": "unknown",
+      "text": "CISCO SYSTEMS, INC.\nConsolidated Statements of Operations\n(in millions, except per-share amounts)\nYears Ended | July 25, 2026 |  | July 26, 2025 |  | July 27, 2024\nREVENUE: |  |  |  |  | \nProduct | $ | 48,295 |  |  | $ | 41,608 |  |  | $ | 39,253 | \nServices | 15,030 |  |  | 15,046 |  |  | 14,550 | \nTotal revenue | 63,325 |  |  | 56,654 |  |  | 53,803 | \nCOST OF SALES: |  |  |  |  | \nProduct | 17,781 |  |  | 15,121 |  |  | 14,339 | \nServices | 4,684 |  |  | 4,743 |  |  | 4,636 | \nTotal cost of sales | 22,465 |  |  | 19,864 |  |  | 18,975 | \nGROSS MARGIN | 40,860 |  |  | 36,790 |  |  | 34,828 | \nOPERATING EXPENSES: |  |  |  |  | \nResearch and development | 9,563 |  |  | 9,300 |  |  | 7,983 | \nSales and marketing | 11,559 |  |  | 10,966 |  |  | 10,364 | \nGeneral and administrative | 2,761 |  |  | 2,992 |  |  | 2,813 | \nAmortization of purchased intangible assets | 916 |  |  | 1,028 |  |  | 698 | \nRestructuring and other charges | 693 |  |  | 744 |  |  | 789 | \nTotal operating expenses | 25,492 |  |  | 25,030 |  |  | 22,647 | \nOPERATING INCOME | 15,368 |  |  | 11,760 |  |  | 12,181 | \nInterest income | 866 |  |  | 1,001 |  |  | 1,365 | \nInterest expense | ( 1,470 ) |  |  | ( 1,593 ) |  |  | ( 1,006 ) | \nOther income (loss), net | 1,245 |  |  | ( 68 ) |  |  | ( 306 ) | \nInterest and other income (loss), net | 641 |  |  | ( 660 ) |  |  | 53 | \nINCOME BEFORE PROVISION FOR INCOME TAXES | 16,009 |  |  | 11,100 |  |  | 12,234 | \nProvision for income taxes | 2,742 |  |  | 920 |  |  | 1,914 | \nNET INCOME | $ | 13,267 |  |  | $ | 10,180 |  |  | $ | 10,320 | \nNet income per share: |  |  |  |  | \nBasic | $ | 3.36 |  |  | $ | 2.56 |  |  | $ | 2.55 | \nDiluted | $ | 3.33 |  |  | $ | 2.55 |  |  | $ | 2.54 | \nShares used in per-share calculation: |  |  |  |  | \nBasic | 3,953 |  |  | 3,976 |  |  | 4,043 | \nDiluted | 3,987 |  |  | 3,998 |  |  | 4,062 | ",
+      "is_table": true,
+      "detected_scale": "millions",
+      "scale_excludes_per_share": true
+    },
+    "fact": {
+      "metric": "eps_diluted",
+      "value_as_written": "3.33",
+      "scale_as_written": null,
+      "period_end": "2026-07-25",
+      "source_chunk_id": "CSCO_0000858877-26-000132_unknown_0266",
+      "source_quote": "Diluted | $ | 3.33"
+    }
+  },
+  {
+    "filing": {
+      "ticker": "INTC",
+      "cik": 50863,
+      "accession": "0000050863-26-000011",
+      "period_of_report": "2025-12-27",
+      "filing_date": "2026-01-23",
+      "primary_document": "intc-20251227.htm"
+    },
+    "chunk": {
+      "chunk_id": "INTC_0000050863-26-000011_unknown_0390",
+      "ticker": "INTC",
+      "accession": "0000050863-26-000011",
+      "section": "unknown",
+      "text": "/s/ Ernst & Young LLP\nSan Jose, California\nJanuary 22, 2026\nYears Ended (In Millions, Except Per Share Amounts) |  | Dec 27, 2025 |  | Dec 28, 2024 |  | Dec 30, 2023\nNet revenue |  | $ | 52,853 |  |  | $ | 53,101 |  |  | $ | 54,228 | \nCost of sales |  | 34,478 |  |  | 35,756 |  |  | 32,517 | \nGross profit |  | 18,375 |  |  | 17,345 |  |  | 21,711 | \nResearch and development |  | 13,774 |  |  | 16,546 |  |  | 16,046 | \nMarketing, general, and administrative |  | 4,624 |  |  | 5,507 |  |  | 5,634 | \nRestructuring and other charges |  | 2,191 |  |  | 6,970 |  |  | ( 62 ) | \nOperating expenses |  | 20,589 |  |  | 29,023 |  |  | 21,618 | \nOperating income (loss) |  | ( 2,214 ) |  |  | ( 11,678 ) |  |  | 93 | \nGains (losses) on equity investments, net |  | 514 |  |  | 242 |  |  | 40 | \nInterest and other, net |  | 3,257 |  |  | 226 |  |  | 629 | \nIncome (loss) before taxes |  | 1,557 |  |  | ( 11,210 ) |  |  | 762 | \nProvision for (benefit from) taxes |  | 1,531 |  |  | 8,023 |  |  | ( 913 ) | \nNet income (loss) |  | 26 |  |  | ( 19,233 ) |  |  | 1,675 | \nLess: net income (loss) attributable to non-controlling interests |  | 293 |  |  | ( 477 ) |  |  | ( 14 ) | \nNet income (loss) attributable to Intel |  | $ | ( 267 ) |  |  | $ | ( 18,756 ) |  |  | $ | 1,689 | \nEarnings (loss) per share attributable to Intel—basic |  | $ | ( 0.06 ) |  |  | $ | ( 4.38 ) |  |  | $ | 0.40 | \nEarnings (loss) per share attributable to Intel—diluted |  | $ | ( 0.06 ) |  |  | $ | ( 4.38 ) |  |  | $ | 0.40 | \nWeighted average shares of common stock outstanding: |  |  |  |  |  | \nBasic |  | 4,530 |  |  | 4,280 |  |  | 4,190 | \nDiluted |  | 4,530 |  |  | 4,280 |  |  | 4,212 | ",
+      "is_table": true,
+      "detected_scale": "millions",
+      "scale_excludes_per_share": true
+    },
+    "fact": {
+      "metric": "net_income",
+      "value_as_written": "26",
+      "scale_as_written": "in millions",
+      "period_end": "2025-12-27",
+      "source_chunk_id": "INTC_0000050863-26-000011_unknown_0390",
+      "source_quote": "Net income (loss) |  | 26 |"
+    }
+  },
+  {
+    "filing": {
+      "ticker": "INTC",
+      "cik": 50863,
+      "accession": "0000050863-26-000011",
+      "period_of_report": "2025-12-27",
+      "filing_date": "2026-01-23",
+      "primary_document": "intc-20251227.htm"
+    },
+    "chunk": {
+      "chunk_id": "INTC_0000050863-26-000011_unknown_0162",
+      "ticker": "INTC",
+      "accession": "0000050863-26-000011",
+      "section": "unknown",
+      "text": "Total Intel Products operating income was $12.7 billion in 2025, down $269 million from 2024.\n2024 vs. 2023\nTotal Intel Products operating income was $13.0 billion in 2024, up $1.9 billion from 2023.\n▪ CCG operating income increased $1.5 billion from 2023, primarily due to $1.0 billion of favorable impacts attributable to higher product profit due to higher revenue in 2024 and lower period charges related to lower samples. Operating income also improved from 2023 due to favorable impacts from lower operating expenses of $423 million primarily driven by intersegment credits and various cost-reduction measures taken in 2024.\n▪ DCAI operating income increased $469 million from 2023, primarily due to favorable impacts from lower period charges from the sell-through of previously reserved inventory and lower non-accelerator inventory reserves taken in 2024. These favorable impacts to operating income were partially offset by higher period charges due to $922 million in Gaudi AI accelerator inventory-related charges recognized in 2024 and higher operating expenses of $151 million primarily driven by increased product development costs in 2024.",
+      "is_table": true,
+      "detected_scale": null,
+      "scale_excludes_per_share": false
+    },
+    "fact": {
+      "metric": "operating_income",
+      "value_as_written": "12.7",
+      "scale_as_written": "billions",
+      "period_end": "2025-12-27",
+      "source_chunk_id": "INTC_0000050863-26-000011_unknown_0162",
+      "source_quote": "Total Intel Products operating income was $12.7 billion in 2025"
+    }
+  },
+  {
+    "filing": {
+      "ticker": "INTC",
+      "cik": 50863,
+      "accession": "0000050863-26-000011",
+      "period_of_report": "2025-12-27",
+      "filing_date": "2026-01-23",
+      "primary_document": "intc-20251227.htm"
+    },
+    "chunk": {
+      "chunk_id": "INTC_0000050863-26-000011_unknown_0398",
+      "ticker": "INTC",
+      "accession": "0000050863-26-000011",
+      "section": "unknown",
+      "text": "January 22, 2026\nSee accompanying notes.\nSee accompanying notes.\n(In Millions, Except Par Value) |  | Dec 27, 2025 |  | Dec 28, 2024\nAssets |  |  |  | \nCurrent assets: |  |  |  | \nCash and cash equivalents |  | $ | 14,265 |  |  | $ | 8,249 | \nShort-term investments |  | 23,151 |  |  | 13,813 | \nAccounts receivable, net |  | 3,839 |  |  | 3,478 | \nInventories |  | 11,618 |  |  | 12,198 | \nOther current assets |  | 10,815 |  |  | 9,586 | \nTotal current assets |  | 63,688 |  |  | 47,324 | \nProperty, plant and equipment, net |  | 105,414 |  |  | 107,919 | \nEquity investments |  | 8,512 |  |  | 5,383 | \nGoodwill |  | 23,912 |  |  | 24,693 | \nIdentified intangible assets, net |  | 2,772 |  |  | 3,691 | \nOther long-term assets |  | 7,131 |  |  | 7,475 | \nTotal assets |  | $ | 211,429 |  |  | $ | 196,485 | \nLiabilities and stockholders' equity |  |  |  | \nCurrent liabilities: |  |  |  | \nAccounts payable |  | $ | 9,882 |  |  | $ | 12,556 | \nAccrued compensation and benefits |  | 3,990 |  |  | 3,343 | \nShort-term debt |  | 2,499 |  |  | 3,729 | \nIncome taxes payable |  | 604 |  |  | 1,756 | \nOther accrued liabilities |  | 14,600 |  |  | 14,282 | \nTotal current liabilities |  | 31,575 |  |  | 35,666 | \nDebt |  | 44,086 |  |  | 46,282 | \nOther long-term liabilities |  | 9,408 |  |  | 9,505 | \nCommitments and Contingencies (Note 19) |  |  |  | \nStockholders' equity: |  |  |  | \nPreferred stock, $0.001 par value, 50 shares authorized; none issued |  | — |  |  | — | \nCommon stock, $0.001 par value, 10,000 shares authorized; 4,994 shares issued and outstanding (4,330 issued and outstanding in 2024) and capital in excess of par value |  | 65,185 |  |  | 50,949 | \nAccumulated other comprehensive income (loss) |  | 113 |  |  | ( 711 ) | \nRetained earnings |  | 48,983 |  |  | 49,032 | \nTotal Intel stockholders' equity |  | 114,281 |  |  | 99,270 | \nNon-controlling interests |  | 12,079 |  |  | 5,762 | \nTotal stockholders' equity |  | 126,360 |  |  | 105,032 | \nTotal liabilities and stockholders' equity |  | $ | 211,429 |  |  | $ | 196,485 | ",
+      "is_table": true,
+      "detected_scale": "millions",
+      "scale_excludes_per_share": false
+    },
+    "fact": {
+      "metric": "stockholders_equity",
+      "value_as_written": "126,360",
+      "scale_as_written": "In Millions",
+      "period_end": "2025-12-27",
+      "source_chunk_id": "INTC_0000050863-26-000011_unknown_0398",
+      "source_quote": "Total stockholders' equity |  | 126,360"
+    }
+  },
+  {
+    "filing": {
+      "ticker": "MSFT",
+      "cik": 789019,
+      "accession": "0001193125-26-323660",
+      "period_of_report": "2026-06-30",
+      "filing_date": "2026-07-29",
+      "primary_document": "msft-20260630.htm"
+    },
+    "chunk": {
+      "chunk_id": "MSFT_0001193125-26-323660_item_8_0008",
+      "ticker": "MSFT",
+      "accession": "0001193125-26-323660",
+      "section": "item_8",
+      "text": "Item 8\nBALANCE SHEETS\n(In millions) |  |  |  |  |  | \nJune 30, |  | 2026 |  |  | 2025 | \nAssets |  |  |  |  |  |  |  | \nCurrent assets: |  |  |  |  |  |  |  | \nCash and cash equivalents |  | $ | 20,935 |  |  | $ | 30,242 | \nShort-term investments |  |  | 55,908 |  |  |  | 64,323 | \nTotal cash, cash equivalents, and short-term investments |  |  | 76,843 |  |  |  | 94,565 | \nAccounts receivable, net of allowance for doubtful accounts of $ 1,040 and $ 944 |  |  | 80,876 |  |  |  | 69,905 | \nInventories |  |  | 1,397 |  |  |  | 938 | \nOther current assets |  |  | 48,594 |  |  |  | 25,723 | \nTotal current assets |  |  | 207,710 |  |  |  | 191,131 | \nProperty and equipment, net of accumulated depreciation of $ 118,691 and $ 93,653 |  |  | 313,076 |  |  |  | 204,966 | \nOperating lease right-of-use assets |  |  | 24,177 |  |  |  | 24,823 | \nEquity and other investments |  |  | 36,348 |  |  |  | 15,405 | \nGoodwill |  |  | 119,651 |  |  |  | 119,509 | \nIntangible assets, net |  |  | 18,609 |  |  |  | 22,604 | \nOther long-term assets |  |  | 38,805 |  |  |  | 40,565 | \nTotal assets |  | $ | 758,376 |  |  | $ | 619,003 | \nLiabilities and stockholders’ equity |  |  |  |  |  |  |  | \nCurrent liabilities: |  |  |  |  |  |  |  | \nAccounts payable |  | $ | 42,416 |  |  | $ | 27,724 | \nCurrent portion of long-term debt |  |  | 9,227 |  |  |  | 2,999 | \nAccrued compensation |  |  | 14,945 |  |  |  | 13,709 | \nShort-term income taxes |  |  | 2,534 |  |  |  | 7,211 | \nShort-term unearned revenue |  |  | 72,965 |  |  |  | 64,555 | \nOther current liabilities |  |  | 26,738 |  |  |  | 25,020 | \nTotal current liabilities |  |  | 168,825 |  |  |  | 141,218 | \nLong-term debt |  |  | 31,067 |  |  |  | 40,152 | \nLong-term income taxes |  |  | 28,647 |  |  |  | 25,986 | \nLong-term unearned revenue |  |  | 2,747 |  |  |  | 2,710 | \nDeferred income taxes |  |  | 3,054 |  |  |  | 2,835 | \nOperating lease liabilities |  |  | 16,532 |  |  |  | 17,437 | \nOther long-term liabilities |  |  | 65,117 |  |  |  | 45,186 | \nTotal liabilities |  |  | 315,989 |  |  |  | 275,524 | \nCommitments and contingencies |  |  |  |  |  |  |  | \nStockholders’ equity: |  |  |  |  |  |  |  | \nCommon stock and paid-in capital – shares authorized 24,000 ; outstanding 7,427 and 7,434 |  |  | 117,406 |  |  |  | 109,095 | \nRetained earnings |  |  | 328,265 |  |  |  | 237,731 | \nAccumulated other comprehensive loss |  |  | ( 3,284) |  |  | ( 3,347)\nTotal stockholders’ equity |  |  | 442,387 |  |  |  | 343,479 | \nTotal liabilities and stockholders’ equity |  | $ | 758,376 |  |  | $ | 619,003 | ",
+      "is_table": true,
+      "detected_scale": "millions",
+      "scale_excludes_per_share": false
+    },
+    "fact": {
+      "metric": "cash",
+      "value_as_written": "20,935",
+      "scale_as_written": "In millions",
+      "period_end": "2026-06-30",
+      "source_chunk_id": "MSFT_0001193125-26-323660_item_8_0008",
+      "source_quote": "Cash and cash equivalents $ 20,935"
+    }
+  },
+  {
+    "filing": {
+      "ticker": "MSFT",
+      "cik": 789019,
+      "accession": "0001193125-26-323660",
+      "period_of_report": "2026-06-30",
+      "filing_date": "2026-07-29",
+      "primary_document": "msft-20260630.htm"
+    },
+    "chunk": {
+      "chunk_id": "MSFT_0001193125-26-323660_item_8_0002",
+      "ticker": "MSFT",
+      "accession": "0001193125-26-323660",
+      "section": "item_8",
+      "text": "ITEM 8. FINANCIAL STATE MENTS AND SUPPLEMENTARY DATA\nINC OME STATEMENTS\n(In millions, except per share amounts) |  |  |  |  |  |  |  |  | \nYear Ended June 30, |  | 2026 |  |  | 2025 |  |  | 2024 | \nRevenue: |  |  |  |  |  |  |  |  |  |  |  | \nProduct |  | $ | 64,696 |  |  | $ | 63,946 |  |  | $ | 64,773 | \nService and other |  |  | 267,143 |  |  |  | 217,778 |  |  |  | 180,349 | \nTotal revenue |  |  | 331,839 |  |  |  | 281,724 |  |  |  | 245,122 | \nCost of revenue: |  |  |  |  |  |  |  |  |  |  |  | \nProduct |  |  | 12,098 |  |  |  | 13,501 |  |  |  | 15,272 | \nService and other |  |  | 94,276 |  |  |  | 74,330 |  |  |  | 58,842 | \nTotal cost of revenue |  |  | 106,374 |  |  |  | 87,831 |  |  |  | 74,114 | \nGross margin |  |  | 225,465 |  |  |  | 193,893 |  |  |  | 171,008 | \nResearch and development |  |  | 35,562 |  |  |  | 32,488 |  |  |  | 29,510 | \nSales and marketing |  |  | 26,710 |  |  |  | 25,654 |  |  |  | 24,456 | \nGeneral and administrative |  |  | 7,956 |  |  |  | 7,223 |  |  |  | 7,609 | \nOperating income |  |  | 155,237 |  |  |  | 128,528 |  |  |  | 109,433 | \nOther income (expense), net |  |  | 10,697 |  |  |  | ( 4,901) |  |  | ( 1,646)\nIncome before income taxes |  |  | 165,934 |  |  |  | 123,627 |  |  |  | 107,787 | \nProvision for income taxes |  |  | 32,185 |  |  |  | 21,795 |  |  |  | 19,651 | \nNet income |  | $ | 133,749 |  |  | $ | 101,832 |  |  | $ | 88,136 | \nEarnings per share: |  |  |  |  |  |  |  |  |  |  |  | \nBasic |  | $ | 18.00 |  |  | $ | 13.70 |  |  | $ | 11.86 | \nDiluted |  | $ | 17.95 |  |  | $ | 13.64 |  |  | $ | 11.80 | \nWeighted average shares outstanding: |  |  |  |  |  |  |  |  |  |  |  | \nBasic |  |  | 7,429 |  |  |  | 7,433 |  |  |  | 7,431 | \nDiluted |  |  | 7,453 |  |  |  | 7,465 |  |  |  | 7,469 | ",
+      "is_table": true,
+      "detected_scale": "millions",
+      "scale_excludes_per_share": true
+    },
+    "fact": {
+      "metric": "eps_diluted",
+      "value_as_written": "17.95",
+      "scale_as_written": null,
+      "period_end": "2026-06-30",
+      "source_chunk_id": "MSFT_0001193125-26-323660_item_8_0002",
+      "source_quote": "Diluted |  | $ | 17.95"
+    }
+  },
+  {
+    "filing": {
+      "ticker": "NFLX",
+      "cik": 1065280,
+      "accession": "0001065280-26-000034",
+      "period_of_report": "2025-12-31",
+      "filing_date": "2026-01-23",
+      "primary_document": "nflx-20251231.htm"
+    },
+    "chunk": {
+      "chunk_id": "NFLX_0001065280-26-000034_item_16_0043",
+      "ticker": "NFLX",
+      "accession": "0001065280-26-000034",
+      "section": "item_16",
+      "text": "4. Cash, Cash Equivalents, Restricted Cash, and Short-term Investments\nThe following tables summarize the Company's cash, cash equivalents, restricted cash and short-term investments as of December 31, 2025 and 2024:\n | As of December 31, 2025\n | Amortized Cost |  | Gross Unrealized Gains |  | Gross Unrealized Losses |  | Estimated Fair Value |  | Cash and cash equivalents |  | Short-term investments |  | Other Current Assets |  | Non-current Assets\n | (in thousands)\nCash | $ | 5,214,163 |  |  | $ | — |  |  | $ | — |  |  | $ | 5,214,163 |  |  | $ | 5,208,710 |  |  | $ | — |  |  | $ | 5,369 |  |  | $ | 84 | \nLevel 1 securities: |  |  |  |  |  |  |  |  |  |  |  |  |  |  | \nMoney market funds | 3,259,240 |  |  | — |  |  | — |  |  | 3,259,240 |  |  | 3,259,180 |  |  | — |  |  | — |  |  | 60 | \nLevel 2 securities: |  |  |  |  |  |  |  |  |  |  |  |  |  |  | \nTime Deposits (1) | 594,469 |  |  | — |  |  | — |  |  | 594,469 |  |  | 565,791 |  |  | 28,678 |  |  | — |  |  | — | \n | $ | 9,067,872 |  |  | $ | — |  |  | $ | — |  |  | $ | 9,067,872 |  |  | $ | 9,033,681 |  |  | $ | 28,678 |  |  | $ | 5,369 |  |  | $ | 144 | ",
+      "is_table": true,
+      "detected_scale": "thousands",
+      "scale_excludes_per_share": false
+    },
+    "fact": {
+      "metric": "cash",
+      "value_as_written": "5,208,710",
+      "scale_as_written": "in thousands",
+      "period_end": "2025-12-31",
+      "source_chunk_id": "NFLX_0001065280-26-000034_item_16_0043",
+      "source_quote": "Cash | $ | 5,214,163 |  |  | $ | — |  |  | $ | — |  |  | $ | 5,214,163 |  |  | $ | 5,208,710 |"
+    }
+  },
+  {
+    "filing": {
+      "ticker": "NVDA",
+      "cik": 1045810,
+      "accession": "0001045810-26-000021",
+      "period_of_report": "2026-01-25",
+      "filing_date": "2026-02-25",
+      "primary_document": "nvda-20260125.htm"
+    },
+    "chunk": {
+      "chunk_id": "NVDA_0001045810-26-000021_item_7_0006",
+      "ticker": "NVDA",
+      "accession": "0001045810-26-000021",
+      "section": "item_7",
+      "text": "Refer to “Item 1A. Risk Factors – Risks Related to Regulatory, Legal, Our Stock and Other Matters” for a further discussion of the potential impact of these factors on our business.\nFiscal Year 2026 Summary\n | Year Ended\n | Jan 25, 2026 |  | Jan 26, 2025 |  | Change\n | ($ in millions, except per share data)\nRevenue | $ | 215,938 |  |  | $ | 130,497 |  |  | Up 65%\nGross margin | 71.1 | % |  | 75.0 | % |  | -3.9 pts\nOperating expenses | $ | 23,076 |  |  | $ | 16,405 |  |  | Up 41%\nOperating income | $ | 130,387 |  |  | $ | 81,453 |  |  | Up 60%\nNet income | $ | 120,067 |  |  | $ | 72,880 |  |  | Up 65%\nNet income per diluted share | $ | 4.90 |  |  | $ | 2.94 |  |  | Up 67%",
+      "is_table": true,
+      "detected_scale": "millions",
+      "scale_excludes_per_share": true
+    },
+    "fact": {
+      "metric": "eps_diluted",
+      "value_as_written": "4.90",
+      "scale_as_written": null,
+      "period_end": "2026-01-25",
+      "source_chunk_id": "NVDA_0001045810-26-000021_item_7_0006",
+      "source_quote": "Net income per diluted share | $ | 4.90 |  |  | $ | 2.94 |  |  | Up 67%"
+    }
+  },
+  {
+    "filing": {
+      "ticker": "ORCL",
+      "cik": 1341439,
+      "accession": "0001193125-26-277521",
+      "period_of_report": "2026-05-31",
+      "filing_date": "2026-06-22",
+      "primary_document": "orcl-20260531.htm"
+    },
+    "chunk": {
+      "chunk_id": "ORCL_0001193125-26-277521_item_15_0164",
+      "ticker": "ORCL",
+      "accession": "0001193125-26-277521",
+      "section": "item_15",
+      "text": "14.\nEARNINGS PER SHARE\n |  | Year Ended May 31, | \n(in millions, except per share data) |  | 2026 |  |  | 2025 |  |  | 2024 | \nNet income |  | $ | 17,087 |  |  | $ | 12,443 |  |  | $ | 10,467 | \nPreferred stock dividends |  |  | 103 |  |  |  | — |  |  |  | — | \nNet income available to common shareholders |  | $ | 16,984 |  |  | $ | 12,443 |  |  | $ | 10,467 | \nWeighted-average common shares outstanding |  |  | 2,860 |  |  |  | 2,789 |  |  |  | 2,744 | \nDilutive effect of employee stock plans |  |  | 54 |  |  |  | 77 |  |  |  | 79 | \nDilutive weighted-average common shares outstanding |  |  | 2,914 |  |  |  | 2,866 |  |  |  | 2,823 | \nBasic earnings per share attributable to common shareholders |  | $ | 5.94 |  |  | $ | 4.46 |  |  | $ | 3.82 | \nDiluted earnings per share attributable to common shareholders |  | $ | 5.83 |  |  | $ | 4.34 |  |  | $ | 3.71 | \nStock awards and shares excluded from calculation (1) |  |  | 31 |  |  |  | 23 |  |  |  | 27 | ",
+      "is_table": true,
+      "detected_scale": "millions",
+      "scale_excludes_per_share": true
+    },
+    "fact": {
+      "metric": "eps_diluted",
+      "value_as_written": "5.83",
+      "scale_as_written": null,
+      "period_end": "2026-05-31",
+      "source_chunk_id": "ORCL_0001193125-26-277521_item_15_0164",
+      "source_quote": "Diluted earnings per share attributable to common shareholders |  | $ | 5.83"
+    }
+  },
+  {
+    "filing": {
+      "ticker": "ORCL",
+      "cik": 1341439,
+      "accession": "0001193125-26-277521",
+      "period_of_report": "2026-05-31",
+      "filing_date": "2026-06-22",
+      "primary_document": "orcl-20260531.htm"
+    },
+    "chunk": {
+      "chunk_id": "ORCL_0001193125-26-277521_item_15_0012",
+      "ticker": "ORCL",
+      "accession": "0001193125-26-277521",
+      "section": "item_15",
+      "text": "ORACLE CORPORATION\nCONSOLIDATED B ALANCE SHEETS\nAs of May 31, 2026 and 2025\n |  | May 31, | \n(in millions, except per share data) |  | 2026 |  |  | 2025 | \nASSETS |  |  |  |  |  | \nCurrent assets: |  |  |  |  |  | \nCash and cash equivalents |  | $ | 31,289 |  |  | $ | 10,786 | \nMarketable securities |  |  | 605 |  |  |  | 417 | \nTrade receivables, net of allowances for credit losses of $ 542 and $ 557 as of May 31, 2026 and May 31, 2025, respectively |  |  | 10,385 |  |  |  | 8,558 | \nPrepaid expenses and other current assets |  |  | 4,288 |  |  |  | 4,818 | \nTotal current assets |  |  | 46,567 |  |  |  | 24,579 | \nNon-current assets: |  |  |  |  |  | \nProperty, plant and equipment, net |  |  | 99,957 |  |  |  | 43,522 | \nOperating lease right-of-use assets |  |  | 29,690 |  |  |  | 13,145 | \nGoodwill |  |  | 62,261 |  |  |  | 62,207 | \nDeferred tax assets |  |  | 11,541 |  |  |  | 11,877 | \nOther non-current assets |  |  | 11,743 |  |  |  | 13,031 | \nTotal non-current assets |  |  | 215,192 |  |  |  | 143,782 | \nTotal assets |  | $ | 261,759 |  |  | $ | 168,361 | \nLIABILITIES AND STOCKHOLDERS’ EQUITY |  |  |  |  |  | \nCurrent liabilities: |  |  |  |  |  | \nNotes payable and other borrowings, current |  | $ | 7,199 |  |  | $ | 7,271 | \nAccounts payable |  |  | 10,977 |  |  |  | 5,113 | \nAccrued compensation and related benefits |  |  | 2,225 |  |  |  | 2,243 | \nDeferred revenues |  |  | 9,916 |  |  |  | 9,387 | \nOther current liabilities |  |  | 11,447 |  |  |  | 8,629 | \nTotal current liabilities |  |  | 41,764 |  |  |  | 32,643 | \nNon-current liabilities: |  |  |  |  |  | \nNotes payable and other borrowings, non-current |  |  | 122,342 |  |  |  | 85,297 | \nIncome taxes payable |  |  | 11,771 |  |  |  | 10,269 | \nOperating lease liabilities |  |  | 26,648 |  |  |  | 11,536 | \nOther non-current liabilities |  |  | 16,178 |  |  |  | 7,647 | \nTotal non-current liabilities |  |  | 176,939 |  |  |  | 114,749 | \nCommitments and contingencies |  |  |  |  |  | \nOracle Corporation stockholders’ equity: |  |  |  |  |  | \nPreferred stock, $ 0.01 par value and additional paid in capital—authorized: 1.0 shares; outstanding: 0.05 shares as of May 31, 2026 of 6.50 % Series D Mandatory Convertible Preferred Stock ( none as of May 31, 2025) |  |  | 4,954 |  |  |  | — | \nCommon stock, $ 0.01 par value and additional paid in capital—authorized: 11,000 shares; outstanding: 2,880 shares and 2,807 shares as of May 31, 2026 and 2025, respectively |  |  | 43,243 |  |  |  | 37,107 | \nAccumulated deficit |  |  | ( 4,309) |  |  | ( 15,481)\nAccumulated other comprehensive loss |  |  | ( 1,380) |  |  | ( 1,175)\nTotal Oracle Corporation stockholders’ equity |  |  | 42,508 |  |  |  | 20,451 | \nNoncontrolling interests |  |  | 548 |  |  |  | 518 | \nTotal stockholders’ equity |  |  | 43,056 |  |  |  | 20,969 | \nTotal liabilities and stockholders’ equity |  | $ | 261,759 |  |  | $ | 168,361 | ",
+      "is_table": true,
+      "detected_scale": "millions",
+      "scale_excludes_per_share": true
+    },
+    "fact": {
+      "metric": "stockholders_equity",
+      "value_as_written": "43,056",
+      "scale_as_written": "in millions",
+      "period_end": "2026-05-31",
+      "source_chunk_id": "ORCL_0001193125-26-277521_item_15_0012",
+      "source_quote": "Total stockholders’ equity |  |  | 43,056"
+    }
+  },
+  {
+    "filing": {
+      "ticker": "CSCO",
+      "cik": 858877,
+      "accession": "0000858877-26-000132",
+      "period_of_report": "2026-07-25",
+      "filing_date": "2026-09-02",
+      "primary_document": "csco-20260725.htm"
+    },
+    "chunk": {
+      "chunk_id": "CSCO_0000858877-26-000132_unknown_0264",
+      "ticker": "CSCO",
+      "accession": "0000858877-26-000132",
+      "section": "unknown",
+      "text": "CISCO SYSTEMS, INC.\nConsolidated Balance Sheets\n(in millions, except par value)\n | July 25, 2026 |  | July 26, 2025\nASSETS |  |  | \nCurrent assets: |  |  | \nCash and cash equivalents | $ | 7,218 |  |  | $ | 8,346 | \nInvestments | 8,700 |  |  | 7,764 | \nAccounts receivable, net of allowance of $ 78 at July 25, 2026 and $ 69 at July 26, 2025 | 7,470 |  |  | 6,701 | \nInventories | 5,694 |  |  | 3,164 | \nFinancing receivables, net | 3,392 |  |  | 3,061 | \nOther current assets | 6,191 |  |  | 5,950 | \nTotal current assets | 38,665 |  |  | 34,986 | \nProperty and equipment, net | 2,760 |  |  | 2,113 | \nFinancing receivables, net | 4,940 |  |  | 3,466 | \nGoodwill | 59,477 |  |  | 59,136 | \nPurchased intangible assets, net | 7,557 |  |  | 9,175 | \nDeferred tax assets | 7,109 |  |  | 7,356 | \nOther assets | 9,129 |  |  | 6,059 | \nTOTAL ASSETS | $ | 129,637 |  |  | $ | 122,291 | \nLIABILITIES AND EQUITY |  |  | \nCurrent liabilities: |  |  | \nShort-term debt | $ | 10,161 |  |  | $ | 5,232 | \nAccounts payable | 3,366 |  |  | 2,528 | \nIncome taxes payable | 190 |  |  | 1,857 | \nAccrued compensation | 4,057 |  |  | 3,611 | \nDeferred revenue | 16,988 |  |  | 16,416 | \nOther current liabilities | 6,763 |  |  | 5,420 | \nTotal current liabilities | 41,525 |  |  | 35,064 | \nLong-term debt | 19,372 |  |  | 22,861 | \nIncome taxes payable | 2,339 |  |  | 2,165 | \nDeferred revenue | 12,793 |  |  | 12,363 | \nOther long-term liabilities | 3,323 |  |  | 2,995 | \nTotal liabilities | 79,352 |  |  | 75,448 | \nCommitments and contingencies (Note 13) |  |  | \nEquity: |  |  | \nCisco stockholders’ equity: |  |  | \nPreferred stock, $ 0.001 par value: 5 shares authorized; none issued and outstanding | — |  |  | — | \nCommon stock and additional paid-in capital, $ 0.001 par value: 20,000 shares authorized; 3,946 and 3,960 shares issued and outstanding at July 25, 2026 and July 26, 2025, respectively | 49,676 |  |  | 47,747 | \nRetained earnings | 1,565 |  |  | 50 | \nAccumulated other comprehensive loss | ( 956 ) |  |  | ( 954 ) | \nTotal equity | 50,285 |  |  | 46,843 | \nTOTAL LIABILITIES AND EQUITY | $ | 129,637 |  |  | $ | 122,291 | ",
+      "is_table": true,
+      "detected_scale": "millions",
+      "scale_excludes_per_share": false
+    },
+    "fact": {
+      "metric": "stockholders_equity",
+      "value_as_written": "50,285",
+      "scale_as_written": "in millions",
+      "period_end": "2026-07-25",
+      "source_chunk_id": "CSCO_0000858877-26-000132_unknown_0264",
+      "source_quote": "Total equity | 50,285"
+    }
+  },
+  {
+    "filing": {
+      "ticker": "GOOGL",
+      "cik": 1652044,
+      "accession": "0001652044-26-000018",
+      "period_of_report": "2025-12-31",
+      "filing_date": "2026-02-05",
+      "primary_document": "goog-20251231.htm"
+    },
+    "chunk": {
+      "chunk_id": "GOOGL_0001652044-26-000018_item_8_0024",
+      "ticker": "GOOGL",
+      "accession": "0001652044-26-000018",
+      "section": "item_8",
+      "text": "Alphabet Inc.\nCONSOLIDATED STATEMENTS OF INCOME\n(in millions, except per share amounts)\n | Year Ended December 31,\n | 2023 |  | 2024 |  | 2025\nRevenues | $ | 307,394 |  |  | $ | 350,018 |  |  | $ | 402,836 | \nCosts and expenses: |  |  |  |  | \nCost of revenues | 133,332 |  |  | 146,306 |  |  | 162,535 | \nResearch and development | 45,427 |  |  | 49,326 |  |  | 61,087 | \nSales and marketing | 27,917 |  |  | 27,808 |  |  | 28,693 | \nGeneral and administrative | 16,425 |  |  | 14,188 |  |  | 21,482 | \nTotal costs and expenses | 223,101 |  |  | 237,628 |  |  | 273,797 | \nIncome from operations | 84,293 |  |  | 112,390 |  |  | 129,039 | \nOther income (expense), net | 1,424 |  |  | 7,425 |  |  | 29,787 | \nIncome before income taxes | 85,717 |  |  | 119,815 |  |  | 158,826 | \nProvision for income taxes | 11,922 |  |  | 19,697 |  |  | 26,656 | \nNet income | $ | 73,795 |  |  | $ | 100,118 |  |  | $ | 132,170 | \nBasic net income per share (Note 12) | $ | 5.84 |  |  | $ | 8.13 |  |  | $ | 10.91 | \nDiluted net income per share (Note 12) | $ | 5.80 |  |  | $ | 8.04 |  |  | $ | 10.81 | ",
+      "is_table": true,
+      "detected_scale": "millions",
+      "scale_excludes_per_share": true
+    },
+    "fact": {
+      "metric": "revenue",
+      "value_as_written": "402,836",
+      "scale_as_written": "in millions",
+      "period_end": "2025-12-31",
+      "source_chunk_id": "GOOGL_0001652044-26-000018_item_8_0024",
+      "source_quote": "Revenues | $ | 307,394 |  |  | $ | 350,018 |  |  | $ | 402,836"
+    }
+  },
+  {
+    "filing": {
+      "ticker": "INTU",
+      "cik": 896878,
+      "accession": "0000896878-26-000037",
+      "period_of_report": "2026-07-31",
+      "filing_date": "2026-09-09",
+      "primary_document": "intu-20260731.htm"
+    },
+    "chunk": {
+      "chunk_id": "INTU_0000896878-26-000037_unknown_0524",
+      "ticker": "INTU",
+      "accession": "0000896878-26-000037",
+      "section": "unknown",
+      "text": "Table of Contents\nThe following table summarizes our cash and cash equivalents, investments, and funds receivable and amounts held for customers by balance sheet classification at the dates indicated.\n | July 31, 2026 |  | July 31, 2025\n(In millions) | Amortized Cost |  | Fair Value |  | Amortized Cost |  | Fair Value\nClassification on consolidated balance sheets: |  |  |  |  |  |  | \nCash and cash equivalents | $ | 4,705 |  |  | $ | 4,705 |  |  | $ | 2,884 |  |  | $ | 2,884 | \nInvestments | 2,495 |  |  | 2,495 |  |  | 1,667 |  |  | 1,668 | \nFunds receivable and amounts held for customers | 5,039 |  |  | 5,038 |  |  | 7,076 |  |  | 7,076 | \nTotal cash and cash equivalents, investments, and funds receivable and amounts held for customers | $ | 12,239 |  |  | $ | 12,238 |  |  | $ | 11,627 |  |  | $ | 11,628 | ",
+      "is_table": true,
+      "detected_scale": "millions",
+      "scale_excludes_per_share": false
+    },
+    "fact": {
+      "metric": "cash",
+      "value_as_written": "4,705",
+      "scale_as_written": "In millions",
+      "period_end": "2026-07-31",
+      "source_chunk_id": "INTU_0000896878-26-000037_unknown_0524",
+      "source_quote": "Cash and cash equivalents | $ | 4,705"
+    }
+  }
+]

@@ -1,0 +1,42 @@
+# Local environments, credentials, and developer artifacts
+.venv/
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.pem
+*.key
+*.p12
+*.pfx
+*credentials*.json
+api_keys.*
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.pytest-work/
+.deploy-check/
+
+# Raw downloads and working copies are not part of the public demo.
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/*.db*
+!data/runs.db
+
+# Immutable snapshots read by the deployed dashboard.
+!data/processed/AAPL_0000320193-25-000079_1f465aaeabea.jsonl
+!data/processed/ADBE_0000796343-26-000003_59034e2f0d18.jsonl
+!data/processed/AMZN_0001018724-26-000004_e356ccfe2a9d.jsonl
+!data/processed/CRM_0001108524-26-000060_8b02d92f4bc8.jsonl
+!data/processed/CSCO_0000858877-26-000132_2746debc6fe2.jsonl
+!data/processed/GOOGL_0001652044-26-000018_9fe6fe416484.jsonl
+!data/processed/IBM_0000051143-26-000010_94cfce2fa76b.jsonl
+!data/processed/INTC_0000050863-26-000011_0dffa4ed70d7.jsonl
+!data/processed/INTU_0000896878-26-000037_81f82767d2d3.jsonl
+!data/processed/META_0001628280-26-003942_7ae7ebb7ccb5.jsonl
+!data/processed/MSFT_0001193125-26-323660_155be5d8b460.jsonl
+!data/processed/NFLX_0001065280-26-000034_edc64c5b0eba.jsonl
+!data/processed/NOW_0001373715-26-000007_24ac1ec7a8dd.jsonl
+!data/processed/NVDA_0001045810-26-000021_93a003e5663a.jsonl
+!data/processed/ORCL_0001193125-26-277521_18db9c41b340.jsonl

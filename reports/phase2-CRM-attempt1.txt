@@ -1,0 +1,88 @@
+INFO httpx HTTP Request: GET https://www.sec.gov/files/company_tickers.json "HTTP/1.1 200 OK"
+INFO httpx HTTP Request: GET https://data.sec.gov/submissions/CIK0001108524.json "HTTP/1.1 200 OK"
+INFO edgar.settings Identity of the Edgar REST client set to [Swaroop Veerla vveerla@uci.edu]
+CRM: chunks=436 sections=['item_1', 'item_10', 'item_11', 'item_12', 'item_13', 'item_14', 'item_15', 'item_16', 'item_1a', 'item_1b', 'item_1c', 'item_2', 'item_3', 'item_4', 'item_4a', 'item_5', 'item_6', 'item_7', 'item_7a', 'item_8', 'item_9', 'item_9a', 'item_9b', 'item_9c', 'unknown'] scaled_tables=68 max_chars=4485
+
+CRM_0001108524-26-000060_item_8_0010 scale=millions
+Salesforce, Inc.
+Consolidated Balance Sheets
+(in millions)
+ | January 31, 2026 |  | January 31, 2025
+Assets |  |  | 
+Current assets: |  |  | 
+Cash and cash equivalents | $ | 7,327 |  |  | $ | 8,848 | 
+Marketable securities | 2,238 |  |  | 5,184 | 
+Accounts receivable, net | 14,339 |  |  | 11,945 | 
+Costs capitalized to obtain revenue contracts, net | 2,075 |  |  | 1,971 | 
+Prepaid expenses and other current assets | 2,243 |  |  | 1,779 | 
+Total current assets | 28,222 |  |  | 29,727 | 
+Property and equipment, net | 3,120 |  |  | 3,236 | 
+Operating lease right-of-use assets, net | 2,003 |  |  | 2,157 | 
+Noncurrent costs capitalized to obtain revenue contracts, net | 2,985 |  |  | 2,475 | 
+Strategic investments | 7,591 |  |  | 4,852 | 
+Goodwill | 57,941 |  |  | 51,283 | 
+Intangible assets acquired through business combinations, net | 6,815 |  |  | 4,428 | 
+Deferred tax assets and other assets, net | 3,628 |  |  | 4,770 | 
+Total assets | $ | 112,305 |  |  | $ | 102,928 | 
+Liabilities and stockholders� equity |  |  | 
+Current liabilities: |  |  | 
+Accounts payable, accrued expenses and other liabilities | $ | 8,253 |  |  | $ | 6,658 | 
+Operating lease liabilities, current | 548 |  |  | 579 | 
+Unearned revenue | 24,317 |  |  | 20,743 | 
+Debt, current | 4,000 |  |  | 0 | 
+Total current liabilities | 37,118 |  |  | 27,980 | 
+Noncurrent debt | 10,439 |  |  | 8,433 | 
+Noncurrent operating lease liabilities | 2,189 |  |  | 2,380 | 
+Other noncurrent liabilities | 3,417 |  |  | 2,962 | 
+Total liabilities | 53,163 |  |  | 41,755 | 
+Commitments and contingencies (See Notes 6 and 14) |  |  | 
+Stockholders� equity: |  |  | 
+Preferred stock, $ 0.001 par value; 5 shares authorized and none issued and outstanding | 0 |  |  | 0 | 
+Common stock, $ 0.001 par value; 1,600 shares authorized, 1,073 and 1,056 shares issued as of January 31, 2026 and 2025, respectively, and 929 and 962 shares outstanding as of January 31, 2026 and 2025, respectively | 1 |  |  | 1 | 
+Treasury stock, at cost | ( 32,228 ) |  |  | ( 19,507 ) | 
+Additional paid-in capital | 68,835 |  |  | 64,576 | 
+Accumulated other comprehensive income (loss) | 313 |  |  | ( 266 ) | 
+Retained earnings | 22,221 |  |  | 16,369 | 
+Total stockholders� equity | 59,142 |  |  | 61,173 | 
+Total liabilities and stockholders� equity | $ | 112,305 |  |  | $ | 102,928 | 
+
+CRM_0001108524-26-000060_item_8_0012 scale=millions
+Salesforce, Inc.
+Consolidated Statements of Operations
+(in millions, except per share data)
+4 | Fiscal Year Ended January 31,
+ | 2026 |  | 2025 |  | 2024
+Revenues: |  |  |  |  | 
+Subscription and support | $ | 39,388 |  |  | $ | 35,679 |  |  | $ | 32,537 | 
+Professional services and other | 2,137 |  |  | 2,216 |  |  | 2,320 | 
+Total revenues | 41,525 |  |  | 37,895 |  |  | 34,857 | 
+Cost of revenues (1)(2): |  |  |  |  | 
+Subscription and support | 6,796 |  |  | 6,198 |  |  | 6,177 | 
+Professional services and other | 2,474 |  |  | 2,445 |  |  | 2,364 | 
+Total cost of revenues | 9,270 |  |  | 8,643 |  |  | 8,541 | 
+Gross profit | 32,255 |  |  | 29,252 |  |  | 26,316 | 
+Operating expenses (1)(2): |  |  |  |  | 
+Research and development | 5,993 |  |  | 5,493 |  |  | 4,906 | 
+Sales and marketing | 14,345 |  |  | 13,257 |  |  | 12,877 | 
+General and administrative | 3,000 |  |  | 2,836 |  |  | 2,534 | 
+Restructuring | 586 |  |  | 461 |  |  | 988 | 
+Total operating expenses | 23,924 |  |  | 22,047 |  |  | 21,305 | 
+Income from operations | 8,331 |  |  | 7,205 |  |  | 5,011 | 
+Gains (losses) on strategic investments, net | 1,017 |  |  | ( 121 ) |  |  | ( 277 ) | 
+Other income | 172 |  |  | 354 |  |  | 216 | 
+Income before provision for income taxes | 9,520 |  |  | 7,438 |  |  | 4,950 | 
+Provision for income taxes | ( 2,063 ) |  |  | ( 1,241 ) |  |  | ( 814 ) | 
+Net income | $ | 7,457 |  |  | $ | 6,197 |  |  | $ | 4,136 | 
+Basic net income per share | $ | 7.85 |  |  | $ | 6.44 |  |  | $ | 4.25 | 
+Diluted net income per share | $ | 7.80 |  |  | $ | 6.36 |  |  | $ | 4.20 | 
+Shares used in computing basic net income per share | 950 |  |  | 962 |  |  | 974 | 
+Shares used in computing diluted net income per share | 956 |  |  | 974 |  |  | 984 | 
+
+CRM_0001108524-26-000060_item_8_0014 scale=millions
+Consolidated Statements of Operations
+(in millions, except per share data)
+(1) Amounts include amortization of intangible assets acquired through business combinations, as follows:
+ | Fiscal Year Ended January 31,
+ | 2026 |  | 2025 |  | 2024
+Cost of revenues | $ | 692 |  |  | $ | 750 |  |  | $ | 978 | 
+Sales and marketing | 995 |  |  | 901 |  |  | 891 | 

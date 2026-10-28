@@ -1,0 +1,143 @@
+run_id=dev-20b-v4
+WARNING dv.llm ticker=- step=provider_config mode=- provider=gemini disabled: placeholder model
+WARNING dv.llm ticker=- step=provider_config mode=- provider=openrouter disabled: placeholder model
+WARNING dv.llm ticker=- step=provider_config mode=- provider=ollama disabled: placeholder model
+INFO dv.pipeline ticker=AAPL step=revenue mode=verified status=answered value=416161000000.0
+INFO dv.pipeline ticker=AAPL step=net_income mode=verified status=answered value=112010000000.0
+INFO dv.pipeline ticker=AAPL step=operating_income mode=verified status=answered value=133050000000.0
+INFO dv.pipeline ticker=AAPL step=operating_cash_flow mode=verified status=answered value=111482000000.0
+INFO dv.pipeline ticker=AAPL step=eps_diluted mode=verified status=answered value=7.46
+INFO dv.pipeline ticker=AAPL step=total_assets mode=verified status=answered value=359241000000.0
+INFO dv.pipeline ticker=AAPL step=total_liabilities mode=verified status=answered value=285508000000.0
+INFO dv.pipeline ticker=AAPL step=cash mode=verified status=answered value=35934000000.0
+INFO dv.pipeline ticker=AAPL step=stockholders_equity mode=verified status=answered value=73733000000.0
+INFO dv.pipeline ticker=MSFT step=revenue mode=verified status=answered value=331839000000.0
+WARNING dv.pipeline ticker=MSFT step=net_income mode=verified attempt=1 failed_check=V3 reason=displayed value is absent from the source quote
+INFO httpx HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+WARNING dv.pipeline ticker=MSFT step=net_income mode=verified attempt=2 failed_check=V3 reason=displayed value is absent from the source quote
+INFO httpx HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+ERROR dv.llm ticker=MSFT step=net_income mode=verified provider=groq model=openai/gpt-oss-20b attempt=1
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 197, in _request
+    response = provider.complete(prompt, temperature=0, max_tokens=self.settings.max_output_tokens)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 65, in complete
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `openai/gpt-oss-20b` in organization `org_01kfp38x4bemsrc3zw5fc3rj32` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 9924, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+ERROR dv.llm ticker=MSFT step=net_income mode=verified provider=groq model=openai/gpt-oss-20b recovery_round=0
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 248, in complete
+    value, response = self._validated(provider, prompt, schema, context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 210, in _validated
+    response = self._request(provider, prompt, context)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 192, in _request
+    for attempt in Retrying(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=2, max=8),
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 514, in __iter__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 440, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 462, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 197, in _request
+    response = provider.complete(prompt, temperature=0, max_tokens=self.settings.max_output_tokens)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 65, in complete
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `openai/gpt-oss-20b` in organization `org_01kfp38x4bemsrc3zw5fc3rj32` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 9924, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO httpx HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+ERROR dv.llm ticker=MSFT step=net_income mode=verified provider=groq model=openai/gpt-oss-20b attempt=1
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 197, in _request
+    response = provider.complete(prompt, temperature=0, max_tokens=self.settings.max_output_tokens)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 65, in complete
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `openai/gpt-oss-20b` in organization `org_01kfp38x4bemsrc3zw5fc3rj32` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 10161, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+ERROR dv.llm ticker=MSFT step=net_income mode=verified provider=groq model=openai/gpt-oss-20b recovery_round=1
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 248, in complete
+    value, response = self._validated(provider, prompt, schema, context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 210, in _validated
+    response = self._request(provider, prompt, context)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 192, in _request
+    for attempt in Retrying(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=2, max=8),
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 514, in __iter__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 440, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\tenacity\__init__.py", line 462, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 197, in _request
+    response = provider.complete(prompt, temperature=0, max_tokens=self.settings.max_output_tokens)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\llm.py", line 65, in complete
+    response = self._client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\.venv\Lib\site-packages\openai\_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `openai/gpt-oss-20b` in organization `org_01kfp38x4bemsrc3zw5fc3rj32` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 10161, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}

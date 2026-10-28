@@ -1,0 +1,102 @@
+INFO httpx HTTP Request: GET https://www.sec.gov/files/company_tickers.json "HTTP/1.1 200 OK"
+INFO httpx HTTP Request: GET https://data.sec.gov/submissions/CIK0000789019.json "HTTP/1.1 200 OK"
+C:\Users\ADMIN\OneDrive\Documents\ChatGPT\chemistry application\diligence-verify\src\dv\ingest.py:23: XMLParsedAsHTMLWarning: It looks like you're using an HTML parser to parse an XML document.
+
+Assuming this really is an XML document, what you're doing might work, but you should know that using an XML parser will be more reliable. To parse this document as XML, make sure you have the Python package 'lxml' installed, and pass the keyword argument `features="xml"` into the BeautifulSoup constructor.
+
+If you want or need to use an HTML parser on this document, you can make this warning go away by filtering it. To do that, run this code before calling the BeautifulSoup constructor:
+
+    from bs4 import XMLParsedAsHTMLWarning
+    import warnings
+
+    warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
+
+  soup = BeautifulSoup(html, "lxml")
+MSFT: chunks=430 sections=['item_1', 'item_10', 'item_11', 'item_12', 'item_13', 'item_14', 'item_15', 'item_16', 'item_1a', 'item_1b', 'item_1c', 'item_2', 'item_3', 'item_4', 'item_5', 'item_6', 'item_7', 'item_7a', 'item_8', 'item_9', 'item_9a', 'item_9b', 'item_9c', 'unknown'] scaled_tables=65 max_chars=3275
+
+MSFT_0001193125-26-323660_item_8_0002 scale=millions
+ITEM 8. FINANCIAL STATE MENTS AND SUPPLEMENTARY DATA
+INC OME STATEMENTS
+(In millions, except per share amounts) |  |  |  |  |  |  |  |  | 
+Year Ended June 30, |  | 2026 |  |  | 2025 |  |  | 2024 | 
+Revenue: |  |  |  |  |  |  |  |  |  |  |  | 
+Product |  | $ | 64,696 |  |  | $ | 63,946 |  |  | $ | 64,773 | 
+Service and other |  |  | 267,143 |  |  |  | 217,778 |  |  |  | 180,349 | 
+Total revenue |  |  | 331,839 |  |  |  | 281,724 |  |  |  | 245,122 | 
+Cost of revenue: |  |  |  |  |  |  |  |  |  |  |  | 
+Product |  |  | 12,098 |  |  |  | 13,501 |  |  |  | 15,272 | 
+Service and other |  |  | 94,276 |  |  |  | 74,330 |  |  |  | 58,842 | 
+Total cost of revenue |  |  | 106,374 |  |  |  | 87,831 |  |  |  | 74,114 | 
+Gross margin |  |  | 225,465 |  |  |  | 193,893 |  |  |  | 171,008 | 
+Research and development |  |  | 35,562 |  |  |  | 32,488 |  |  |  | 29,510 | 
+Sales and marketing |  |  | 26,710 |  |  |  | 25,654 |  |  |  | 24,456 | 
+General and administrative |  |  | 7,956 |  |  |  | 7,223 |  |  |  | 7,609 | 
+Operating income |  |  | 155,237 |  |  |  | 128,528 |  |  |  | 109,433 | 
+Other income (expense), net |  |  | 10,697 |  |  |  | ( 4,901) |  |  | ( 1,646)
+Income before income taxes |  |  | 165,934 |  |  |  | 123,627 |  |  |  | 107,787 | 
+Provision for income taxes |  |  | 32,185 |  |  |  | 21,795 |  |  |  | 19,651 | 
+Net income |  | $ | 133,749 |  |  | $ | 101,832 |  |  | $ | 88,136 | 
+Earnings per share: |  |  |  |  |  |  |  |  |  |  |  | 
+Basic |  | $ | 18.00 |  |  | $ | 13.70 |  |  | $ | 11.86 | 
+Diluted |  | $ | 17.95 |  |  | $ | 13.64 |  |  | $ | 11.80 | 
+Weighted average shares outstanding: |  |  |  |  |  |  |  |  |  |  |  | 
+Basic |  |  | 7,429 |  |  |  | 7,433 |  |  |  | 7,431 | 
+Diluted |  |  | 7,453 |  |  |  | 7,465 |  |  |  | 7,469 | 
+
+MSFT_0001193125-26-323660_item_8_0005 scale=millions
+Item 8
+COMPREHENSIVE IN COME STATEMENTS
+(In millions) |  |  |  |  |  |  |  |  | 
+Year Ended June 30, |  | 2026 |  |  | 2025 |  |  | 2024 | 
+Net income |  | $ | 133,749 |  |  | $ | 101,832 |  |  | $ | 88,136 | 
+Other comprehensive income (loss), net of tax: |  |  |  |  |  |  |  |  |  |  |  | 
+Net change related to derivatives |  |  | 8 |  |  |  | ( 5) |  |  | 24 | 
+Net change related to investments |  |  | 215 |  |  |  | 1,574 |  |  |  | 957 | 
+Translation adjustments and other |  |  | ( 160) |  |  | 674 |  |  |  | ( 228)
+Other comprehensive income |  |  | 63 |  |  |  | 2,243 |  |  |  | 753 | 
+Comprehensive income |  | $ | 133,812 |  |  | $ | 104,075 |  |  | $ | 88,889 | 
+
+MSFT_0001193125-26-323660_item_8_0008 scale=millions
+Item 8
+BALANCE SHEETS
+(In millions) |  |  |  |  |  | 
+June 30, |  | 2026 |  |  | 2025 | 
+Assets |  |  |  |  |  |  |  | 
+Current assets: |  |  |  |  |  |  |  | 
+Cash and cash equivalents |  | $ | 20,935 |  |  | $ | 30,242 | 
+Short-term investments |  |  | 55,908 |  |  |  | 64,323 | 
+Total cash, cash equivalents, and short-term investments |  |  | 76,843 |  |  |  | 94,565 | 
+Accounts receivable, net of allowance for doubtful accounts of $ 1,040 and $ 944 |  |  | 80,876 |  |  |  | 69,905 | 
+Inventories |  |  | 1,397 |  |  |  | 938 | 
+Other current assets |  |  | 48,594 |  |  |  | 25,723 | 
+Total current assets |  |  | 207,710 |  |  |  | 191,131 | 
+Property and equipment, net of accumulated depreciation of $ 118,691 and $ 93,653 |  |  | 313,076 |  |  |  | 204,966 | 
+Operating lease right-of-use assets |  |  | 24,177 |  |  |  | 24,823 | 
+Equity and other investments |  |  | 36,348 |  |  |  | 15,405 | 
+Goodwill |  |  | 119,651 |  |  |  | 119,509 | 
+Intangible assets, net |  |  | 18,609 |  |  |  | 22,604 | 
+Other long-term assets |  |  | 38,805 |  |  |  | 40,565 | 
+Total assets |  | $ | 758,376 |  |  | $ | 619,003 | 
+Liabilities and stockholders� equity |  |  |  |  |  |  |  | 
+Current liabilities: |  |  |  |  |  |  |  | 
+Accounts payable |  | $ | 42,416 |  |  | $ | 27,724 | 
+Current portion of long-term debt |  |  | 9,227 |  |  |  | 2,999 | 
+Accrued compensation |  |  | 14,945 |  |  |  | 13,709 | 
+Short-term income taxes |  |  | 2,534 |  |  |  | 7,211 | 
+Short-term unearned revenue |  |  | 72,965 |  |  |  | 64,555 | 
+Other current liabilities |  |  | 26,738 |  |  |  | 25,020 | 
+Total current liabilities |  |  | 168,825 |  |  |  | 141,218 | 
+Long-term debt |  |  | 31,067 |  |  |  | 40,152 | 
+Long-term income taxes |  |  | 28,647 |  |  |  | 25,986 | 
+Long-term unearned revenue |  |  | 2,747 |  |  |  | 2,710 | 
+Deferred income taxes |  |  | 3,054 |  |  |  | 2,835 | 
+Operating lease liabilities |  |  | 16,532 |  |  |  | 17,437 | 
+Other long-term liabilities |  |  | 65,117 |  |  |  | 45,186 | 
+Total liabilities |  |  | 315,989 |  |  |  | 275,524 | 
+Commitments and contingencies |  |  |  |  |  |  |  | 
+Stockholders� equity: |  |  |  |  |  |  |  | 
+Common stock and paid-in capital � shares authorized 24,000 ; outstanding 7,427 and 7,434 |  |  | 117,406 |  |  |  | 109,095 | 
+Retained earnings |  |  | 328,265 |  |  |  | 237,731 | 
+Accumulated other comprehensive loss |  |  | ( 3,284) |  |  | ( 3,347)
+Total stockholders� equity |  |  | 442,387 |  |  |  | 343,479 | 
+Total liabilities and stockholders� equity |  | $ | 758,376 |  |  | $ | 619,003 | 

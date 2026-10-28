@@ -1,0 +1,40 @@
+INFO httpx HTTP Request: GET https://www.sec.gov/files/company_tickers.json "HTTP/1.1 200 OK"
+INFO httpx HTTP Request: GET https://data.sec.gov/submissions/CIK0000320193.json "HTTP/1.1 200 OK"
+INFO edgar.settings Identity of the Edgar REST client set to [Swaroop Veerla vveerla@uci.edu]
+AAPL: chunks=236 sections=['item_1', 'item_10', 'item_11', 'item_12', 'item_13', 'item_14', 'item_15', 'item_16', 'item_1a', 'item_1b', 'item_1c', 'item_2', 'item_3', 'item_4', 'item_5', 'item_6', 'item_7', 'item_7a', 'item_8', 'item_9', 'item_9a', 'item_9b', 'item_9c', 'unknown'] scaled_tables=35 max_chars=4604
+
+AAPL_0000320193-25-000079_item_5_0001 scale=millions
+As of October 17, 2025, there were 22,429 shareholders of record.
+Purchases of Equity Securities by the Issuer and Affiliated Purchasers
+Share repurchase activity during the three months ended September 27, 2025, was as follows (in millions, except number of shares, which are reflected in thousands, and per-share amounts):
+Periods |  | Total Number of Shares Purchased |  | Average Price Paid Per Share |  | Total Number of Shares Purchased as Part of Publicly Announced Plans or Programs |  | Approximate Dollar Value of Shares That May Yet Be Purchased Under the Plans or Programs (1)
+June 29, 2025 to August 2, 2025: |  |  |  |  |  |  |  | 
+Open market and privately negotiated purchases |  | 33,265 |  |  | $ | 210.43 |  |  | 33,265 |  |  | 
+August 3, 2025 to August 30, 2025: |  |  |  |  |  |  |  | 
+Open market and privately negotiated purchases |  | 28,986 |  |  | $ | 224.25 |  |  | 28,986 |  |  | 
+August 31, 2025 to September 27, 2025: |  |  |  |  |  |  |  | 
+Open market and privately negotiated purchases |  | 27,247 |  |  | $ | 238.56 |  |  | 27,247 |  |  | 
+Total |  | 89,498 |  |  |  |  |  |  | $ | 99,779 | 
+
+AAPL_0000320193-25-000079_item_7_0003 scale=millions
+Segment Operating Performance
+The following table shows net sales by reportable segment for 2025, 2024 and 2023 (dollars in millions):
+ | 2025 |  | Change |  | 2024 |  | Change |  | 2023
+Americas | $ | 178,353 |  |  | 7 | % |  | $ | 167,045 |  |  | 3 | % |  | $ | 162,560 | 
+Europe | 111,032 |  |  | 10 | % |  | 101,328 |  |  | 7 | % |  | 94,294 | 
+Greater China | 64,377 |  |  | (4) | % |  | 66,952 |  |  | (8) | % |  | 72,559 | 
+Japan | 28,703 |  |  | 15 | % |  | 25,052 |  |  | 3 | % |  | 24,257 | 
+Rest of Asia Pacific | 33,696 |  |  | 10 | % |  | 30,658 |  |  | 4 | % |  | 29,615 | 
+Total net sales | $ | 416,161 |  |  | 6 | % |  | $ | 391,035 |  |  | 2 | % |  | $ | 383,285 | 
+
+AAPL_0000320193-25-000079_item_7_0005 scale=millions
+Apple Inc. | 2025 Form 10-K | 22
+Products and Services Performance
+The following table shows net sales by category for 2025, 2024 and 2023 (dollars in millions):
+ | 2025 |  | Change |  | 2024 |  | Change |  | 2023
+iPhone | $ | 209,586 |  |  | 4 | % |  | $ | 201,183 |  |  | � | % |  | $ | 200,583 | 
+Mac | 33,708 |  |  | 12 | % |  | 29,984 |  |  | 2 | % |  | 29,357 | 
+iPad | 28,023 |  |  | 5 | % |  | 26,694 |  |  | (6) | % |  | 28,300 | 
+Wearables, Home and Accessories | 35,686 |  |  | (4) | % |  | 37,005 |  |  | (7) | % |  | 39,845 | 
+Services (1) | 109,158 |  |  | 14 | % |  | 96,169 |  |  | 13 | % |  | 85,200 | 
+Total net sales | $ | 416,161 |  |  | 6 | % |  | $ | 391,035 |  |  | 2 | % |  | $ | 383,285 | 

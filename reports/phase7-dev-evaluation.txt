@@ -1,0 +1,4 @@
+INFO httpx HTTP Request: GET https://data.sec.gov/api/xbrl/companyfacts/CIK0001108524.json "HTTP/1.1 200 OK"
+INFO httpx HTTP Request: GET https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json "HTTP/1.1 200 OK"
+baseline: {'correct': 27}
+verified: {'correct': 23, 'unverified': 4}
