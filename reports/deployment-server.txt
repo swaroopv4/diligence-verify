@@ -1,0 +1,5 @@
+PASS: fresh clone, isolated app-only requirements environment, no .env, API credentials cleared.
+Command: streamlit run app/streamlit_app.py --server.address 127.0.0.1 --server.port 8512 --server.headless true --browser.gatherUsageStats false
+Server boot: success
+GET /_stcore/health: HTTP 200
+Full rendering: all 30 views passed in deployment-clean-clone.txt

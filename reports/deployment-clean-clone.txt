@@ -1,0 +1,32 @@
+2026-10-28 01:26:04.687 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+PASS clean clone AAPL verified
+PASS clean clone AAPL baseline
+PASS clean clone ADBE verified
+PASS clean clone ADBE baseline
+PASS clean clone AMZN verified
+PASS clean clone AMZN baseline
+PASS clean clone CRM verified
+PASS clean clone CRM baseline
+PASS clean clone CSCO verified
+PASS clean clone CSCO baseline
+PASS clean clone GOOGL verified
+PASS clean clone GOOGL baseline
+PASS clean clone IBM verified
+PASS clean clone IBM baseline
+PASS clean clone INTC verified
+PASS clean clone INTC baseline
+PASS clean clone INTU verified
+PASS clean clone INTU baseline
+PASS clean clone META verified
+PASS clean clone META baseline
+PASS clean clone MSFT verified
+PASS clean clone MSFT baseline
+PASS clean clone NFLX verified
+PASS clean clone NFLX baseline
+PASS clean clone NOW verified
+PASS clean clone NOW baseline
+PASS clean clone NVDA verified
+PASS clean clone NVDA baseline
+PASS clean clone ORCL verified
+PASS clean clone ORCL baseline
+PASS: all 30 views, no .env, no API credentials, no extraction SDKs, non-loopback sockets blocked (local Windows asyncio self-pipes allowed).

@@ -683,3 +683,16 @@ Known limits: no fully cold completed cost benchmark; the cache comparison uses 
 - Expanded credential ignores (.env and variants, Streamlit secrets, private-key/credential files), keeping only .env.example. Scanned every candidate file, including SQLite, for known environment credential values and provider/private-key patterns: no matches. The new repository had no pre-existing commit history. Values were not printed.
 - Rebuilt README with a one-paragraph summary, a runs.db-derived current results table, live-app placeholder, keyless local setup, Python 3.11 Community Cloud entrypoint instructions and cost/study limitations.
 - Gate: python -m pytest --tb=short -> 183 passed in 10.55s (reports/deployment-tests.txt). A clean minimal dependency environment and fresh-clone/no-.env runtime validation follow this packaging commit.
+
+## Deployment preparation — fresh-clone gate passed
+
+- Packaging commit 053a5bd was cloned with --no-local and core.autocrlf=false into an ignored validation checkout. All 15 evidence hashes match and the SQLite bytes are identical to the committed database; no .env exists in the clone.
+- Created a new isolated Python 3.11 virtual environment with only requirements.txt and its transitive dependencies. Installation succeeded. OpenAI, EdgarTools, dotenv and YAML packages are absent; no editable research package is installed.
+- Cleared inherited API/token/secret/password variables, SEC_USER_AGENT and Python path overrides. With non-loopback connections blocked, Streamlit AppTest loaded all 30 company/mode views, including row data and source panes. No extraction/provider modules were imported. Log: reports/deployment-clean-clone.txt.
+- The optional exhaustive harness needed two corrections before passing on its third attempt: AppTest resolves relative script paths against the harness file (fixed to the absolute clone entrypoint), and Windows asyncio uses a local socketpair (allowed loopback self-pipes while keeping external sockets blocked). Neither issue required an app change.
+- Ran the actual minimal-environment `streamlit run app/streamlit_app.py` command from the clone, with no .env/API credentials, on temporary localhost port 8512. Server boot succeeded; /_stcore/health returned HTTP 200. The normal user demo remains on port 8511.
+- Full commit-history audit scanned 127 distinct blobs, including the database, for known credential values and provider/private-key patterns: zero findings. An initial overly broad scanner mistook PORTKEY_MODEL's public model identifier for a secret because its variable name contains KEY; corrected credential-name classification, then the history audit passed. No real credential was found or removed, and no history rewrite was needed.
+- Final size check: database 1,503,232 bytes; processed evidence 7,727,476 bytes across 15 files. No tracked file is over 50 MB. Credential files are ignored and absent from Git history.
+- The README links to official Community Cloud dependency/deployment guidance and contains the current database-derived results. The live-app URL is explicitly a placeholder. No remote was added and no deployment was published.
+
+Requested deployment-preparation gate is complete. Stop after delivering the local repository and validation evidence.

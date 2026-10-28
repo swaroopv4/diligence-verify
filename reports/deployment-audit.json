@@ -1,0 +1,12 @@
+{
+  "commit": "053a5bd5612b1068321c529568e828c832954ec2",
+  "history_blobs_scanned": 127,
+  "credential_findings": 0,
+  "tracked_env_files": 0,
+  "files_over_50_mb": [],
+  "database_bytes": 1503232,
+  "processed_files": 15,
+  "processed_bytes": 7727476,
+  "clone_source_hashes": "all match",
+  "clone_has_env": false
+}
