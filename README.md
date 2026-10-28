@@ -11,14 +11,14 @@ Diligence Verify compares LLM extraction of 9 financial metrics from 15 public c
 | Baseline | gemini-3.5-flash-lite | 109 | 5 | 0 | 17 | 95.6% |
 | Verified | gemini-3.5-flash-lite | 111 | 0 | 3 | 17 | 100.0% |
 
-The table is generated from `data/runs.db`. Each mode has 131 facts with ground truth; 4 cases without matching XBRL data are excluded from accuracy. Precision is correct / (correct + wrong), not coverage. The second-model benchmark remains pending. These observed results do not guarantee financial correctness on other filings. Detailed diagnosis and limitations: [Phase 5b results](reports/phase5b-results.md).
+The table is generated from `data/runs.db`. Each mode has 131 facts with ground truth; 4 cases without matching XBRL data are excluded from accuracy. Precision is correct / (correct + wrong), not coverage. The second-model benchmark remains pending. These observed results do not guarantee financial correctness on other filings. Detailed diagnosis and limitations: [Phase 5b results](reports/phase5b-results.md). A subsequent uncached verified run retained the same correct/wrong counts but changed one Netflix cash abstention from unverified to not found; the requested parity gate stopped further UI changes. See the [cold-run comparison](reports/cold-final-verified-comparison.md).
 
 ## Run the dashboard locally
 
 Use **Python 3.11** (the version tested for deployment). Clone this standalone repository, then run from its root:
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL> diligence-verify
+git clone https://github.com/swaroopV4/diligence-verify.git diligence-verify
 cd diligence-verify
 python -m venv .venv
 ```
