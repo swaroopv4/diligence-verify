@@ -327,4 +327,3 @@ Companies measured: 15; total wall time: 681.04s; average: 45.40s/company; refer
 Time includes free-tier request pacing and any provider recovery waits.
 
 Cold accuracy gate passed: all per-fact classifications match the previous run.
-

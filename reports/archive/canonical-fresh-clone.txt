@@ -1,0 +1,32 @@
+2026-10-28 02:55:40.942 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+PASS AAPL verified
+PASS AAPL baseline
+PASS ADBE verified
+PASS ADBE baseline
+PASS AMZN verified
+PASS AMZN baseline
+PASS CRM verified
+PASS CRM baseline
+PASS CSCO verified
+PASS CSCO baseline
+PASS GOOGL verified
+PASS GOOGL baseline
+PASS IBM verified
+PASS IBM baseline
+PASS INTC verified
+PASS INTC baseline
+PASS INTU verified
+PASS INTU baseline
+PASS META verified
+PASS META baseline
+PASS MSFT verified
+PASS MSFT baseline
+PASS NFLX verified
+PASS NFLX baseline
+PASS NOW verified
+PASS NOW baseline
+PASS NVDA verified
+PASS NVDA baseline
+PASS ORCL verified
+PASS ORCL baseline
+PASS fresh clone: 30 views, no .env, no API credentials, external sockets blocked; exact shared README/app/report counts; 53-line README; default INTC operating income and highlight.
